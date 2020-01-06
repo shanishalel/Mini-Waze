@@ -2,6 +2,7 @@ package dataStructure;
 
 
 import java.io.BufferedReader;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Collection;
@@ -11,6 +12,7 @@ import java.util.Set;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+
 
 
 public class DGraph implements graph, java.io.Serializable{
@@ -136,6 +138,7 @@ public class DGraph implements graph, java.io.Serializable{
 			for(int i=0;i<Nodes.length();i++) {
 				JSONObject Node=(JSONObject)Nodes.get(i);
 				String point=(String) Node.get("pos");
+				
 			}
 
 			

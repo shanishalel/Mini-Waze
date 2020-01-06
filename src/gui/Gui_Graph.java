@@ -44,6 +44,7 @@ public class Gui_Graph extends JFrame implements ActionListener
 	public Gui_Graph(){
 		this.graph =null;
 		initGUI();
+		
 	}
 
 	public Gui_Graph(graph g)

@@ -1,6 +1,7 @@
 package algorithms;
 
 import java.io.FileInputStream;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -13,7 +14,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-import dataStructure.dGraph;
+import dataStructure.DGraph;
 import dataStructure.Nodes;
 import dataStructure.edge_data;
 import dataStructure.graph;
@@ -37,7 +38,7 @@ public class Graph_Algo implements graph_algorithms, java.io.Serializable{
 	}
 	
 	public Graph_Algo() {
-		this.graph=new dGraph();
+		this.graph=new DGraph();
 	}
 
 	@Override
@@ -295,7 +296,7 @@ public class Graph_Algo implements graph_algorithms, java.io.Serializable{
 
 	@Override
 	public graph copy() {
-		dGraph copy_Dgraph=new dGraph();
+		DGraph copy_Dgraph=new DGraph();
 		Collection <node_data> Nodes = this.graph.getV();
 		for(node_data node_data:Nodes) {
 			//copy the node

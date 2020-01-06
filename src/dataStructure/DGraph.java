@@ -1,10 +1,16 @@
 package dataStructure;
 
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Set;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 
 public class DGraph implements graph, java.io.Serializable{
@@ -115,6 +121,29 @@ public class DGraph implements graph, java.io.Serializable{
 	@Override
 	public int getMC() {
 		return MC;
+	}
+	
+	//start from here
+/**
+ * this function will get a string represent a graph and init a graph from her
+ * @param g
+ */
+	public void init(String g)  {
+		try {
+			JSONObject obj = new JSONObject(g);
+			JSONArray Edges =obj.getJSONArray("Edges");
+			JSONArray Nodes =obj.getJSONArray("Nodes");
+			for(int i=0;i<Nodes.length();i++) {
+				JSONObject Node=(JSONObject)Nodes.get(i);
+				String point=(String) Node.get("pos");
+			}
+
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 }

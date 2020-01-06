@@ -74,6 +74,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
+import gui.*;
 
 /**
  *  The {@code StdDraw} class provides a basic capability for
@@ -480,6 +481,9 @@ import javax.swing.KeyStroke;
  */
 public final class StdDraw implements ActionListener, MouseListener, MouseMotionListener, KeyListener {
 
+	
+	static Gui_Graph1 Gui_Graph1;
+	
 	/**
 	 *  The color black.
 	 */
@@ -715,13 +719,44 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 	// create the menu bar (changed to private)
 	private static JMenuBar createMenuBar() {
 		JMenuBar menuBar = new JMenuBar();
-		JMenu menu = new JMenu("File");
-		menuBar.add(menu);
-		JMenuItem menuItem1 = new JMenuItem(" Save...   ");
+		JMenu menu1 = new JMenu("File");
+		JMenu menu2 = new JMenu("Algorithms");
+		
+		menuBar.add(menu1);
+		menuBar.add(menu2);
+		JMenuItem menuItem1 = new JMenuItem("Save to file");
+		JMenuItem menuItem2 = new JMenuItem("Load from file");
 		menuItem1.addActionListener(std);
-		menuItem1.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,
-				Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
-		menu.add(menuItem1);
+		menuItem2.addActionListener(std);
+		menu1.add(menuItem1);
+		menu1.add(menuItem2);
+		
+		JMenuItem menuItem3 = new JMenuItem("Draw graph");
+		JMenuItem menuItem4 = new JMenuItem("Is Connected");
+		JMenuItem menuItem5 = new JMenuItem("Shortest Path Dist");
+		JMenuItem menuItem6 = new JMenuItem("Shortest Path");
+		JMenuItem menuItem7 = new JMenuItem("TSP");
+		menuItem3.addActionListener(std);
+		menuItem4.addActionListener(std);
+		menuItem5.addActionListener(std);
+		menuItem6.addActionListener(std);
+		menuItem7.addActionListener(std);
+		menu2.add(menuItem3);
+		menu2.add(menuItem4);
+		menu2.add(menuItem5);
+		menu2.add(menuItem6);
+		menu2.add(menuItem7);
+		
+
+
+
+
+
+
+
+
+
+		
 		return menuBar;
 	}
 
@@ -1648,17 +1683,41 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 		}
 	}
 
-
+public static void setGuiGraph(Gui_Graph1 Gui) {
+	Gui_Graph1=Gui;
+}
+	
 	/**
 	 * This method cannot be called directly.
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		FileDialog chooser = new FileDialog(StdDraw.frame, "Use a .png or .jpg extension", FileDialog.SAVE);
-		chooser.setVisible(true);
-		String filename = chooser.getFile();
-		if (filename != null) {
-			StdDraw.save(chooser.getDirectory() + File.separator + chooser.getFile());
+//		FileDialog chooser = new FileDialog(StdDraw.frame, "Use a .png or .jpg extension", FileDialog.SAVE);
+//		chooser.setVisible(true);
+//		String filename = chooser.getFile();
+//		if (filename != null) {
+//			StdDraw.save(chooser.getDirectory() + File.separator + chooser.getFile());
+//		}
+		
+		String str = e.getActionCommand();
+
+		switch(str) {
+		case "Draw graph" : Gui_Graph1.paint();
+		break;
+		case "Save to file": Gui_Graph1.Savegraph();
+		break;
+		case "Load from file": Gui_Graph1.Loadgraph();
+		break;
+		case "Is Connected": Gui_Graph1.isConnected();
+		break;
+		case "Shortest Path Dist": Gui_Graph1.shortestPathDist();
+		break;
+		case "Shortest Path": Gui_Graph1.shortestPath();
+		break;
+		case "TSP": Gui_Graph1.TSP();
+		break;
+		default:
+			break;
 		}
 	}
 
@@ -1870,6 +1929,7 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 		}
 	}
 
+	
 
 
 

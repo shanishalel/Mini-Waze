@@ -6,7 +6,7 @@ import java.util.Random;
 
 import algorithms.Graph_Algo;
 import algorithms.graph_algorithms;
-import dataStructure.dGraph;
+import dataStructure.DGraph;
 import dataStructure.Nodes;
 import dataStructure.graph;
 import dataStructure.node_data;
@@ -29,7 +29,7 @@ public class Testing_gui {
 	
 
 	private static void test6() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		d.addNode(new Nodes(1, new Point3D(130, 130)));
 		d.addNode(new Nodes(2, new Point3D(200, 140)));
 		d.addNode(new Nodes(3, new Point3D(600, 600)));
@@ -43,7 +43,7 @@ public class Testing_gui {
 
 
 	private static void test5() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		d.addNode(new Nodes(1, new Point3D(130, 130)));
 		d.addNode(new Nodes(2, new Point3D(200, 140)));
 		d.addNode(new Nodes(3, new Point3D(600, 600)));
@@ -62,7 +62,7 @@ public class Testing_gui {
 	}
 
 	private static void test4() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		d.addNode(new Nodes(1, new Point3D(130, 130)));
 		d.addNode(new Nodes(2, new Point3D(200, 140)));
 		d.addNode(new Nodes(3, new Point3D(600, 600)));
@@ -86,7 +86,7 @@ public class Testing_gui {
 	}
 
 	private static void test3() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		for (int i = 0 ; i< 1000000 ; i++) {
 			int x = (int) ((Math.random()*700)+100);
 			int y = (int) ((Math.random()*700)+100);
@@ -104,7 +104,7 @@ public class Testing_gui {
 	}
 
 	private static void test2() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		d.addNode(new Nodes(1, new Point3D(130, 130)));
 		d.addNode(new Nodes(2, new Point3D(200, 140)));
 		d.addNode(new Nodes(3, new Point3D(600, 600)));
@@ -132,7 +132,7 @@ public class Testing_gui {
 	}
 
 	public static void test() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		d.addNode(new Nodes(1, new Point3D(130, 130)));
 		d.addNode(new Nodes(2, new Point3D(200, 140)));
 		d.addNode(new Nodes(3, new Point3D(600, 600)));

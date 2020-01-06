@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 import algorithms.Graph_Algo;
 import algorithms.graph_algorithms;
-import dataStructure.dGraph;
+import dataStructure.DGraph;
 import dataStructure.Nodes;
 import dataStructure.graph;
 import dataStructure.node_data;
@@ -21,7 +21,7 @@ class Graph_AlgoTest implements java.io.Serializable {
 
 	@Test
 	void testInitGraph() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		for (int i =1 ; i<10 ;i++){
 			Point3D p = new Point3D(j, j, j);
@@ -39,7 +39,7 @@ class Graph_AlgoTest implements java.io.Serializable {
 
 	@Test
 	void testInitString() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		for (int i =1 ; i<10 ;i++){
 			Point3D p = new Point3D(j, j, j);
@@ -61,7 +61,7 @@ class Graph_AlgoTest implements java.io.Serializable {
 
 	@Test
 	void testSave() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		for (int i =1 ; i<10 ;i++){
 			Point3D p = new Point3D(j, j, j);
@@ -80,7 +80,7 @@ class Graph_AlgoTest implements java.io.Serializable {
 
 	@Test
 	void testIsConnected() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		/* create d graph that is connect graph  */
 		int j=1;
 		for (int i =1 ; i<=5 ;i++){
@@ -104,7 +104,7 @@ class Graph_AlgoTest implements java.io.Serializable {
 
 	@Test
 	void testShortestPathDist() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		for (int i =1 ; i<=6 ;i++){
 			Point3D p = new Point3D(j, j, j);
@@ -125,7 +125,7 @@ class Graph_AlgoTest implements java.io.Serializable {
 
 	@Test
 	void testShortestPath() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		d.addNode(new Nodes(1, new Point3D(130, 130)));
 		d.addNode(new Nodes(2, new Point3D(200, 140)));
 		d.addNode(new Nodes(3, new Point3D(600, 600)));
@@ -153,7 +153,7 @@ class Graph_AlgoTest implements java.io.Serializable {
 
 	@Test
 	void testTSP() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		d.addNode(new Nodes(1, new Point3D(130, 130)));
 		d.addNode(new Nodes(2, new Point3D(200, 140)));
 		d.addNode(new Nodes(3, new Point3D(600, 600)));
@@ -186,7 +186,7 @@ class Graph_AlgoTest implements java.io.Serializable {
 
 	@Test
 	void testCopy() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		for (int i =1 ; i<10 ;i++){
 			Point3D p = new Point3D(j, j, j);

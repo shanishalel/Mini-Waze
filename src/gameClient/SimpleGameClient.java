@@ -10,7 +10,7 @@ import org.json.JSONObject;
 import Server.Game_Server;
 import Server.game_service;
 import dataStructure.DGraph;
-import dataStructure.dGraph;
+import dataStructure.DGraph;
 import dataStructure.edge_data;
 import dataStructure.graph;
 /**

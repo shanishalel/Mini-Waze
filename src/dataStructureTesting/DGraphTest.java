@@ -6,7 +6,7 @@ import java.util.Collection;
 
 import org.junit.jupiter.api.Test;
 
-import dataStructure.dGraph;
+import dataStructure.DGraph;
 import dataStructure.Nodes;
 import dataStructure.edge_data;
 import dataStructure.node_data;
@@ -16,7 +16,7 @@ class DGraphTest {
 
 	@Test
 	void testGetNode() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		for(int i=1;i<10;i++ ) { //the key can't be 0  
 			Point3D p = new Point3D(j,j,j);
@@ -30,7 +30,7 @@ class DGraphTest {
 	
 	@Test 
 	void testGetNodeNoKey() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		for(int i=1;i<3;i++ ) { //the key can't be 0  
 			Point3D p = new Point3D(j,j,j);
@@ -44,7 +44,7 @@ class DGraphTest {
 	
 	@Test
 	void buildSameNode() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		Point3D p = new Point3D(j,j,j);
 		Nodes n=new Nodes(1,p);
@@ -55,7 +55,7 @@ class DGraphTest {
 
 	@Test
 	void testGetEdge() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		for(int i=1;i<10;i++ ) {  
 			Point3D p = new Point3D(j,j,j);
@@ -81,7 +81,7 @@ class DGraphTest {
 	
 	@Test
 	void testAddNode() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		Point3D p = new Point3D(j, j, j);
 		for (int i =1 ; i<=1000000 ;i++){
@@ -95,7 +95,7 @@ class DGraphTest {
 
 	@Test
 	void testConnect() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		for (int i =1 ; i<=10 ;i++){
 			Point3D p = new Point3D(j, j, j);
@@ -118,7 +118,7 @@ class DGraphTest {
 	
 	@Test 
 	void testCoonectSameSrcDest() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		Point3D p = new Point3D(j, j, j);
 		for (int i =1 ; i<=3 ;i++){
@@ -133,14 +133,14 @@ class DGraphTest {
 
 	@Test
 	void testGetV() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		for (int i =1 ; i<=10 ;i++){
 			Point3D p = new Point3D(j, j, j);
 			Nodes n = new Nodes(i , p );
 			d.addNode(n);
 		}
-		dGraph g = new dGraph();
+		DGraph g = new DGraph();
 		for (int i =1 ; i<=10 ;i++){
 			Point3D p = new Point3D(j, j, j);
 			Nodes n = new Nodes(i , p );
@@ -161,7 +161,7 @@ class DGraphTest {
 
 	@Test
 	void testGetE() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		for (int i =1 ; i<10 ;i++){
 			Point3D p = new Point3D(j, j, j);
@@ -171,7 +171,7 @@ class DGraphTest {
 		for(int i =1 ; i <d.nodeSize() ;i++) {
 			d.connect(1, i, i);
 		}
-		dGraph g = new dGraph();
+		DGraph g = new DGraph();
 		for (int i =1 ; i<10 ;i++){
 			Point3D p = new Point3D(j, j, j);
 			Nodes n = new Nodes(i , p );
@@ -196,7 +196,7 @@ class DGraphTest {
 
 	@Test
 	void testRemoveNode() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		for (int i =1 ; i<10 ;i++){
 			Point3D p = new Point3D(j, j, j);
@@ -228,7 +228,7 @@ class DGraphTest {
 
 	@Test
 	void testRemoveEdge() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		for (int i =0 ; i<10 ;i++){
 			Point3D p = new Point3D(j, j, j);
@@ -252,7 +252,7 @@ class DGraphTest {
 	
 	@Test
 	void testRemoveNodeEdge() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		Point3D p = new Point3D(j, j, j);
 		for (int i =1 ; i<=6 ;i++){
@@ -273,7 +273,7 @@ class DGraphTest {
 
 	@Test
 	void testNodeSize() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		for (int i =1 ; i<10 ;i++){
 			Point3D p = new Point3D(j, j, j);
@@ -287,7 +287,7 @@ class DGraphTest {
 
 	@Test
 	void testEdgeSize() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		for (int i =1 ; i<10 ;i++){
 			Point3D p = new Point3D(j, j, j);
@@ -305,7 +305,7 @@ class DGraphTest {
 
 	@Test
 	void testGetMC() {
-		dGraph d = new dGraph();
+		DGraph d = new DGraph();
 		int j=1;
 		Point3D p = new Point3D(j, j, j);
 		for (int i = 0; i < 6; i++) {

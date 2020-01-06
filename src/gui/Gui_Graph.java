@@ -27,7 +27,7 @@ import javax.swing.JTextField;
 import javax.swing.filechooser.FileSystemView;
 
 import algorithms.Graph_Algo;
-import dataStructure.dGraph;
+import dataStructure.DGraph;
 import dataStructure.edge_data;
 import dataStructure.graph;
 import dataStructure.node_data;

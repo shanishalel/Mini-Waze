@@ -7,7 +7,7 @@ import java.util.Hashtable;
 import java.util.Set;
 
 
-public class dGraph implements graph, java.io.Serializable{
+public class DGraph implements graph, java.io.Serializable{
 	/**
 	 * 
 	 */
@@ -20,7 +20,7 @@ public class dGraph implements graph, java.io.Serializable{
 	//The hash represent an edges by Hashtable<node_data, Hashtable<Integer, edge_data>>   
 	Hashtable<node_data, Hashtable<Integer, edge_data>>  Edge;
 
-	public dGraph() {
+	public DGraph() {
 		this.Nodes = new Hashtable<Integer, node_data>();
 		this.Edge= new Hashtable<node_data, Hashtable<Integer, edge_data>>();
 		this.MC=0;

@@ -482,7 +482,7 @@ import gui.*;
 public final class StdDraw implements ActionListener, MouseListener, MouseMotionListener, KeyListener {
 
 	
-	static Gui_Graph1 Gui_Graph1;
+	static Gui_Graph Gui_Graph;
 	
 	/**
 	 *  The color black.
@@ -1683,8 +1683,8 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 		}
 	}
 
-public static void setGuiGraph(Gui_Graph1 Gui) {
-	Gui_Graph1=Gui;
+public static void setGuiGraph(Gui_Graph Gui) {
+	Gui_Graph=Gui;
 }
 	
 	/**
@@ -1702,19 +1702,19 @@ public static void setGuiGraph(Gui_Graph1 Gui) {
 		String str = e.getActionCommand();
 
 		switch(str) {
-		case "Draw graph" : Gui_Graph1.paint();
+		case "Draw graph" : Gui_Graph.paint();
 		break;
-		case "Save to file": Gui_Graph1.Savegraph();
+		case "Save to file": Gui_Graph.Savegraph();
 		break;
-		case "Load from file": Gui_Graph1.Loadgraph();
+		case "Load from file": Gui_Graph.Loadgraph();
 		break;
-		case "Is Connected": Gui_Graph1.isConnected();
+		case "Is Connected": Gui_Graph.isConnected();
 		break;
-		case "Shortest Path Dist": Gui_Graph1.shortestPathDist();
+		case "Shortest Path Dist": Gui_Graph.shortestPathDist();
 		break;
-		case "Shortest Path": Gui_Graph1.shortestPath();
+		case "Shortest Path": Gui_Graph.shortestPath();
 		break;
-		case "TSP": Gui_Graph1.TSP();
+		case "TSP": Gui_Graph.TSP();
 		break;
 		default:
 			break;

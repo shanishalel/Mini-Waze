@@ -14,7 +14,7 @@ public class test {
 		d.connect(1, 2, 3);
 		d.connect(2, 3, 4);
 		d.connect(3, 1, 1);
-		Gui_Graph1 graph = new Gui_Graph1(d);
+		MyGameGUI graph = new MyGameGUI(d);
 		
 	}
 

@@ -14,11 +14,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-import dataStructure.DGraph;
-import dataStructure.Nodes;
-import dataStructure.edge_data;
-import dataStructure.graph;
-import dataStructure.node_data;
+import MYdataStructure.DGraph;
+import MYdataStructure.Nodes;
+import MYdataStructure.edge_data;
+import MYdataStructure.graph;
+import MYdataStructure.node_data;
 import utils.Point3D;
 /**
  * This empty class represents the set of graph-theory algorithms

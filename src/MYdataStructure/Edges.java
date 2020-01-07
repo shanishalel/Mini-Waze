@@ -1,4 +1,7 @@
-package dataStructure;
+package MYdataStructure;
+
+import MYdataStructure.edge_data;
+import MYdataStructure.node_data;
 
 public class Edges implements edge_data, java.io.Serializable {
 	

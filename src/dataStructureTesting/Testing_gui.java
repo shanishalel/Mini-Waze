@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Random;
 
+import MYdataStructure.DGraph;
+import MYdataStructure.Nodes;
+import MYdataStructure.graph;
+import MYdataStructure.node_data;
 import algorithms.Graph_Algo;
 import algorithms.graph_algorithms;
-import dataStructure.DGraph;
-import dataStructure.Nodes;
-import dataStructure.graph;
-import dataStructure.node_data;
 import gui.Gui_Graph;
 import utils.Point3D;
 

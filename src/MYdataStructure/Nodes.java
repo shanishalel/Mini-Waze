@@ -1,5 +1,6 @@
-package dataStructure;
+package MYdataStructure;
 
+import MYdataStructure.node_data;
 import utils.Point3D;
 
 public class Nodes implements node_data , java.io.Serializable{

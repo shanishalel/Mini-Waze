@@ -1,5 +1,8 @@
-package dataStructure;
+package MYdataStructure;
 import java.util.Collection;
+
+import MYdataStructure.edge_data;
+import MYdataStructure.node_data;
 /**
  * This interface represents a directional weighted graph.
  * The interface has a road-system or communication network in mind - and should support a large number of nodes (over 100,000).

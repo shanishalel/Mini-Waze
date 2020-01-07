@@ -6,10 +6,10 @@ import java.util.Collection;
 
 import org.junit.jupiter.api.Test;
 
-import dataStructure.DGraph;
-import dataStructure.Nodes;
-import dataStructure.edge_data;
-import dataStructure.node_data;
+import MYdataStructure.DGraph;
+import MYdataStructure.Nodes;
+import MYdataStructure.edge_data;
+import MYdataStructure.node_data;
 import utils.Point3D;
 
 class DGraphTest {

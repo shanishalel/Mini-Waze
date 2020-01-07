@@ -1,7 +1,7 @@
 package gui;
 
-import dataStructure.DGraph;
-import dataStructure.Nodes;
+import MYdataStructure.DGraph;
+import MYdataStructure.Nodes;
 import utils.Point3D;
 
 public class test {

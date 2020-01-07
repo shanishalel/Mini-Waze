@@ -1,6 +1,7 @@
-package dataStructure;
+package MYdataStructure;
 
 
+import java.awt.Point;
 import java.io.BufferedReader;
 
 import java.io.FileReader;
@@ -12,6 +13,11 @@ import java.util.Set;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import MYdataStructure.edge_data;
+import MYdataStructure.graph;
+import MYdataStructure.node_data;
+import utils.Point3D;
 
 
 
@@ -132,16 +138,51 @@ public class DGraph implements graph, java.io.Serializable{
  */
 	public void init(String g)  {
 		try {
+			String s="";
+			double x=0,y=0,z=0,counter=0;
 			JSONObject obj = new JSONObject(g);
 			JSONArray Edges =obj.getJSONArray("Edges");
 			JSONArray Nodes =obj.getJSONArray("Nodes");
+			//build Nodes
 			for(int i=0;i<Nodes.length();i++) {
 				JSONObject Node=(JSONObject)Nodes.get(i);
 				String point=(String) Node.get("pos");
-				
+				for (int j = 0; j < point.length(); j++) {
+					if (point.charAt(j) != ',') {
+						s+=point.charAt(j); 
+						 if (counter==2 && j == point.length()-1) {
+								z= Double.parseDouble(s);
+								counter=0;
+								s="";
+							}
+					}
+					else {
+						if (counter==0) {
+							x= Double.parseDouble(s);
+							counter++;
+							s="";
+						}
+						else if (counter==1) {
+							y= Double.parseDouble(s);
+							counter++;
+							s="";
+						}
+					}
+				}
+				Point3D p = new Point3D(x,y,z);
+				int id = Node.getInt("id");
+				Nodes n=new Nodes(id,p);
+				this.addNode(n);
+			}
+			//build Edges
+			for(int i=0;i<Edges.length();i++) {
+				JSONObject Edge=(JSONObject)Edges.get(i);
+				int src = Edge.getInt("src");
+				int dest = Edge.getInt("dest");
+				double w = Edge.getDouble("w");
+				this.connect(src, dest, w);
 			}
 
-			
 		}
 		catch(Exception e) {
 			e.printStackTrace();

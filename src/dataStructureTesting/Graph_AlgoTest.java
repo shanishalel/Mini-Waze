@@ -9,12 +9,12 @@ import java.util.Random;
 
 import org.junit.jupiter.api.Test;
 
+import MYdataStructure.DGraph;
+import MYdataStructure.Nodes;
+import MYdataStructure.graph;
+import MYdataStructure.node_data;
 import algorithms.Graph_Algo;
 import algorithms.graph_algorithms;
-import dataStructure.DGraph;
-import dataStructure.Nodes;
-import dataStructure.graph;
-import dataStructure.node_data;
 import utils.Point3D;
 
 class Graph_AlgoTest implements java.io.Serializable {

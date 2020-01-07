@@ -7,8 +7,8 @@ import java.util.LinkedList;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 
+import MYdataStructure.graph;
 import utils.StdDraw;
-import dataStructure.graph;
 import utils.Point3D;
 
 public class g_StdDraw implements ActionListener {

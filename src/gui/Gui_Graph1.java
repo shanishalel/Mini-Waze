@@ -11,10 +11,10 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+import MYdataStructure.edge_data;
+import MYdataStructure.graph;
+import MYdataStructure.node_data;
 import algorithms.Graph_Algo;
-import dataStructure.edge_data;
-import dataStructure.graph;
-import dataStructure.node_data;
 import utils.Point3D;
 import utils.StdDraw;
 
@@ -220,26 +220,26 @@ public class Gui_Graph1 {
 
 	public void initGUI() {
 		StdDraw.setCanvasSize(600, 800);
-		int X_min = Integer.MAX_VALUE;
-		int X_max = Integer.MIN_VALUE;
-		int Y_min = Integer.MAX_VALUE;
-		int Y_max = Integer.MIN_VALUE;
+		double X_min = Integer.MAX_VALUE;
+		double X_max = Integer.MIN_VALUE;
+		double Y_min = Integer.MAX_VALUE;
+		double Y_max = Integer.MIN_VALUE;
 		
 		// rescale the coordinate system
 		
 		Collection<node_data> nodes=graph.getV();   
 		for(node_data node:nodes) {
-		if(node.getLocation().ix()>X_max) {
-			X_max=(node.getLocation().ix());
+		if(node.getLocation().x()>X_max) {
+			X_max=(node.getLocation().x());
 		}
-		if(node.getLocation().ix()<X_min) {
-			X_min=(node.getLocation().ix());
+		if(node.getLocation().x()<X_min) {
+			X_min=(node.getLocation().x());
 		}
-		if(node.getLocation().iy()>Y_max) {
-			Y_max=(node.getLocation().iy());
+		if(node.getLocation().y()>Y_max) {
+			Y_max=(node.getLocation().y());
 		}
-		if(node.getLocation().iy()<Y_min) {
-			Y_min=(node.getLocation().iy());
+		if(node.getLocation().y()<Y_min) {
+			Y_min=(node.getLocation().y());
 		}
 
 		}	

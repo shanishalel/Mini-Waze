@@ -1,4 +1,4 @@
-package dataStructure;
+package MYdataStructure;
 
 import utils.Point3D;
 /**

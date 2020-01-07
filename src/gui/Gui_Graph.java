@@ -26,11 +26,11 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileSystemView;
 
+import MYdataStructure.DGraph;
+import MYdataStructure.edge_data;
+import MYdataStructure.graph;
+import MYdataStructure.node_data;
 import algorithms.Graph_Algo;
-import dataStructure.DGraph;
-import dataStructure.edge_data;
-import dataStructure.graph;
-import dataStructure.node_data;
 import utils.Point3D;
 
 public class Gui_Graph extends JFrame implements ActionListener

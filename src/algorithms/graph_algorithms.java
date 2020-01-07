@@ -15,8 +15,8 @@ package algorithms;
 
 import java.util.List;
 
-import dataStructure.graph;
-import dataStructure.node_data;
+import MYdataStructure.graph;
+import MYdataStructure.node_data;
 
 public interface graph_algorithms {
 	/**

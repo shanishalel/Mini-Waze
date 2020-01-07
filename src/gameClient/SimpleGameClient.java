@@ -12,6 +12,8 @@ import MYdataStructure.edge_data;
 import MYdataStructure.graph;
 import Server.Game_Server;
 import Server.game_service;
+import gui.Gui_Graph;
+import gui.Gui_Graph1;
 /**
  * This class represents a simple example for using the GameServer API:
  * the main file performs the following tasks:
@@ -37,6 +39,8 @@ public class SimpleGameClient {
 		String g = game.getGraph();
 		DGraph gg = new DGraph();
 		gg.init(g);
+		Gui_Graph1 graph = new Gui_Graph1(gg);
+
 		String info = game.toString();
 		System.out.println(info);
 		System.out.println(g);

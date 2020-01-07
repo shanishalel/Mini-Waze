@@ -22,7 +22,10 @@ public class Gui_Graph1 {
 	public static graph graph;
 	private static final long serialVersionUID = 6128157318970002904L;
 	LinkedList<Point3D> points = new LinkedList<Point3D>();
-
+	double X_min = Integer.MAX_VALUE;
+	double X_max = Integer.MIN_VALUE;
+	double Y_min = Integer.MAX_VALUE;
+	double Y_max = Integer.MIN_VALUE;
 
 	public Gui_Graph1(){
 		this.graph =null;
@@ -68,14 +71,15 @@ public class Gui_Graph1 {
 			for (node_data node_data : Nodes) {
 				Point3D p = node_data.getLocation();
 				StdDraw.setPenColor(Color.ORANGE);
-				StdDraw.filledCircle(p.ix(), p.iy(), 10);
+				StdDraw.filledCircle(p.x(), p.y(), 0.0001); //nodes in orange
 				StdDraw.setPenColor(Color.BLACK);
-				StdDraw.text(p.ix()+1, p.iy()-2, (Integer.toString(node_data.getKey())));
+				
+				StdDraw.text(p.x()+p.y(), p.y()*0.01 , (Integer.toString(node_data.getKey())));
 				Collection<edge_data> Edge = this.graph.getE(node_data.getKey());
 				for (edge_data edge_data : Edge) {
 					if (edge_data.getTag() ==100) {
 						edge_data.setTag(0);
-						StdDraw.setPenColor(Color.RED);
+						StdDraw.setPenColor(Color.RED); 
 					}
 					else {
 						StdDraw.setPenColor(Color.BLUE);
@@ -84,12 +88,24 @@ public class Gui_Graph1 {
 					node_data dest = graph.getNode(edge_data.getDest());
 					Point3D p2 = dest.getLocation();
 					if (p2 != null) {
-						StdDraw.line(p.ix(), p.iy(), p2.ix(), p2.iy());
-						StdDraw.text((p.ix()+p2.ix())/2, (p.iy()+p2.iy())/2, Double.toString(edge_data.getWeight()));
+						StdDraw.line(p.x(), p.y(), p2.x(), p2.y());
 						StdDraw.setPenColor(Color.MAGENTA);
-						int x_place =((((((p.ix()+p2.ix())/2)+p2.ix())/2)+p2.ix())/2);
-						int y_place = ((((((p.iy()+p2.iy())/2)+p2.iy())/2)+p2.iy())/2);
-						StdDraw.filledCircle(x_place, y_place, 5);
+						double x_place =((((((p.x()+p2.x())/2)+p2.x())/2)+p2.x())/2);
+						double y_place = ((((((p.y()+p2.y())/2)+p2.y())/2)+p2.y())/2);
+						StdDraw.filledCircle(x_place, y_place, 0.0001);
+						StdDraw.setPenColor(Color.BLUE);
+						//cut the number to only 1 digit after the point
+						String toShort=Double.toString(edge_data.getWeight());
+						int i=0;
+						while(i<toShort.length()) {
+						if(toShort.charAt(i)=='.') {
+							toShort=toShort.substring(0, i+2);
+						}
+						i++;
+					}
+						System.out.println(toShort);
+						StdDraw.text(x_place, y_place,toShort );
+
 					}	
 
 				}
@@ -219,7 +235,7 @@ public class Gui_Graph1 {
 
 
 	public void initGUI() {
-		StdDraw.setCanvasSize(600, 800);
+		StdDraw.setCanvasSize(600, 600);
 		double X_min = Integer.MAX_VALUE;
 		double X_max = Integer.MIN_VALUE;
 		double Y_min = Integer.MAX_VALUE;
@@ -243,8 +259,8 @@ public class Gui_Graph1 {
 		}
 
 		}	
-		StdDraw.setXscale((X_min-X_min), (X_max+(X_max/5)));
-		StdDraw.setYscale((Y_min-(Y_min)), (Y_max+(Y_max/5)));
+		StdDraw.setXscale(X_min, X_max);
+		StdDraw.setYscale(Y_min, Y_max);
 		StdDraw.setGuiGraph(this);
 		paint();
 	}

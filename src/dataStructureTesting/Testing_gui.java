@@ -11,6 +11,7 @@ import MYdataStructure.node_data;
 import algorithms.Graph_Algo;
 import algorithms.graph_algorithms;
 import gui.Gui_Graph;
+import gui.Gui_Graph1;
 import utils.Point3D;
 
 
@@ -21,9 +22,9 @@ public class Testing_gui {
 //			test();
 //			test2();
 //			test3();
-			test4();
+//			test4();
 //			test5();
-//		test6();
+		test6();
 	}
 	
 	
@@ -36,7 +37,7 @@ public class Testing_gui {
 		d.connect(1, 2, 3);
 		d.connect(2, 3, 4);
 		d.connect(3, 1, 1);
-		Gui_Graph graph = new Gui_Graph(d);
+		Gui_Graph1 graph = new Gui_Graph1(d);
 		
 	}
 

@@ -71,30 +71,30 @@ public class SimpleGameClient {
 //		Robot r=new Robot();
 //		r.init(game.toString());
 //		ArrayList<String> Robots= (ArrayList<String>) game.getRobots();
-		MyGameGUI GG= new MyGameGUI(gg);
-		JSONObject line;
-		try {
-			line = new JSONObject(info);
-			JSONObject ttt = line.getJSONObject("GameServer");
-			int rs = ttt.getInt("robots");
-			System.out.println(info);
-			System.out.println(g);
-			// the list of fruits should be considered in your solution
-			Iterator<String> f_iter = game.getFruits().iterator();
-//			while(f_iter.hasNext()) {System.out.println(f_iter.next());}	
-			int src_node = 0;  // arbitrary node, you should start at one of the fruits
-			for(int a = 0;a<rs;a++) {
-				game.addRobot(src_node+a);
-			}
-		}
-		catch (JSONException e) {e.printStackTrace();}
-		game.startGame();
-		// should be a Thread!!!
-		while(game.isRunning()) {
-			moveRobots(game, gg);
-		}
-		String results = game.toString();
-		System.out.println("Game Over: "+results);
+		MyGameGUI GG= new MyGameGUI();
+//		JSONObject line;
+//		try {
+//			line = new JSONObject(info);
+//			JSONObject ttt = line.getJSONObject("GameServer");
+//			int rs = ttt.getInt("robots");
+//			System.out.println(info);
+//			System.out.println(g);
+//			// the list of fruits should be considered in your solution
+//			Iterator<String> f_iter = game.getFruits().iterator();
+////			while(f_iter.hasNext()) {System.out.println(f_iter.next());}	
+//			int src_node = 0;  // arbitrary node, you should start at one of the fruits
+//			for(int a = 0;a<rs;a++) {
+//				game.addRobot(src_node+a);
+//			}
+//		}
+//		catch (JSONException e) {e.printStackTrace();}
+//		game.startGame();
+//		// should be a Thread!!!
+//		while(game.isRunning()) {
+//			moveRobots(game, gg);
+//		}
+//		String results = game.toString();
+//		System.out.println("Game Over: "+results);
 	}
 	/** 
 	 * Moves each of the robots along the edge, 

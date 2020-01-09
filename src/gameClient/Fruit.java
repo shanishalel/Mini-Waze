@@ -10,7 +10,7 @@ import MYdataStructure.node_data;
 import utils.Point3D;
 
 public class Fruit {
-	Hashtable<Integer, Fruit> Fruits = new Hashtable<Integer, Fruit>();
+	
 	int TYPE;
 	int VALUE;
 	Point3D POINT;
@@ -19,10 +19,6 @@ public class Fruit {
 		this.TYPE=TYPE;
 		this.POINT=POINT;
 		this.VALUE= VALUE;
-	}
-	
-	public Collection<Fruit> getF() {
-		return Fruits.values();
 	}
 	
 	public Fruit (int type , int value , Point3D p) {
@@ -77,7 +73,6 @@ public class Fruit {
 				int value = Fruits2.getInt("value");
 				int type =  Fruits2.getInt("type");
 				Fruit f = new Fruit(type, value, p);
-				Fruits.put(value, f);
 		}
 		catch(Exception e) {
 			e.printStackTrace();

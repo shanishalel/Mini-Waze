@@ -67,6 +67,24 @@ public class Robot {
 	public int getValue () {
 		return this.VALUE;
 	}
+	
+	public int getSrc() {
+		return this.SRC;
+	}
+	
+	public void setSrc(int Src) {
+		this.SRC = Src;
+	}
+	
+	public int getDest() {
+		return this.DEST;
+	}
+	
+	public void setDest(int Dest) {
+		this.DEST = Dest;
+	}
+	
+	
 
 	public void init (String s) {
 		try {
@@ -97,13 +115,12 @@ public class Robot {
 						}
 					}
 				}
-				Point3D p = new Point3D(x,y,z);
-				int value = Robots.getInt("value");
-				int id =  Robots.getInt("id");
-				int src = Robots.getInt("src");
-				int dest = Robots.getInt("dest");
-				int speed = Robots.getInt("speed");
-				Robot r = new Robot(p, value,id , src ,dest,speed );
+				this.POINT= new Point3D(x,y,z);
+				this.VALUE = Robots.getInt("value");
+				this.ID =  Robots.getInt("id");
+				this.SRC = Robots.getInt("src");
+				this.DEST = Robots.getInt("dest");
+				this.SPEED = Robots.getInt("speed");
 		}
 		catch(Exception e) {
 			e.printStackTrace();

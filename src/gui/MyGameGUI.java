@@ -64,61 +64,74 @@ public class MyGameGUI  {
 
 
 	public void Scenario() {
-		JFrame input = new JFrame();
-		String s ="";
-		s = JOptionPane.showInputDialog(
-				null, "Please enter a Scenario number between 0-23");
-		int sen=Integer.parseInt(s);
-		if(sen<0 || sen>23) {
-			JOptionPane.showMessageDialog(input, "The number that you entered isn't a Scenario number " );
-		}
-		else {
-			game_service game = Game_Server.getServer(sen); // you have [0,23] games
-			String g = game.getGraph();
-			DGraph gg = new DGraph();
-			gg.init(g);
-			this.graph =gg;
-			String info = game.toString();
-			// fruit
-			Fruit f = new Fruit();
-			for (String  fruit : game.getFruits()) {
-				f.init(fruit);
-			Point3D p_f	=f.getPoint3D();
-				fruits.put(p_f, f);
+		try {
+			JFrame input = new JFrame();
+			String s ="";
+			s = JOptionPane.showInputDialog(
+					null, "Please enter a Scenario number between 0-23");
+			int sen=Integer.parseInt(s);
+			if(sen<0 || sen>23) {
+				JOptionPane.showMessageDialog(input, "The number that you entered isn't a Scenario number " );
 			}
-			//robot
-			Robot r=new Robot();
-			JSONObject obj = new JSONObject(s);
-			JSONObject Robot =obj.getJSONObject("GameServer");
-			int robot = Robot.getInt("robots");
-			r.init(game.toString());		
-			Collection<node_data> node = graph.getV();
-			int size = node.size();
-			for (Robot robot : rob) {
+			else {
+				game_service game = Game_Server.getServer(sen); // you have [0,23] games
+				String g = game.getGraph();
+				DGraph gg = new DGraph();
+				gg.init(g);
+				this.graph =gg;
+				String info = game.toString();
+				// fruit
+				Fruit f = new Fruit();
+				if (fruits == null ) {
+					fruits= new Hashtable<Point3D, Fruit>();
+				}
+				for (String  fruit : game.getFruits()) {
+					f.init(fruit);
+					Point3D p_f	=f.getPoint3D();
+					fruits.put(p_f, f);
+				}
+				//robot
+				Robot r=new Robot();
+				JSONObject obj = new JSONObject(info);
+				JSONObject Robot =obj.getJSONObject("GameServer");
+				int robot = Robot.getInt("robots");
+				Collection<node_data> node = graph.getV();
+				int size = node.size();
 				int rnd = 0;
-				do {
-					rnd = (int) (Math.random()*size);
-					if (graph.getNode(rnd) != null) {
-						Point3D po = graph.getNode(rnd).getLocation();
-						robot.setPoint3D(po);
-						game.addRobot(rnd);
-						robots.put(rnd, r);
-					}
-				} while (graph.getNode(rnd) == null);
+				if (robots == null ) {
+					robots = new Hashtable<Integer, Robot>();
+				}
+				for ( int i =0 ; i < robot ; i++) {
+					do {
+						rnd = (int) (Math.random()*size);
+						if (graph.getNode(rnd) != null) {
+							Point3D po = graph.getNode(rnd).getLocation();
+							game.addRobot(rnd);
+						}
+					} while (graph.getNode(rnd) == null);
+				}
+				for (String robo : game.getRobots()) {
+					r.init(robo);
+					int id = r.getID();
+					robots.put(id, r);
+				}
+				initGUI();
+				startGameNow(game, gg);
 			}
-			initGUI();
-//			MyGameGUI GG= new MyGameGUI(gg ,f,r);
-//			startGameNow(game, gg);
+			
 		}
+		catch (Exception e) {
+			// TODO: handle exception
+		}			
 	}
 
-	public static void startGameNow(game_service game ,graph gg) {
+	public void startGameNow(game_service game ,graph gg) {
 		game.startGame();
 		while(game.isRunning()) {
 			moveRobots(game , gg);
 		}
 	}
-	private static void moveRobots(game_service game, graph gg) {
+	private void moveRobots(game_service game, graph gg) {
 		List<String> log = game.move();
 		if(log!=null) {
 			long t = game.timeToEnd();
@@ -128,21 +141,27 @@ public class MyGameGUI  {
 					JSONObject line = new JSONObject(robot_json);
 					JSONObject ttt = line.getJSONObject("Robot");
 					int rid = ttt.getInt("id");
+					Robot r =robots.get(rid);
 					int src = ttt.getInt("src");
+					r.setSrc(src);
+//					r.setPoint3D(graph.getNode(src).getLocation());
 					int dest = ttt.getInt("dest");
-				
+					r.setDest(dest);
+					
 					if(dest==-1) {	
 						dest = nextNode(gg, src);
 						game.chooseNextEdge(rid, dest);
+						r.setPoint3D(graph.getNode(dest).getLocation());
 						System.out.println("Turn to node: "+dest+"  time to end:"+(t/1000));
 						System.out.println(ttt);
 					}
+					paint();
 				} 
 				catch (JSONException e) {e.printStackTrace();}
 			}
 		}
 	}
-	
+
 	private static int nextNode(graph g, int src) {
 		int ans = -1;
 		Collection<edge_data> ee = g.getE(src);
@@ -160,6 +179,7 @@ public class MyGameGUI  {
 	 * this function will paint the graph
 	 */
 	public void paint() {
+		StdDrawGame.clear();
 		if(this.graph !=null) {
 			Collection <node_data> Nodes = this.graph.getV();
 			for (node_data node_data : Nodes) {
@@ -202,27 +222,33 @@ public class MyGameGUI  {
 
 				}
 			}
+			paintFruit();
+			paintRobot();
+			StdDrawGame.show();
 		}
 	}
 
 	public void paintFruit() {
 		if ( this.fruits != null ) {
 			Set <Point3D> set = fruits.keySet();
-			for (Point3D fruit : set) {
-				Fruit fru = fruits.get(set);
-				Point3D p = fru.getPoint3D();
+			for (Point3D p3 : set) {
+				Fruit fru = fruits.get(p3);
+//				Point3D po = fru.getPoint3D();
+				if (fru.getType() == -1) {
 				StdDrawGame.setPenColor(Color.RED);
-				StdDrawGame.filledCircle(p.x(), p.y(), 0.0001); //nodes in orange
-				StdDrawGame.setPenColor(Color.BLACK);
-				StdDrawGame.text(p.x(), p.y()+(p.y()*0.000004) , (Integer.toString(fru.getValue())));
+				StdDrawGame.filledCircle(p3.x(), p3.y(), 0.0001);
+				}
+				else {
+					StdDrawGame.setPenColor(Color.CYAN);
+					StdDrawGame.filledCircle(p3.x(), p3.y(), 0.0001);
+				}
+//				StdDrawGame.setPenColor(Color.BLACK);
+//				StdDrawGame.text(p3.x(), p3.y()+(p3.y()*0.000004) , (Integer.toString(fru.getValue())));
 			}
-
-
 		}
-
 	}
-	
-	
+
+
 
 	public void moveRobot(game_service game ) {
 		Thread t= new Thread(new Runnable() {
@@ -241,7 +267,7 @@ public class MyGameGUI  {
 		if(this.robots!=null) {
 			Set <Integer> set = robots.keySet();
 			for (Integer robot : set) {
-				Robot robo = robots.get(set);
+				Robot robo = robots.get(robot);
 				Point3D p = robo.getPoint3D();
 				StdDrawGame.setPenColor(Color.GREEN);
 				StdDrawGame.filledCircle(p.x(), p.y(), 0.0001); //nodes in orange
@@ -253,7 +279,8 @@ public class MyGameGUI  {
 	}
 
 	public void initGUI() {
-		StdDrawGame.setCanvasSize(600, 600);
+		StdDrawGame.setCanvasSize(800, 600);
+		StdDrawGame.enableDoubleBuffering();
 		double X_min = Integer.MAX_VALUE;
 		double X_max = Integer.MIN_VALUE;
 		double Y_min = Integer.MAX_VALUE;
@@ -261,29 +288,27 @@ public class MyGameGUI  {
 
 		// rescale the coordinate system
 		if (graph != null) {
-		Collection<node_data> nodes=graph.getV();   
-		for(node_data node:nodes) {
-			if(node.getLocation().x()>X_max) {
-				X_max=(node.getLocation().x());
-			}
-			if(node.getLocation().x()<X_min) {
-				X_min=(node.getLocation().x());
-			}
-			if(node.getLocation().y()>Y_max) {
-				Y_max=(node.getLocation().y());
-			}
-			if(node.getLocation().y()<Y_min) {
-				Y_min=(node.getLocation().y());
-			}
+			Collection<node_data> nodes=graph.getV();   
+			for(node_data node:nodes) {
+				if(node.getLocation().x()>X_max) {
+					X_max=(node.getLocation().x());
+				}
+				if(node.getLocation().x()<X_min) {
+					X_min=(node.getLocation().x());
+				}
+				if(node.getLocation().y()>Y_max) {
+					Y_max=(node.getLocation().y());
+				}
+				if(node.getLocation().y()<Y_min) {
+					Y_min=(node.getLocation().y());
+				}
 
-		}	
+			}	
 		}
 		StdDrawGame.setXscale(X_min, X_max);
 		StdDrawGame.setYscale(Y_min, Y_max);
 		StdDrawGame.setGuiGraph(this);
 		paint();
-		paintFruit();
-		paintRobot();
 	}
 
 

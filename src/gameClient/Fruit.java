@@ -7,24 +7,27 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import MYdataStructure.node_data;
+import MYdataStructure.*;
 import utils.Point3D;
 
 public class Fruit {
-	
+	graph graph;
 	int TYPE;
 	int VALUE;
 	Point3D POINT;
 	
 	public Fruit () {
+		this.graph=graph;
 		this.TYPE=TYPE;
 		this.POINT=POINT;
 		this.VALUE= VALUE;
 	}
 	
-	public Fruit (int type , int value , Point3D p) {
+	public Fruit (int type , int value , Point3D p ,  graph graph) {
+		this.graph=graph;
 		this.VALUE=value;
 		this.TYPE=type;
-		this.POINT=p;
+		this.POINT= new Point3D(p);
 	}
 	
 	public Point3D getPoint3D () {
@@ -70,9 +73,10 @@ public class Fruit {
 					}
 				}
 				Point3D p = new Point3D(x,y,z);
-				int value = Fruits2.getInt("value");
-				int type =  Fruits2.getInt("type");
-				Fruit f = new Fruit(type, value, p);
+				this.VALUE = Fruits2.getInt("value");
+				this.TYPE =  Fruits2.getInt("type");
+				this.POINT=new Point3D(p);
+//				Fruit f = new Fruit(type, value, p);
 		}
 		catch(Exception e) {
 			e.printStackTrace();

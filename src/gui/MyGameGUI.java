@@ -121,7 +121,7 @@ public class MyGameGUI  {
 			
 		}
 		catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}			
 	}
 
@@ -132,7 +132,9 @@ public class MyGameGUI  {
 		}
 	}
 	private void moveRobots(game_service game, graph gg) {
+		double x=0,y=0,z=0,counter=0;
 		List<String> log = game.move();
+		List<String> rob = game.getRobots();
 		if(log!=null) {
 			long t = game.timeToEnd();
 			for(int i=0;i<log.size();i++) {
@@ -158,6 +160,22 @@ public class MyGameGUI  {
 					paint();
 				} 
 				catch (JSONException e) {e.printStackTrace();}
+			}
+			Robot r=new Robot();
+			robots.clear();
+			for (String robo : game.getRobots()) {
+				r.init(robo);
+				int id = r.getID();
+				robots.put(id, r);
+				paint();
+			}
+			Fruit f = new Fruit();
+			fruits.clear();
+			for (String  fruit : game.getFruits()) {
+				f.init(fruit);
+				Point3D p_f	=f.getPoint3D();
+				fruits.put(p_f, f);
+				paint();
 			}
 		}
 	}

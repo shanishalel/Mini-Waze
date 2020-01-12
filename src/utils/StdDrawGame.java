@@ -720,43 +720,15 @@ public final class StdDrawGame implements ActionListener, MouseListener, MouseMo
 	private static JMenuBar createMenuBar() {
 		JMenuBar menuBar = new JMenuBar();
 		JMenu menu1 = new JMenu("Play");
-//		JMenu menu2 = new JMenu("Scenario");
 		
 		menuBar.add(menu1);
-//		menuBar.add(menu2);
 		JMenuItem menuItem1 = new JMenuItem("Play automatic");
 		JMenuItem menuItem2 = new JMenuItem("Play Manual");
 		menuItem1.addActionListener(std);
 		menuItem2.addActionListener(std);
 		menu1.add(menuItem1);
 		menu1.add(menuItem2);
-		
-		JMenuItem menuItem3 = new JMenuItem("Scenario");
-//		JMenuItem menuItem4 = new JMenuItem("Is Connected");
-//		JMenuItem menuItem5 = new JMenuItem("Shortest Path Dist");
-//		JMenuItem menuItem6 = new JMenuItem("Shortest Path");
-//		JMenuItem menuItem7 = new JMenuItem("TSP");
-		menuItem3.addActionListener(std);
-//		menuItem4.addActionListener(std);
-//		menuItem5.addActionListener(std);
-//		menuItem6.addActionListener(std);
-//		menuItem7.addActionListener(std);
-		menu1.add(menuItem3);
-//		menu2.add(menuItem4);
-//		menu2.add(menuItem5);
-//		menu2.add(menuItem6);
-//		menu2.add(menuItem7);
-		
 
-
-
-
-
-
-
-
-
-		
 		return menuBar;
 	}
 
@@ -1796,7 +1768,10 @@ public static void setGuiGraph(MyGameGUI Gui) {
 	 */
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		// this body is intentionally left empty
+		double x =  mouseX();
+		double y = mouseY();
+		MyGameGUI.setXY(x,y);
+
 	}
 
 	/**

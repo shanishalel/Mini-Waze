@@ -6,11 +6,11 @@ import java.util.Hashtable;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import MYdataStructure.node_data;
 import MYdataStructure.*;
 import utils.Point3D;
 
 public class Fruit {
+	static double EPS= 0.0000001;
 	graph graph;
 	edge_data edge;
 	int TYPE;
@@ -113,6 +113,26 @@ public class Fruit {
 		}
 		catch(Exception e) {
 			e.printStackTrace();
+		}
+	}
+	
+	
+	public static void findFruitPlace(graph gg , Fruit f) {
+		Point3D p = f.getPoint3D();
+		Collection <node_data> Nodes = gg.getV();
+		for (node_data node_data : Nodes) {
+			Collection<edge_data> neighbors=gg.getE(node_data.getKey());
+			for (edge_data edge_data : neighbors) {
+				double x = Math.abs(node_data.getLocation().x() - p.x());
+				int dest = edge_data.getDest();
+				double x2 =Math.abs(gg.getNode(dest).getLocation().x() - p.x());
+				double xAll = Math.abs(gg.getNode(dest).getLocation().x() - node_data.getLocation().x());
+				if (Math.abs((x2+x) - xAll )<= EPS) {
+					f.setDest(dest);
+					f.setSrc(node_data.getKey());
+					f.setEdge(edge_data);
+				}
+			}
 		}
 	}
 }

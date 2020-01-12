@@ -12,22 +12,31 @@ import utils.Point3D;
 
 public class Fruit {
 	graph graph;
+	edge_data edge;
 	int TYPE;
 	int VALUE;
 	Point3D POINT;
+	int DEST;
+	int SRC;
 	
 	public Fruit () {
 		this.graph=graph;
+		this.edge = edge;
 		this.TYPE=TYPE;
 		this.POINT=POINT;
 		this.VALUE= VALUE;
+		this.SRC =SRC;
+		this.DEST=DEST;
 	}
 	
 	public Fruit (int type , int value , Point3D p ,  graph graph) {
 		this.graph=graph;
+		this.edge = edge;
 		this.VALUE=value;
 		this.TYPE=type;
 		this.POINT= new Point3D(p);
+		this.SRC =SRC;
+		this.DEST=DEST;
 	}
 	
 	public Point3D getPoint3D () {
@@ -40,6 +49,30 @@ public class Fruit {
 	
 	public int getType() {
 		return this.TYPE;
+	}
+	
+	public int getSrc () {
+		return this.SRC;
+	}
+	
+	public void setSrc(int Src) {
+		this.SRC =Src;
+	}
+	
+	public int getDest() {
+		return this.DEST;
+	}
+	
+	public void setDest(int Dest) {
+		this.DEST = Dest;
+	}
+	
+	public edge_data getEdge() {
+		return this.edge;
+	}
+	
+	public void setEdge(edge_data Edge) {
+		this.edge = Edge;
 	}
 	
 

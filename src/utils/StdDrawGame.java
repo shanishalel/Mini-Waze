@@ -1684,12 +1684,23 @@ public final class StdDrawGame implements ActionListener, MouseListener, MouseMo
 	}
 	
 	static Thread t;
-	public static void threadpaint() {
+	public static void threadPlatManu() {
 		t = new Thread(new Runnable() {
 			
 			@Override
 			public void run() {
-				MyGameGUI.Scenario();
+				MyGameGUI.PlayManual();
+				t.interrupt();
+			}
+		});
+		t.start();
+	}
+	public static void threadPlayAuto() {
+		t = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				MyGameGUI.Playautomatic();
 				t.interrupt();
 			}
 		});
@@ -1713,9 +1724,11 @@ public static void setGuiGraph(MyGameGUI Gui) {
 //		}
 		
 		String str = e.getActionCommand();
-		if ( str.equals("Scenario")){
-			threadpaint();
-			
+		if ( str.equals("Play automatic")){
+			threadPlayAuto();
+		}
+		else if (str.equals("Play Manual") ) {
+			threadPlatManu();
 		}
 		
 //		switch(str) {

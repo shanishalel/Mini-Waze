@@ -9,6 +9,25 @@ import org.json.JSONObject;
 import MYdataStructure.*;
 import utils.Point3D;
 
+
+
+/**
+ * This class represent fruit struct that have 2 types of fruit : 
+ 	1- that represent a fruit from high to low and -1 - that represent a fruit from low to high . 
+ 	every fruit have :
+ 	graph graph;
+	edge_data edge;
+	int TYPE;
+	int VALUE;
+	Point3D POINT;
+	int DEST;
+	int SRC;
+	
+	this class contains the following methods :
+	counstructors, 
+ * @author USER
+ *
+ */
 public class Fruit {
 	static double EPS= 0.0000001;
 	graph graph;
@@ -19,6 +38,9 @@ public class Fruit {
 	int DEST;
 	int SRC;
 	
+	/**
+	  *This function is the default counstrctor 
+	  */
 	public Fruit () {
 		this.graph=graph;
 		this.edge = edge;
@@ -29,6 +51,13 @@ public class Fruit {
 		this.DEST=DEST;
 	}
 	
+	/**
+	 * This function is cunstrctor
+	 * @param type - the type of the fruit (1 or -1)
+	 * @param value - represent the key value
+	 * @param p - represent the location f p 
+	 * @param graph - this represent the graph
+	 */
 	public Fruit (int type , int value , Point3D p ,  graph graph) {
 		this.graph=graph;
 		this.edge = edge;
@@ -39,43 +68,83 @@ public class Fruit {
 		this.DEST=DEST;
 	}
 	
+	/**
+	 * get the point
+	 * @return
+	 */
 	public Point3D getPoint3D () {
 		return this.POINT;
 	}
 	
+	/**
+	 * get the value
+	 * @return
+	 */
 	public int getValue () {
 		return this.VALUE;
 	}
 	
+	/**
+	 * get the type
+	 * @return
+	 */
 	public int getType() {
 		return this.TYPE;
 	}
 	
+	/**
+	 * get the src
+	 * @return
+	 */
 	public int getSrc () {
 		return this.SRC;
 	}
 	
+	/**
+	 * set the src
+	 * @param Src
+	 */
 	public void setSrc(int Src) {
 		this.SRC =Src;
 	}
 	
+	/**
+	 * get the dest
+	 * @return
+	 */
 	public int getDest() {
 		return this.DEST;
 	}
-	
+
+	/**
+	 * set the dest 
+	 * @param Dest
+	 */
 	public void setDest(int Dest) {
 		this.DEST = Dest;
 	}
 	
+	/**
+	 * get the edge
+	 * @return
+	 */
 	public edge_data getEdge() {
 		return this.edge;
 	}
 	
+	
+	/**
+	 *set the edge 
+	 * @param Edge
+	 */
 	public void setEdge(edge_data Edge) {
 		this.edge = Edge;
 	}
 	
-
+	 /**
+	  * This function init a fruit from the string s by reading from the json 
+	  * @param s
+	  */
 	public void init(String s) {
 		try {
 			double x=0,y=0,z=0,counter=0;
@@ -109,14 +178,17 @@ public class Fruit {
 				this.VALUE = Fruits2.getInt("value");
 				this.TYPE =  Fruits2.getInt("type");
 				this.POINT=new Point3D(p);
-//				Fruit f = new Fruit(type, value, p);
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	
+	/**
+	 * This function gets graph and fruit and set the dest, src and edge 
+	 * @param gg
+	 * @param f
+	 */
 	public static void findFruitPlace(graph gg , Fruit f) {
 		Point3D p = f.getPoint3D();
 		Collection <node_data> Nodes = gg.getV();

@@ -37,6 +37,7 @@ public class Fruit {
 	Point3D POINT;
 	int DEST;
 	int SRC;
+	boolean VISITED;
 	
 	/**
 	  *This function is the default counstrctor 
@@ -49,6 +50,7 @@ public class Fruit {
 		this.VALUE= VALUE;
 		this.SRC =SRC;
 		this.DEST=DEST;
+		this.VISITED=VISITED;
 	}
 	
 	/**
@@ -66,6 +68,7 @@ public class Fruit {
 		this.POINT= new Point3D(p);
 		this.SRC =SRC;
 		this.DEST=DEST;
+		this.VISITED=VISITED;
 	}
 	
 	/**
@@ -139,6 +142,14 @@ public class Fruit {
 	 */
 	public void setEdge(edge_data Edge) {
 		this.edge = Edge;
+	}
+	
+	public boolean getVisited() {
+		return this.VISITED;
+	}
+	
+	public void setVisited(boolean Visited) {
+		this.VISITED=Visited;
 	}
 	
 	 /**

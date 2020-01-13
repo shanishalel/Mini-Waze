@@ -111,11 +111,11 @@ public class MyGameGUI  {
 				this.graph =gg;
 				String info = game.toString();
 				// fruit
-				Fruit f = new Fruit();
 				if (fruits == null ) {
 					fruits= new Hashtable<Point3D, Fruit>();
 				}
 				for (String  fruit : game.getFruits()) {
+					Fruit f = new Fruit();
 					f.init(fruit);
 					Point3D p_f	=f.getPoint3D();
 					f.findFruitPlace(gg , f);
@@ -136,11 +136,11 @@ public class MyGameGUI  {
 				Set <Point3D> allFruits = fruits.keySet();
 				for (Point3D Point : allFruits) {
 					if (counter < fruits.size()) {
-						if (counter > amountRobot ) {
+						if (counter >= amountRobot ) {
 							break;
 						}
 						Fruit placeFruit = fruits.get(Point);
-						game.addRobot(placeFruit.getDest());
+						game.addRobot(placeFruit.getSrc());
 						counter++;
 					}
 					else {
@@ -154,9 +154,10 @@ public class MyGameGUI  {
 					}
 				}
 				for (String robo : game.getRobots()) {
-					r.init(robo);
-					int id = r.getID();
-					robots.put(id, r);
+					Robot ro = new Robot();
+					ro.init(robo);
+					int id = ro.getID();
+					robots.put(id, ro);
 				}
 				initGUI();
 				moveManual(game);
@@ -189,11 +190,11 @@ public class MyGameGUI  {
 				this.graph =gg;
 				String info = game.toString();
 				// fruit
-				Fruit f = new Fruit();
 				if (fruits == null ) {
 					fruits= new Hashtable<Point3D, Fruit>();
 				}
 				for (String  fruit : game.getFruits()) {
+					Fruit f = new Fruit();
 					f.init(fruit);
 					Point3D p_f	=f.getPoint3D();
 					f.findFruitPlace(gg , f);
@@ -214,7 +215,7 @@ public class MyGameGUI  {
 				Set <Point3D> allFruits = fruits.keySet();
 				for (Point3D Point : allFruits) {
 					if (counter < fruits.size()) {
-						if (counter > amountRobot ) {
+						if (counter >= amountRobot ) {
 							break;
 						}
 						Fruit placeFruit = fruits.get(Point);
@@ -233,9 +234,10 @@ public class MyGameGUI  {
 					}
 				}
 				for (String robo : game.getRobots()) {
-					r.init(robo);
-					int id = r.getID();
-					robots.put(id, r);
+					Robot ro = new Robot();
+					ro.init(robo);
+					int id = ro.getID();
+					robots.put(id, ro);
 				}
 				initGUI();
 				startGameNow(game, gg);
@@ -257,9 +259,9 @@ public class MyGameGUI  {
 	public void startGameNow(game_service game ,graph gg) {
 		game.startGame();
 		while(game.isRunning()) {
-			moveRobots(game , gg);
-
+			smartMove(game , gg);
 		}
+		System.out.println(game.toString());
 	}
 
 	/**
@@ -268,52 +270,75 @@ public class MyGameGUI  {
 	 * @param gg
 	 */
 	private void smartMove(game_service game, graph gg) {
+		double min =Integer.MAX_VALUE , temp=0;
+		List<node_data> ListGr = new ArrayList<node_data>();
+		Graph_Algo graphA = new Graph_Algo(gg);
 		List<String> log = game.move();
 		if(log!=null) {
-			long t = game.timeToEnd();
-			for(int i=0;i<log.size();i++) {
-				String robot_json = log.get(i);
-				try {
-					JSONObject line = new JSONObject(robot_json);
-					JSONObject ttt = line.getJSONObject("Robot");
-					int rid = ttt.getInt("id");
-					Robot r =robots.get(rid);
-					int src = ttt.getInt("src");
-					r.setSrc(src);
-					int dest = ttt.getInt("dest");
-					r.setDest(dest);
-
-					if(dest==-1) {	
-						dest = nextNode(gg, src);
-						game.chooseNextEdge(rid, dest);
-						r.setPoint3D(graph.getNode(dest).getLocation());
-						System.out.println("Turn to node: "+dest+"  time to end:"+(t/1000));
-						System.out.println(ttt);
+			//				long t = game.timeToEnd();
+			//				for(int i=0;i<log.size();i++) {
+			//					String robot_json = log.get(i);
+			try {
+				String info = game.toString();
+				JSONObject obj = new JSONObject(info);
+				JSONObject Robot =obj.getJSONObject("GameServer");
+				int amountRobot = Robot.getInt("robots");
+				int counter=0;
+				Set <Point3D> allFruits = fruits.keySet();
+				Fruit temp_f = new Fruit();
+				while ( counter < amountRobot) {
+					System.out.println("ok");
+					Robot ro = robots.get(counter);
+					for (Point3D point3d : allFruits) {
+						Fruit fo = fruits.get(point3d);
+						temp = graphA.shortestPathDist(ro.getSrc(), fo.getSrc());
+						if ( temp < min && !fo.getVisited()) {
+							temp_f = fo;
+							min = temp;
+							ListGr = graphA.shortestPath(ro.getSrc(), fo.getSrc());
+							ListGr.add(gg.getNode(fo.getDest()));
+						}
 					}
-				} 
-				catch (JSONException e) {e.printStackTrace();}
-			}
-			// robot move 
-			Robot r=new Robot();
-			robots.clear();
-			for (String robo : game.getRobots()) {
-				r.init(robo);
-				int id = r.getID();
-				robots.put(id, r);
-			}
-			// fruit move if its eaten
-			Fruit f = new Fruit();
-			fruits.clear();
-			for (String  fruit : game.getFruits()) {
-				f.init(fruit);
-				Point3D p_f	=f.getPoint3D();
-				fruits.put(p_f, f);
-			}
-
-			paint();
+					temp_f.setVisited(true);
+					ListGr.remove(0);
+					for (int j = 0; j < ListGr.size(); j++) {
+						node_data temp_node = ListGr.get(j);
+						int destGo = temp_node.getKey();
+						Point3D po = temp_node.getLocation();
+						ro.setPoint3D(po);
+						ro.setSrc( temp_node.getKey());
+						game.chooseNextEdge(ro.getID(), destGo);
+						System.out.println(destGo);
+//						System.out.println(game.timeToEnd()/1000);
+					}
+					counter++;
+				}
+				counter=0;
+			} 
+			catch (JSONException e) {e.printStackTrace();}
 		}
-
+		// robot move 
+		Robot r=new Robot();
+		robots.clear();
+		for (String robo : game.getRobots()) {
+			r.init(robo);
+			int id = r.getID();
+			robots.put(id, r);
+		}
+		Fruit f = new Fruit();
+		// fruit move if its eaten
+		fruits.clear();
+		for (String  fruit : game.getFruits()) {
+			f.init(fruit);
+			Point3D p_f	=f.getPoint3D();
+			f.findFruitPlace(gg , f);
+			fruits.put(p_f, f);
+		}
+		game.move();
+		paint();
 	}
+
+	//		}
 
 	/**
 	 * This function moving the robots by the automatic game
@@ -450,11 +475,12 @@ public class MyGameGUI  {
 					robots.put(id, r);
 				}
 				// fruit move if its eaten
-				Fruit f = new Fruit();
 				fruits.clear();
 				for (String  fruit : game.getFruits()) {
+					Fruit f = new Fruit();
 					f.init(fruit);
 					Point3D p_f	=f.getPoint3D();
+					f.findFruitPlace(graph , f);
 					fruits.put(p_f, f);
 				}
 				long t = game.timeToEnd();
@@ -478,10 +504,7 @@ public class MyGameGUI  {
 						Point3D po = node_edge.getLocation();
 						if ( ((po.x()+0.0001)-(this.x+0.0001)<= 0.0001) && ((po.y()+0.00001)-(this.y+0.0001)<= 0.00001 ) ){
 							r.setPoint3D(po);
-							r.setSrc(node_edge.getKey());
-
-
-
+							r.setDest(node_edge.getKey());
 							game.chooseNextEdge(r.getID(), node_edge.getKey());
 							isRobot =false;
 							this.x=0;
@@ -614,8 +637,8 @@ public class MyGameGUI  {
 				Point3D p = robo.getPoint3D();
 				StdDrawGame.setPenColor(Color.GREEN);
 				StdDrawGame.filledCircle(p.x(), p.y(), 0.0001); //nodes in orange
-				StdDrawGame.setPenColor(Color.BLACK);
-				StdDrawGame.text(p.x(), p.y()+(p.y()*0.000004) , (Integer.toString(robo.getValue())));
+				//				StdDrawGame.setPenColor(Color.BLACK);
+				//				StdDrawGame.text(p.x(), p.y()+(p.y()*0.000004) , (Integer.toString(robo.getValue())));
 			}
 
 		}

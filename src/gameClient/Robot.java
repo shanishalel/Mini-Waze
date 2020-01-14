@@ -7,6 +7,7 @@ import java.util.Hashtable;
 
 import org.json.JSONObject;
 
+import MYdataStructure.node_data;
 import utils.Point3D;
 
 /**
@@ -211,13 +212,16 @@ public class Robot {
 			e.printStackTrace();
 		}
 		
-		
-		
-		
-
 	}
 	
-
+	public boolean IsDone(node_data dest) {
+			boolean IsDone=false;
+			if(this.getPoint3D()==dest.getLocation()) {
+				IsDone=true;
+			}
+			return IsDone;
+		
+	}
 
 
 

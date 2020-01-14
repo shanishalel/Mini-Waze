@@ -270,7 +270,7 @@ public class MyGameGUI  {
 	 * @param gg
 	 */
 	private void smartMove(game_service game, graph gg) {
-		double min =Integer.MAX_VALUE , temp=0;
+//		double min =Integer.MAX_VALUE , temp=0;
 		List<node_data> ListGr = new ArrayList<node_data>();
 		Graph_Algo graphA = new Graph_Algo(gg);
 		List<String> log = game.move();
@@ -281,35 +281,38 @@ public class MyGameGUI  {
 				JSONObject Robot =obj.getJSONObject("GameServer");
 				int amountRobot = Robot.getInt("robots");
 				int counter=0;
-				Set <Point3D> allFruits = fruits.keySet();
-				Fruit temp_f = new Fruit();
+				//				Set <Point3D> allFruits = fruits.keySet();
+//				Fruit temp_f = new Fruit();
 				while ( counter < amountRobot) {
 					Robot ro = robots.get(counter);
-					for (Point3D point3d : allFruits) {
-						Fruit fo = fruits.get(point3d);
-						temp = graphA.shortestPathDist(ro.getSrc(), fo.getSrc());
-						if ( temp < min && fo.getVisited() == false) {
-							temp_f = fo;
-							min = temp;
-							ListGr = graphA.shortestPath(ro.getSrc(), fo.getSrc());
-							ListGr.add(gg.getNode(fo.getDest()));
-						}
-					}
-					temp_f.setVisited(true);
-					if (ListGr.size() != 0 ) {
-					ListGr.remove(0);
-					}
-					for (int j = 0; j < ListGr.size(); j++) {
-						node_data temp_node = ListGr.get(j);
-						int destGo = temp_node.getKey();
-						Point3D po = temp_node.getLocation();
-						ro.setPoint3D(po);
-						ro.setSrc( temp_node.getKey());
-						game.chooseNextEdge(ro.getID(), destGo);
-						System.out.println(ro.getID()+" "+destGo);
-						
-//						System.out.println(game.timeToEnd()/1000);
-					}
+					ListGr=SetPath ( game,  gg, ro,  graphA);
+					MoveRobot( game,  gg,  ro,  graphA, ListGr);
+					
+					//					for (Point3D point3d : allFruits) {
+					//						Fruit fo = fruits.get(point3d);
+					//						temp = graphA.shortestPathDist(ro.getSrc(), fo.getSrc());
+					//						if ( temp < min && fo.getVisited() == false) {
+					//							temp_f = fo;
+					//							min = temp;
+					//							ListGr = graphA.shortestPath(ro.getSrc(), fo.getSrc());
+					//							ListGr.add(gg.getNode(fo.getDest()));
+					//						}
+					//					}
+//					temp_f.setVisited(true);
+//					if (ListGr.size() != 0 ) {
+//						ListGr.remove(0);
+//					}
+//					for (int j = 0; j < ListGr.size(); j++) {
+//						node_data temp_node = ListGr.get(j);
+//						int destGo = temp_node.getKey();
+//						Point3D po = temp_node.getLocation();
+//						ro.setPoint3D(po);
+//						ro.setSrc( temp_node.getKey());
+//						game.chooseNextEdge(ro.getID(), destGo);
+						//						System.out.println(ro.getID()+" "+destGo);
+						//						
+						////						System.out.println(game.timeToEnd()/1000);
+//					}
 					counter++;
 				}
 				//counter=0;
@@ -323,8 +326,60 @@ public class MyGameGUI  {
 		game.move();
 		paint();
 	}
-	
-	
+
+	/**
+	 * This function return the path that the robot should
+	 *  go to ,to get the fruit
+	 * @param game
+	 * @param gg
+	 * @param dest
+	 * @param ro
+	 * @param graphA
+	 * @return
+	 */
+	private List<node_data> SetPath (game_service game, MYdataStructure.graph gg, Robot ro, Graph_Algo graphA) {
+		double min =Integer.MAX_VALUE , temp=0;
+		List<node_data> ListGr = new ArrayList<node_data>();
+		Set <Point3D> allFruits = fruits.keySet();
+		Fruit temp_f = new Fruit();
+		for (Point3D point3d : allFruits) {
+			Fruit fo = fruits.get(point3d);
+			temp = graphA.shortestPathDist(ro.getSrc(), fo.getSrc());
+			if ( temp < min && fo.getVisited() == false) {
+				temp_f = fo;
+				min = temp;
+				ListGr = graphA.shortestPath(ro.getSrc(), fo.getSrc());
+				ListGr.add(gg.getNode(fo.getDest()));
+			}			
+		}
+		return ListGr;
+
+	}
+
+	/**
+	 * this function will move the robots by the path she gets
+	 * @param game
+	 * @param gg
+	 * @param ro
+	 * @param graphA
+	 * @param ListGr
+	 */
+	private void MoveRobot(game_service game, MYdataStructure.graph gg, Robot ro, Graph_Algo graphA, List<node_data> ListGr) {
+		Fruit temp_f = new Fruit();
+		temp_f.setVisited(true);
+		if (ListGr.size() != 0 ) {
+			ListGr.remove(0);
+		}
+		for (int j = 0; j < ListGr.size(); j++) {
+			node_data temp_node = ListGr.get(j);
+			int destGo = temp_node.getKey();
+			Point3D po = temp_node.getLocation();
+			ro.setPoint3D(po);
+			ro.setSrc( temp_node.getKey());
+			game.chooseNextEdge(ro.getID(), destGo);
+		}
+	}
+
 	private void reRobot(game_service game, MYdataStructure.graph gg) {
 		robots.clear();
 		for (String robo : game.getRobots()) {
@@ -333,7 +388,7 @@ public class MyGameGUI  {
 			int id = r.getID();
 			robots.put(id, r);
 		}
-		
+
 	}
 
 	private void reFruit(game_service game, MYdataStructure.graph gg) {
@@ -451,7 +506,7 @@ public class MyGameGUI  {
 						}
 					}
 				}
-//				paintFruit();
+				//				paintFruit();
 				game.move();
 				paint();
 			}

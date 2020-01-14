@@ -206,17 +206,25 @@ public class Fruit {
 		for (node_data node_data : Nodes) {
 			Collection<edge_data> neighbors=gg.getE(node_data.getKey());
 			for (edge_data edge_data : neighbors) {
-				double x = Math.abs(node_data.getLocation().x() - p.x());
+				double dis1 = distans(node_data.getLocation().x() , node_data.getLocation().y(), p.x() , p.y());
 				int dest = edge_data.getDest();
-				double x2 =Math.abs(gg.getNode(dest).getLocation().x() - p.x());
-				double xAll = Math.abs(gg.getNode(dest).getLocation().x() - node_data.getLocation().x());
-				if (Math.abs((x2+x) - xAll )<= EPS) {
+				double dis2 = distans(gg.getNode(dest).getLocation().x() , gg.getNode(dest).getLocation().y() ,p.x() , p.y());
+				double dis_All = distans(node_data.getLocation().x() , node_data.getLocation().y() ,gg.getNode(dest).getLocation().x() , gg.getNode(dest).getLocation().y() );	
+				if (Math.abs((dis1+dis2) - dis_All)<= EPS) {
 					f.setDest(dest);
 					f.setSrc(node_data.getKey());
 					f.setEdge(edge_data);
 				}
 			}
 		}
+	}
+
+	private static double distans(double x, double y, double x2, double y2) {
+		double x_dis = Math.pow((x-x2), 2);
+		double y_dis = Math.pow((y-y2), 2);
+		double dis = Math.sqrt((x_dis + y_dis));
+		return dis;
+		
 	}
 }
 

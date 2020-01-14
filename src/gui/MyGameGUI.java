@@ -323,7 +323,8 @@ public class MyGameGUI  {
 		game.move();
 		paint();
 	}
-
+	
+	
 	private void reRobot(game_service game, MYdataStructure.graph gg) {
 		robots.clear();
 		for (String robo : game.getRobots()) {

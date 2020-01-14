@@ -1,19 +1,13 @@
 package gui;
 
 import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.event.MouseListener;
-import java.awt.geom.Point2D;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Hashtable;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -90,7 +84,29 @@ public class MyGameGUI  {
 		this.graph=g;
 		initGUI();
 	}
-	
+
+	Thread time;
+	public void tiemRun(game_service game) {
+		time = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				while(game.isRunning()) {
+					StdDrawGame.setPenColor(Color.BLACK);
+//					StdDrawGame.text(35.19970089806296, 32.108148348319325,Integer.toString((int)game.timeToEnd()/1000 ));
+					System.out.println(game.timeToEnd()/1000);
+					try{
+						Thread.sleep(1000);
+					}
+					catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		});
+		time.start();
+	}
+
 	/**
 	 * This function is play the manual choice and send it to move manual
 	 */
@@ -258,11 +274,22 @@ public class MyGameGUI  {
 	 * @param gg
 	 */
 	public void startGameNow(game_service game ,graph gg) {
+		JFrame input = new JFrame();
 		game.startGame();
+		tiemRun(game);
 		while(game.isRunning()) {
 			smartMove(game , gg);
 		}
-		System.out.println(game.toString());
+		try {
+			String info = game.toString();
+			JSONObject obj = new JSONObject(info);
+			JSONObject GameServer =obj.getJSONObject("GameServer");
+			int grade = GameServer.getInt("grade");
+			JOptionPane.showMessageDialog(input, "the game is finished! \n"+ "your score is: " + grade);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -324,8 +351,8 @@ public class MyGameGUI  {
 				ListGr = graphA.shortestPath(ro.getSrc(), fo.getSrc());
 				ListGr.add(gg.getNode(fo.getDest()));
 			}
-			
-			
+
+
 		}
 		return ListGr;
 
@@ -396,6 +423,7 @@ public class MyGameGUI  {
 
 	public void moveManual(game_service game) {
 		game.startGame();
+		tiemRun(game);
 		try {
 			List<String> log = game.move();
 			Set <Integer> roboLoc = robots.keySet();
@@ -412,9 +440,7 @@ public class MyGameGUI  {
 						Point3D p = r.getPoint3D();
 						double disX=Math.pow((p.x()-this.x), 2);
 						double disY=Math.pow((p.y()-this.y), 2);
-						if(Math.sqrt(disY+disX)<=0.00025) {
-						
-//						if (Math.abs((p.x()+0.00025)-(this.x+0.00025)) <= 0.0001 && Math.abs((p.y()+0.00025)-(this.y+0.00025)) <= 0.0001 ){
+						if(Math.sqrt(disY+disX)<=0.00025) {	
 							isRobot =true;
 							this.x=0;
 							this.y=0;
@@ -431,7 +457,6 @@ public class MyGameGUI  {
 						double disX=Math.pow((po.x()-this.x), 2);
 						double disY=Math.pow((po.y()-this.y), 2);
 						if(Math.sqrt(disY+disX)<=0.00025) {
-//						if ( ((po.x()+0.00015)-(this.x+0.00015)<= 0.0001) && ((po.y()+0.00015)-(this.y+0.00015)<= 0.0001 ) ){
 							r.setPoint3D(po);
 							r.setDest(node_edge.getKey());
 							game.chooseNextEdge(r.getID(), node_edge.getKey());
@@ -452,7 +477,17 @@ public class MyGameGUI  {
 		catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println(game.toString());
+		try {
+			JFrame input = new JFrame();
+			String info = game.toString();
+			JSONObject obj = new JSONObject(info);
+			JSONObject GameServer =obj.getJSONObject("GameServer");
+			int grade = GameServer.getInt("grade");
+			JOptionPane.showMessageDialog(input, "the game is finished! \n"+ "your score is: " + grade);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 
@@ -519,12 +554,12 @@ public class MyGameGUI  {
 				if (fru.getType() == -1) {
 					StdDrawGame.setPenColor(Color.RED);
 					StdDrawGame.picture(p3.x(), p3.y(), "data/boy.jpg", 0.0004, 0.0004);
-//					StdDrawGame.filledCircle(p3.x(), p3.y(), 0.00015);
+					//					StdDrawGame.filledCircle(p3.x(), p3.y(), 0.00015);
 				}
 				else {
 					StdDrawGame.setPenColor(Color.CYAN);
 					StdDrawGame.picture(p3.x(), p3.y(), "data/girl.jpg", 0.0004, 0.0004);
-//					StdDrawGame.filledCircle(p3.x(), p3.y(), 0.00015);
+					//					StdDrawGame.filledCircle(p3.x(), p3.y(), 0.00015);
 				}
 			}
 		}
@@ -541,8 +576,8 @@ public class MyGameGUI  {
 				Point3D p = robo.getPoint3D();
 				StdDrawGame.setPenColor(Color.GREEN);
 				StdDrawGame.picture(p.x(), p.y(), "data/car2.jpg", 0.0008, 0.0004);
-//				StdDrawGame.picture(x, Y_max, filename, scaledWidth, scaledHeight);
-//				StdDrawGame.filledCircle(p.x(), p.y(), 0.00025);
+				//				StdDrawGame.picture(x, Y_max, filename, scaledWidth, scaledHeight);
+				//				StdDrawGame.filledCircle(p.x(), p.y(), 0.00025);
 			}
 
 		}

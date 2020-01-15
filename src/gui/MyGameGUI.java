@@ -23,6 +23,7 @@ import Server.game_service;
 import algorithms.Graph_Algo;
 import gameClient.Fruit;
 import gameClient.Robot;
+import gameClient.*;
 import utils.Point3D;
 import utils.StdDrawGame;
 
@@ -85,27 +86,7 @@ public class MyGameGUI  {
 		initGUI();
 	}
 
-	Thread time;
-	public void tiemRun(game_service game) {
-		time = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				while(game.isRunning()) {
-					StdDrawGame.setPenColor(Color.BLACK);
-//					StdDrawGame.text(35.19970089806296, 32.108148348319325,Integer.toString((int)game.timeToEnd()/1000 ));
-					System.out.println(game.timeToEnd()/1000);
-					try{
-						Thread.sleep(1000);
-					}
-					catch (Exception e) {
-						e.printStackTrace();
-					}
-				}
-			}
-		});
-		time.start();
-	}
+	
 
 	/**
 	 * This function is play the manual choice and send it to move manual
@@ -276,12 +257,14 @@ public class MyGameGUI  {
 	public void startGameNow(game_service game ,graph gg) {
 		JFrame input = new JFrame();
 		game.startGame();
-		tiemRun(game);
+		ThreadGame.moveTime(game);
+		ThreadGame.tiemRun(game);
 		while(game.isRunning()) {
 			smartMove(game , gg);
 		}
 		try {
 			String info = game.toString();
+			System.out.println(info);
 			JSONObject obj = new JSONObject(info);
 			JSONObject GameServer =obj.getJSONObject("GameServer");
 			int grade = GameServer.getInt("grade");
@@ -301,8 +284,6 @@ public class MyGameGUI  {
 	private void smartMove(game_service game, graph gg) {
 		List<node_data> ListGr = new ArrayList<node_data>();
 		Graph_Algo graphA = new Graph_Algo(gg);
-		List<String> log = game.move();
-		if(log!=null) {
 			try {
 				String info = game.toString();
 				JSONObject obj = new JSONObject(info);
@@ -317,12 +298,10 @@ public class MyGameGUI  {
 				}
 			} 
 			catch (JSONException e) {e.printStackTrace();}
-		}
 		// robot move 
 		reRobot(game , gg);	
 		// fruit move if its eaten
 		reFruit( game, gg);
-		game.move();
 		paint();
 	}
 
@@ -423,7 +402,7 @@ public class MyGameGUI  {
 
 	public void moveManual(game_service game) {
 		game.startGame();
-		tiemRun(game);
+		ThreadGame.tiemRun(game);
 		try {
 			List<String> log = game.move();
 			Set <Integer> roboLoc = robots.keySet();

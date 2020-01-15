@@ -25,7 +25,8 @@ import utils.Point3D;
  * @author USER
  *
  */
-public class Robot {
+
+public class Robot implements Robots {
 	int VALUE;
 	int ID;
 	int SRC;
@@ -80,14 +81,16 @@ public class Robot {
 	 * gets the id
 	 * @return
 	 */
+	@Override
 	public int getID () {
 		return this.ID;
 	}
 	
 	/**
-	 * set thr id
+	 * set the id
 	 * @param ID
 	 */
+	@Override
 	public void setID(int ID) {
 		this.ID=ID;
 	}
@@ -96,6 +99,7 @@ public class Robot {
 	 * get the speed
 	 * @return
 	 */
+	@Override
 	public int getSpeed () {
 		return this.SPEED;
 	}
@@ -105,6 +109,7 @@ public class Robot {
 	 * set the speed
 	 * @param SPEED
 	 */
+	@Override
 	public void setSpeed(int SPEED) {
 		this.SPEED=SPEED;
 	}
@@ -113,6 +118,7 @@ public class Robot {
 	 * get the point of the location
 	 * @return
 	 */
+	@Override
 	public Point3D getPoint3D () {
 		return this.POINT;
 	}
@@ -121,6 +127,7 @@ public class Robot {
 	 * set the point 3d
 	 * @param p
 	 */
+	@Override
 	public void setPoint3D (Point3D p) {
 		 this.POINT =p;
 	}
@@ -129,6 +136,7 @@ public class Robot {
 	 * get the value
 	 * @return
 	 */
+	@Override
 	public int getValue () {
 		return this.VALUE;
 	}
@@ -137,6 +145,7 @@ public class Robot {
 	 * get the src
 	 * @return
 	 */
+	@Override
 	public int getSrc() {
 		return this.SRC;
 	}
@@ -145,6 +154,7 @@ public class Robot {
 	 * set the src
 	 * @param Src
 	 */
+	@Override
 	public void setSrc(int Src) {
 		this.SRC = Src;
 	}
@@ -153,6 +163,7 @@ public class Robot {
 	 * get the dest
 	 * @return
 	 */
+	@Override
 	public int getDest() {
 		return this.DEST;
 	}
@@ -162,6 +173,7 @@ public class Robot {
 	 * set the dest
 	 * @param Dest
 	 */
+	@Override
 	public void setDest(int Dest) {
 		this.DEST = Dest;
 	}
@@ -172,6 +184,7 @@ public class Robot {
 	   by reading from the json. 
 	 * @param s
 	 */
+	@Override
 	public void init (String s) {
 		try {
 			double x=0,y=0,z=0,counter=0;
@@ -214,6 +227,13 @@ public class Robot {
 		
 	}
 	
+	
+	/**
+	 * boolean that will mark if the robot is done the path that was made for him
+	 * @param dest
+	 * @return
+	 */
+	@Override
 	public boolean IsDone(node_data dest) {
 			boolean IsDone=false;
 			if(this.getPoint3D()==dest.getLocation()) {

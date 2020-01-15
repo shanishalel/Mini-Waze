@@ -258,7 +258,7 @@ public class MyGameGUI  {
 		JFrame input = new JFrame();
 		game.startGame();
 		ThreadGame.moveTime(game);
-		ThreadGame.tiemRun(game);
+		ThreadGame.timeRun(game);
 		while(game.isRunning()) {
 			smartMove(game , gg);
 		}
@@ -269,6 +269,7 @@ public class MyGameGUI  {
 			JSONObject GameServer =obj.getJSONObject("GameServer");
 			int grade = GameServer.getInt("grade");
 			JOptionPane.showMessageDialog(input, "the game is finished! \n"+ "your score is: " + grade);
+			
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -402,7 +403,7 @@ public class MyGameGUI  {
 
 	public void moveManual(game_service game) {
 		game.startGame();
-		ThreadGame.tiemRun(game);
+		ThreadGame.timeRun(game);
 		try {
 			List<String> log = game.move();
 			Set <Integer> roboLoc = robots.keySet();
@@ -413,6 +414,7 @@ public class MyGameGUI  {
 				// fruit move if its eaten
 				reFruit(game, graph);
 				long t = game.timeToEnd();
+				
 				if (isRobot == false ) {
 					for (Integer roboL : roboLoc) {
 						r = robots.get(roboL);
@@ -532,12 +534,12 @@ public class MyGameGUI  {
 				Fruit fru = fruits.get(p3);
 				if (fru.getType() == -1) {
 					StdDrawGame.setPenColor(Color.RED);
-					StdDrawGame.picture(p3.x(), p3.y(), "data/boy.jpg", 0.0004, 0.0004);
+					StdDrawGame.picture(p3.x(), p3.y(), "data/boy.jpg", 0.0006, 0.0004);
 					//					StdDrawGame.filledCircle(p3.x(), p3.y(), 0.00015);
 				}
 				else {
 					StdDrawGame.setPenColor(Color.CYAN);
-					StdDrawGame.picture(p3.x(), p3.y(), "data/girl.jpg", 0.0004, 0.0004);
+					StdDrawGame.picture(p3.x(), p3.y(), "data/girl.jpg", 0.0006, 0.0004);
 					//					StdDrawGame.filledCircle(p3.x(), p3.y(), 0.00015);
 				}
 			}

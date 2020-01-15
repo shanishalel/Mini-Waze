@@ -28,7 +28,7 @@ import utils.Point3D;
  * @author USER
  *
  */
-public class Fruit {
+public class Fruit implements Fruits{
 	static double EPS= 0.0000001;
 	graph graph;
 	edge_data edge;
@@ -75,6 +75,7 @@ public class Fruit {
 	 * get the point
 	 * @return
 	 */
+	@Override
 	public Point3D getPoint3D () {
 		return this.POINT;
 	}
@@ -83,6 +84,7 @@ public class Fruit {
 	 * get the value
 	 * @return
 	 */
+	@Override
 	public int getValue () {
 		return this.VALUE;
 	}
@@ -91,6 +93,7 @@ public class Fruit {
 	 * get the type
 	 * @return
 	 */
+	@Override
 	public int getType() {
 		return this.TYPE;
 	}
@@ -99,6 +102,7 @@ public class Fruit {
 	 * get the src
 	 * @return
 	 */
+	@Override
 	public int getSrc () {
 		return this.SRC;
 	}
@@ -107,6 +111,7 @@ public class Fruit {
 	 * set the src
 	 * @param Src
 	 */
+	@Override
 	public void setSrc(int Src) {
 		this.SRC =Src;
 	}
@@ -115,6 +120,7 @@ public class Fruit {
 	 * get the dest
 	 * @return
 	 */
+	@Override
 	public int getDest() {
 		return this.DEST;
 	}
@@ -123,6 +129,7 @@ public class Fruit {
 	 * set the dest 
 	 * @param Dest
 	 */
+	@Override
 	public void setDest(int Dest) {
 		this.DEST = Dest;
 	}
@@ -131,6 +138,7 @@ public class Fruit {
 	 * get the edge
 	 * @return
 	 */
+	@Override
 	public edge_data getEdge() {
 		return this.edge;
 	}
@@ -140,14 +148,22 @@ public class Fruit {
 	 *set the edge 
 	 * @param Edge
 	 */
+	@Override
 	public void setEdge(edge_data Edge) {
 		this.edge = Edge;
 	}
-	
+	/**
+	 * gets
+	 */
+	@Override
 	public boolean getVisited() {
 		return this.VISITED;
 	}
 	
+	/**
+	 * set boolean
+	 */
+	@Override
 	public void setVisited(boolean Visited) {
 		this.VISITED=Visited;
 	}
@@ -156,6 +172,7 @@ public class Fruit {
 	  * This function init a fruit from the string s by reading from the json 
 	  * @param s
 	  */
+	@Override
 	public void init(String s) {
 		try {
 			double x=0,y=0,z=0,counter=0;
@@ -200,7 +217,8 @@ public class Fruit {
 	 * @param gg
 	 * @param f
 	 */
-	public static void findFruitPlace(graph gg , Fruit f) {
+	@Override
+	public void findFruitPlace(graph gg , Fruit f) {
 		Point3D p = f.getPoint3D();
 		Collection <node_data> Nodes = gg.getV();
 		for (node_data node_data : Nodes) {
@@ -218,8 +236,9 @@ public class Fruit {
 			}
 		}
 	}
-
-	private static double distans(double x, double y, double x2, double y2) {
+	
+	
+	private double distans(double x, double y, double x2, double y2) {
 		double x_dis = Math.pow((x-x2), 2);
 		double y_dis = Math.pow((y-y2), 2);
 		double dis = Math.sqrt((x_dis + y_dis));

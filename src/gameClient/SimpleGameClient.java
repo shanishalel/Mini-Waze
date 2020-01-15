@@ -146,7 +146,7 @@ public class SimpleGameClient {
 	}
 	
 	
-	/*repaint thr fruit*/
+	/*repaint the fruit*/
 	public void GetFruit (game_service game, graph gg) {
 		ArrayList<String> fruit =  (ArrayList<String>) game.getFruits();
 		Fruit f = new Fruit(); 

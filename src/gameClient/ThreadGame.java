@@ -49,4 +49,26 @@ public class ThreadGame {
 		moveTime.start();
 	}
 	
+	static Thread Kml_file;
+	public static void moveKml(game_service game , KML_Logger KML) {
+		Kml_file= new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				while (game.isRunning()) {
+					try{
+						Thread.sleep(60);
+						String time = java.time.LocalDate.now()+"T"+java.time.LocalTime.now();
+						KML.setFruit(time);
+						KML.setRobot(time);
+					}
+					catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+				
+			}
+		});
+		Kml_file.start();
+	}
 }

@@ -54,6 +54,7 @@ public class MyGameGUI  {
 	double x;
 	double y;
 	boolean isRobot = false;
+	KML_Logger KML;
 
 	/**
 	 * This function is a default constructor
@@ -238,7 +239,7 @@ public class MyGameGUI  {
 					robots.put(id, ro);
 				}
 				initGUI();
-				startGameNow(game, gg);
+				startGameNow(game, gg , sen);
 			}
 
 		}
@@ -254,15 +255,18 @@ public class MyGameGUI  {
 	 * @param game
 	 * @param gg
 	 */
-	public void startGameNow(game_service game ,graph gg) {
+	public void startGameNow(game_service game ,graph gg , int sen) {
 		JFrame input = new JFrame();
 		game.startGame();
+		KML.setGame(game);
+		ThreadGame.moveKml(game, KML);
 		ThreadGame.moveTime(game);
 		ThreadGame.timeRun(game);
 		while(game.isRunning()) {
 			smartMove(game , gg);
 		}
 		try {
+			KML.save(sen + ".kml");
 			String info = game.toString();
 			System.out.println(info);
 			JSONObject obj = new JSONObject(info);
@@ -571,9 +575,11 @@ public class MyGameGUI  {
 		double X_max = Integer.MIN_VALUE;
 		double Y_min = Integer.MAX_VALUE;
 		double Y_max = Integer.MIN_VALUE;
-
+		
 		// rescale the coordinate system
 		if (graph != null) {
+			KML = new KML_Logger(graph);
+			KML.kml_Graph();
 			Collection<node_data> nodes=graph.getV();   
 			for(node_data node:nodes) {
 				if(node.getLocation().x()>X_max) {

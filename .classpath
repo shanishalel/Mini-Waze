@@ -17,5 +17,12 @@
 	<classpathentry kind="lib" path="C:/Users/dar/Desktop/לימודים/שנה ב/תכנות מונחה עצמים/מטלה 3/jar/jaxb-impl.jar"/>
 	<classpathentry kind="lib" path="C:/Users/dar/Desktop/לימודים/שנה ב/תכנות מונחה עצמים/מטלה 3/jar/jaxb-jxc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/dar/Desktop/לימודים/שנה ב/תכנות מונחה עצמים/מטלה 3/jar/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="lib/activation-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/JAK_2.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/JavaAPIforKml-2.2.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-core.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-jxc.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -37,7 +37,7 @@ public class ThreadGame {
 				while (game.isRunning()) {
 					game.move();
 					try{
-						Thread.sleep(60);
+						Thread.sleep(80);
 					}
 					catch (Exception e) {
 						e.printStackTrace();

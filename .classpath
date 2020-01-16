@@ -9,14 +9,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="lib" path="lib/java-json.jar"/>
 	<classpathentry kind="lib" path="lib/GameServer_v0.27.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dar/Desktop/לימודים/שנה ב/תכנות מונחה עצמים/מטלה 3/jar/activation-1.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dar/Desktop/לימודים/שנה ב/תכנות מונחה עצמים/מטלה 3/jar/JAK_2.2.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dar/Desktop/לימודים/שנה ב/תכנות מונחה עצמים/מטלה 3/jar/JavaAPIforKml-2.2.1-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dar/Desktop/לימודים/שנה ב/תכנות מונחה עצמים/מטלה 3/jar/jaxb-api.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dar/Desktop/לימודים/שנה ב/תכנות מונחה עצמים/מטלה 3/jar/jaxb-core.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dar/Desktop/לימודים/שנה ב/תכנות מונחה עצמים/מטלה 3/jar/jaxb-impl.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dar/Desktop/לימודים/שנה ב/תכנות מונחה עצמים/מטלה 3/jar/jaxb-jxc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dar/Desktop/לימודים/שנה ב/תכנות מונחה עצמים/מטלה 3/jar/jaxb-xjc.jar"/>
 	<classpathentry kind="lib" path="lib/activation-1.1.1.jar"/>
 	<classpathentry kind="lib" path="lib/JAK_2.2.1.jar"/>
 	<classpathentry kind="lib" path="lib/JavaAPIforKml-2.2.1-javadoc.jar"/>

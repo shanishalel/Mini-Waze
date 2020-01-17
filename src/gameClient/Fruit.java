@@ -14,23 +14,24 @@ import utils.Point3D;
 /**
  * This class represent fruit struct that have 2 types of fruit : 
  	1- that represent a fruit from high to low and -1 - that represent a fruit from low to high . 
- 	every fruit have :
- 	graph graph;
-	edge_data edge;
-	int TYPE;
-	int VALUE;
-	Point3D POINT;
-	int DEST;
-	int SRC;
+ 	Every fruit composed by :    
+* graph - graph that represent the graph of the scenario of the game.
+* edge_data - that represent the edge that the fruit on here.  
+* int type - that represent the type of the fruit (-1 is for low to high, 1 is from high to low). Notice: in our game the fruit type are girl or boy . 
+* int value - that represent the value that the fruit equals to. 
+* Point 3D - that represent the point on the graph were the fruit is located.
+* int src - that represent the src of the edge that the fruit is located on.  
+* int dest - that represent the dest of the edge that the fruit is located on.
+* boolean visited - that represent if the fruit is on the path of one of the robots or no.
+  
 	
-	this class contains the following methods :
-	counstructors, 
+	this class contains the interface function . 
  * @author USER
  *
  */
 public class Fruit implements Fruits{
 	static double EPS= 0.0000001;
-	graph graph;
+	graph graph; 
 	edge_data edge;
 	int TYPE;
 	int VALUE;
@@ -169,7 +170,9 @@ public class Fruit implements Fruits{
 	}
 	
 	 /**
-	  * This function init a fruit from the string s by reading from the json 
+	  * This function init a fruit from the string s by reading from the json  
+	  * the function reading from the json and init it to fruit struct to the 
+	  * correct field. 
 	  * @param s
 	  */
 	@Override
@@ -214,6 +217,9 @@ public class Fruit implements Fruits{
 	
 	/**
 	 * This function gets graph and fruit and set the dest, src and edge 
+	 * the function pass all the nodes and check for every node if the dest between the 2 nodes is
+	 * equals to the dest between the first node to the fruit and form the fruit to the next node. 
+	 * if it does she will set the edge of the fruit to be the edge btween them also the src and dest.
 	 * @param gg
 	 * @param f
 	 */

@@ -42,6 +42,7 @@ import utils.StdDrawGame;
  *
  */
 public class MyGameGUI  {
+	
 	public  graph graph;
 	Hashtable<Point3D, Fruit> fruits;
 	Hashtable<Integer, Robot> robots;
@@ -199,6 +200,7 @@ public class MyGameGUI  {
 					f.findFruitPlace(gg , f);
 					fruits.put(p_f, f);
 				}
+				
 				//robot
 				Robot r=new Robot();
 				JSONObject obj = new JSONObject(info);

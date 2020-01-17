@@ -8,8 +8,20 @@ import utils.Point3D;
 
 
 /**
- * this interface represent a robot struct 
- * every robot will have the following function
+ * this interface represent a robot struct, the location of the robots on the graph is located by us, we locate them in the most closet location
+ * to the fruit (so we will be able to get to the max point in the game). the robots moves and points from the fruot that he eat is update from
+ * the server. the robot have the next fields:
+ * * int id- represent the key of the node that he is located.
+ * * int speed- gets from the server the speed change during the game (accourding to the fruit the robot eat). 
+ * * point 3D- location of the robot. 
+ * * int value- value of the robot according to the fruit he eat.
+ * * int src- the src of the point the robot locate.
+ * * int dest - the dest of the robot (used for biluding path).
+ * 
+ * 
+ * main function:
+ * * init- this fucntion init the robot from json file by reading from json file and set the according field.
+ * * boolean IsDone- this function mark as done robot who gets to his dest 
  * @author USER
  *
  */

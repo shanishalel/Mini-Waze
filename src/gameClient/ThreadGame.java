@@ -57,7 +57,7 @@ public class ThreadGame {
 			public void run() {
 				while (game.isRunning()) {
 					try{
-						Thread.sleep(60);
+						Thread.sleep(400);
 						String time = java.time.LocalDate.now()+"T"+java.time.LocalTime.now();
 						KML.setFruit(time);
 						KML.setRobot(time);

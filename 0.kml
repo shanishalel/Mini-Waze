@@ -5,10 +5,10 @@
         <ns2:open>1</ns2:open>
         <ns2:Style id="place Node">
             <ns2:IconStyle>
-                <ns2:scale>1.5</ns2:scale>
+                <ns2:scale>1.0</ns2:scale>
                 <ns2:heading>0.0</ns2:heading>
                 <ns2:Icon>
-                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/sunny.png</ns2:href>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/paddle/purple-blank.png</ns2:href>
                     <ns2:refreshInterval>0.0</ns2:refreshInterval>
                     <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
                     <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
@@ -80,6 +80,1626 @@
                 <ns2:color>ff43b3ff</ns2:color>
                 <ns2:width>2.5</ns2:width>
             </ns2:LineStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place boy">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/man.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place girl">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/woman.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
+        </ns2:Style>
+        <ns2:Style id="place robot">
+            <ns2:IconStyle>
+                <ns2:scale>1.5</ns2:scale>
+                <ns2:heading>0.0</ns2:heading>
+                <ns2:Icon>
+                    <ns2:href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</ns2:href>
+                    <ns2:refreshInterval>0.0</ns2:refreshInterval>
+                    <ns2:viewRefreshTime>0.0</ns2:viewRefreshTime>
+                    <ns2:viewBoundScale>0.0</ns2:viewBoundScale>
+                </ns2:Icon>
+            </ns2:IconStyle>
         </ns2:Style>
         <ns2:Style id="place boy">
             <ns2:IconStyle>
@@ -1398,7 +3018,7 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:37:54.236537200</ns2:when>
+                <ns2:when>2020-01-18T14:01:13.201781700</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1407,16 +3027,16 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:37:54.236537200</ns2:when>
+                <ns2:when>2020-01-18T14:01:13.201781700</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.19928484854374,32.10227955082914</ns2:coordinates>
+                <ns2:coordinates>35.201629927956425,32.1027991950531</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:37:55.237670700</ns2:when>
+                <ns2:when>2020-01-18T14:01:13.604212100</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1425,16 +3045,52 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:37:55.237670700</ns2:when>
+                <ns2:when>2020-01-18T14:01:13.604212100</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.19597880064568,32.10154696638656</ns2:coordinates>
+                <ns2:coordinates>35.20005615373263,32.10245046371343</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:37:56.238891600</ns2:when>
+                <ns2:when>2020-01-18T14:01:14.005140</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.197656770719604,32.10191878639921</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:14.005140</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19848237950883,32.10210173237377</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:14.406069100</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.197656770719604,32.10191878639921</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:14.406069100</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.196912500765784,32.10175386423048</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:14.806996900</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1443,16 +3099,16 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:37:56.238891600</ns2:when>
+                <ns2:when>2020-01-18T14:01:14.806996900</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.2010887905953,32.10267928486901</ns2:coordinates>
+                <ns2:coordinates>35.19675619252755,32.10171922801616</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:37:57.241076900</ns2:when>
+                <ns2:when>2020-01-18T14:01:15.207923600</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1461,16 +3117,16 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:37:57.241076900</ns2:when>
+                <ns2:when>2020-01-18T14:01:15.207923600</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.204656151152136,32.10294094823585</ns2:coordinates>
+                <ns2:coordinates>35.19875166340904,32.10216140277239</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:37:58.243258500</ns2:when>
+                <ns2:when>2020-01-18T14:01:15.608850700</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1479,16 +3135,16 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:37:58.243258500</ns2:when>
+                <ns2:when>2020-01-18T14:01:15.608850700</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.20726020247211,32.10257492199925</ns2:coordinates>
+                <ns2:coordinates>35.20075208583118,32.10260467473645</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:37:59.244570900</ns2:when>
+                <ns2:when>2020-01-18T14:01:16.009777600</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1497,16 +3153,16 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:37:59.244570900</ns2:when>
+                <ns2:when>2020-01-18T14:01:16.009777600</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.20784934034835,32.10433793459592</ns2:coordinates>
+                <ns2:coordinates>35.20275250825332,32.10304794670051</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:00.245980700</ns2:when>
+                <ns2:when>2020-01-18T14:01:16.410709600</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1515,16 +3171,16 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:00.245980700</ns2:when>
+                <ns2:when>2020-01-18T14:01:16.410709600</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.20686598145752,32.10549083787089</ns2:coordinates>
+                <ns2:coordinates>35.20381320625274,32.10305943282439</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:01.247225100</ns2:when>
+                <ns2:when>2020-01-18T14:01:16.811632100</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1533,16 +3189,16 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:01.247225100</ns2:when>
+                <ns2:when>2020-01-18T14:01:16.811632100</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.205295856605474,32.10622342712903</ns2:coordinates>
+                <ns2:coordinates>35.2048610516046,32.10291214736664</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:02.249542200</ns2:when>
+                <ns2:when>2020-01-18T14:01:17.212557700</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1551,16 +3207,232 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:02.249542200</ns2:when>
+                <ns2:when>2020-01-18T14:01:17.212557700</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.20241134244909,32.106058790596464</ns2:coordinates>
+                <ns2:coordinates>35.20569621547416,32.10279475648199</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:03.251743400</ns2:when>
+                <ns2:when>2020-01-18T14:01:17.613032100</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.199963710098416,32.105723673136964</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:17.613032100</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.206744060826026,32.102647471024234</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:18.013452</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.199963710098416,32.105723673136964</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:18.013452</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20749874938236,32.10271436916112</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:18.414408500</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.199963710098416,32.105723673136964</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:18.414408500</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20768414041673,32.10357290376277</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:18.815306400</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.199963710098416,32.105723673136964</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:18.815306400</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20786953145111,32.104431438364415</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:19.216197100</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.199963710098416,32.105723673136964</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:19.216197100</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20762706813533,32.1049313861085</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:19.617123700</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.199963710098416,32.105723673136964</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:19.617123700</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20711799691375,32.10530558894295</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:20.018050900</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.199963710098416,32.105723673136964</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:20.018050900</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.206608925692166,32.1056797917774</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:20.419016500</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.199963710098416,32.105723673136964</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:20.419016500</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20609985447058,32.10605399461185</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:20.819905700</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.199963710098416,32.105723673136964</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:20.819905700</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.2053807785139,32.10622827413195</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:21.220834900</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.199963710098416,32.105723673136964</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:21.220834900</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20423999421064,32.10616316272604</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:21.621760300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.199963710098416,32.105723673136964</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:21.621760300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.2030963791771,32.106097889753364</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:22.022728900</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.199963710098416,32.105723673136964</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:22.022728900</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.201952764143556,32.10603261678069</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:22.423615500</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1569,34 +3441,70 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:03.251743400</ns2:when>
+                <ns2:when>2020-01-18T14:01:22.423615500</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.19985707662901,32.105705507657284</ns2:coordinates>
+                <ns2:coordinates>35.20101587055644,32.10590291329042</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:04.253872800</ns2:when>
+                <ns2:when>2020-01-18T14:01:22.824543600</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.19494883961552,32.105809680537625</ns2:coordinates>
+                <ns2:coordinates>35.195224052340706,32.10575624080796</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:04.253872800</ns2:when>
+                <ns2:when>2020-01-18T14:01:22.824543600</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.19717581711049,32.105377254765116</ns2:coordinates>
+                <ns2:coordinates>35.19988779164877,32.10571074009575</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:05.256057800</ns2:when>
+                <ns2:when>2020-01-18T14:01:23.225470200</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.195224052340706,32.10575624080796</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:23.225470200</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.1987597127411,32.10551856690109</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:23.626433300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.195224052340706,32.10575624080796</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:23.626433300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19763442610796,32.105326869382644</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:24.027323700</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1605,7 +3513,43 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:05.256057800</ns2:when>
+                <ns2:when>2020-01-18T14:01:24.027323700</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19631697056796,32.105544022224805</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:24.428252</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19038634163924,32.10748920705224</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:24.428252</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19480555066997,32.10583750382417</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:24.829179400</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19038634163924,32.10748920705224</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:24.829179400</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
@@ -1614,7 +3558,25 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:06.257359300</ns2:when>
+                <ns2:when>2020-01-18T14:01:25.230108300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19038634163924,32.10748920705224</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:25.230108300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.192517284989215,32.106516201255836</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:25.631110500</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1623,16 +3585,16 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:06.257359300</ns2:when>
+                <ns2:when>2020-01-18T14:01:25.631110500</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.19114315465064,32.10714364017131</ns2:coordinates>
+                <ns2:coordinates>35.19161753027805,32.10692703646143</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:07.258528500</ns2:when>
+                <ns2:when>2020-01-18T14:01:26.031960800</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1641,16 +3603,16 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:07.258528500</ns2:when>
+                <ns2:when>2020-01-18T14:01:26.031960800</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.18999441858159,32.10766816225855</ns2:coordinates>
+                <ns2:coordinates>35.190717775566895,32.10733787166703</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:08.259770</ns2:when>
+                <ns2:when>2020-01-18T14:01:26.432506400</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1659,16 +3621,16 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:08.259770</ns2:when>
+                <ns2:when>2020-01-18T14:01:26.432506400</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.19223102086624,32.10664691174655</ns2:coordinates>
+                <ns2:coordinates>35.18982247508698,32.10774667303497</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:09.261968</ns2:when>
+                <ns2:when>2020-01-18T14:01:26.832817500</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1677,16 +3639,124 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:09.261968</ns2:when>
+                <ns2:when>2020-01-18T14:01:26.832817500</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.1950956647051,32.105781170616474</ns2:coordinates>
+                <ns2:coordinates>35.19010267619459,32.10761873096562</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:10.264213200</ns2:when>
+                <ns2:when>2020-01-18T14:01:27.233747300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.1992728373109,32.105605979924384</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:27.233747300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.190977397707655,32.10721932611872</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:27.634672400</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.1992728373109,32.105605979924384</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:27.634672400</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19185211922073,32.10681992127182</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:28.035641100</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.1992728373109,32.105605979924384</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:28.035641100</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19272684073379,32.10642051642492</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:28.436381500</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.1992728373109,32.105605979924384</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:28.436381500</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19369844490934,32.10605247728702</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:28.837454300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.1992728373109,32.105605979924384</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:28.837454300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19487959978823,32.10582312525625</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:29.238417300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.1992728373109,32.105605979924384</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:29.238417300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19633443689516,32.10554063068176</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:29.639343300</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1695,16 +3765,16 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:10.264213200</ns2:when>
+                <ns2:when>2020-01-18T14:01:29.639343300</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.19551813077076,32.10569913780958</ns2:coordinates>
+                <ns2:coordinates>35.197528356739305,32.1053088</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:11.266383300</ns2:when>
+                <ns2:when>2020-01-18T14:01:30.040237900</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1713,16 +3783,52 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:11.266383300</ns2:when>
+                <ns2:when>2020-01-18T14:01:30.040237900</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.19054628766403,32.107416174416606</ns2:coordinates>
+                <ns2:coordinates>35.19453552031598,32.105889937261274</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:12.268614</ns2:when>
+                <ns2:when>2020-01-18T14:01:30.441197900</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.18893516072167,32.10655929420479</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:30.441197900</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.192336888623856,32.10659857168072</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:30.842126100</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.18893516072167,32.10655929420479</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:30.842126100</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19054183343278,32.10741820825426</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:31.243017700</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1731,16 +3837,16 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:12.268614</ns2:when>
+                <ns2:when>2020-01-18T14:01:31.243017700</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.18815905819831,32.10502488860535</ns2:coordinates>
+                <ns2:coordinates>35.18923627709139,32.10715462102037</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:13.269826700</ns2:when>
+                <ns2:when>2020-01-18T14:01:31.643967800</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1749,16 +3855,16 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:13.269826700</ns2:when>
+                <ns2:when>2020-01-18T14:01:31.643967800</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.188940131915025,32.10363548444735</ns2:coordinates>
+                <ns2:coordinates>35.18835531265252,32.105412896535206</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:14.272013800</ns2:when>
+                <ns2:when>2020-01-18T14:01:32.044872400</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1767,133 +3873,7 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:14.272013800</ns2:when>
-            </ns2:TimeStamp>
-            <ns2:styleUrl>#place robot</ns2:styleUrl>
-            <ns2:Point>
-                <ns2:coordinates>35.199682553051026,32.10236767784477</ns2:coordinates>
-            </ns2:Point>
-        </ns2:Placemark>
-        <ns2:Placemark>
-            <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:15.274161700</ns2:when>
-            </ns2:TimeStamp>
-            <ns2:styleUrl>#place girl</ns2:styleUrl>
-            <ns2:Point>
-                <ns2:coordinates>35.19974476565152,32.105686374989176</ns2:coordinates>
-            </ns2:Point>
-        </ns2:Placemark>
-        <ns2:Placemark>
-            <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:15.274161700</ns2:when>
-            </ns2:TimeStamp>
-            <ns2:styleUrl>#place robot</ns2:styleUrl>
-            <ns2:Point>
-                <ns2:coordinates>35.206531379343716,32.102677365597344</ns2:coordinates>
-            </ns2:Point>
-        </ns2:Placemark>
-        <ns2:Placemark>
-            <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:16.275481300</ns2:when>
-            </ns2:TimeStamp>
-            <ns2:styleUrl>#place girl</ns2:styleUrl>
-            <ns2:Point>
-                <ns2:coordinates>35.19974476565152,32.105686374989176</ns2:coordinates>
-            </ns2:Point>
-        </ns2:Placemark>
-        <ns2:Placemark>
-            <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:16.275481300</ns2:when>
-            </ns2:TimeStamp>
-            <ns2:styleUrl>#place robot</ns2:styleUrl>
-            <ns2:Point>
-                <ns2:coordinates>35.20745821777966,32.10505550289022</ns2:coordinates>
-            </ns2:Point>
-        </ns2:Placemark>
-        <ns2:Placemark>
-            <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:17.277560200</ns2:when>
-            </ns2:TimeStamp>
-            <ns2:styleUrl>#place girl</ns2:styleUrl>
-            <ns2:Point>
-                <ns2:coordinates>35.19974476565152,32.105686374989176</ns2:coordinates>
-            </ns2:Point>
-        </ns2:Placemark>
-        <ns2:Placemark>
-            <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:17.277560200</ns2:when>
-            </ns2:TimeStamp>
-            <ns2:styleUrl>#place robot</ns2:styleUrl>
-            <ns2:Point>
-                <ns2:coordinates>35.203704986187525,32.10613262660763</ns2:coordinates>
-            </ns2:Point>
-        </ns2:Placemark>
-        <ns2:Placemark>
-            <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:18.278845600</ns2:when>
-            </ns2:TimeStamp>
-            <ns2:styleUrl>#place boy</ns2:styleUrl>
-            <ns2:Point>
-                <ns2:coordinates>35.188500771222955,32.10570047767076</ns2:coordinates>
-            </ns2:Point>
-        </ns2:Placemark>
-        <ns2:Placemark>
-            <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:18.278845600</ns2:when>
-            </ns2:TimeStamp>
-            <ns2:styleUrl>#place robot</ns2:styleUrl>
-            <ns2:Point>
-                <ns2:coordinates>35.19341035835351,32.10610841680672</ns2:coordinates>
-            </ns2:Point>
-        </ns2:Placemark>
-        <ns2:Placemark>
-            <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:19.281149600</ns2:when>
-            </ns2:TimeStamp>
-            <ns2:styleUrl>#place girl</ns2:styleUrl>
-            <ns2:Point>
-                <ns2:coordinates>35.19565793847981,32.10567199049591</ns2:coordinates>
-            </ns2:Point>
-        </ns2:Placemark>
-        <ns2:Placemark>
-            <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:19.281149600</ns2:when>
-            </ns2:TimeStamp>
-            <ns2:styleUrl>#place robot</ns2:styleUrl>
-            <ns2:Point>
-                <ns2:coordinates>35.18880964888765,32.106311149075616</ns2:coordinates>
-            </ns2:Point>
-        </ns2:Placemark>
-        <ns2:Placemark>
-            <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:20.282473800</ns2:when>
-            </ns2:TimeStamp>
-            <ns2:styleUrl>#place girl</ns2:styleUrl>
-            <ns2:Point>
-                <ns2:coordinates>35.188827745913414,32.10634692808267</ns2:coordinates>
-            </ns2:Point>
-        </ns2:Placemark>
-        <ns2:Placemark>
-            <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:20.282473800</ns2:when>
-            </ns2:TimeStamp>
-            <ns2:styleUrl>#place robot</ns2:styleUrl>
-            <ns2:Point>
-                <ns2:coordinates>35.19578441070316,32.10564743261465</ns2:coordinates>
-            </ns2:Point>
-        </ns2:Placemark>
-        <ns2:Placemark>
-            <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:21.283823100</ns2:when>
-            </ns2:TimeStamp>
-            <ns2:styleUrl>#place girl</ns2:styleUrl>
-            <ns2:Point>
-                <ns2:coordinates>35.19580080140219,32.10564424993287</ns2:coordinates>
-            </ns2:Point>
-        </ns2:Placemark>
-        <ns2:Placemark>
-            <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:21.283823100</ns2:when>
+                <ns2:when>2020-01-18T14:01:32.044872400</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
@@ -1902,7 +3882,439 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:22.285941700</ns2:when>
+                <ns2:when>2020-01-18T14:01:32.445799800</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20539663533063,32.10283686555705</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:32.445799800</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.188396491994695,32.10369209102841</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:32.846767400</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20539663533063,32.10283686555705</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:32.846767400</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.18910131880549,32.103618700840336</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:33.247692500</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20539663533063,32.10283686555705</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:33.247692500</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.194192836580704,32.102084960287904</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:33.648585</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20539663533063,32.10283686555705</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:33.648585</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19834563707584,32.102071431730174</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:34.049509400</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20539663533063,32.10283686555705</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:34.049509400</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20233657883881,32.102955781242635</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:34.450438700</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19974476565152,32.105686374989176</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:34.450438700</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20445125069967,32.102969749105064</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:34.851398300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19974476565152,32.105686374989176</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:34.851398300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.206546941403396,32.10267517818955</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:35.252292200</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19974476565152,32.105686374989176</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:35.252292200</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20761025933621,32.103230764973496</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:35.653217800</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19974476565152,32.105686374989176</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:35.653217800</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20792948668281,32.10470908739496</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:36.053810500</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19974476565152,32.105686374989176</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:36.053810500</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20691890470333,32.10545193559602</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:36.454076200</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19974476565152,32.105686374989176</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:36.454076200</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.205900762260164,32.10620034126492</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:36.854769400</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19974476565152,32.105686374989176</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:36.854769400</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20400504359731,32.10614975268462</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:37.254934800</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19974476565152,32.105686374989176</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:37.254934800</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.20172347499079,32.106019529872796</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:37.655895</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place boy</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.188500771222955,32.10570047767076</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:37.655895</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.197528356739305,32.1053088</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:38.056787300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place boy</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.188500771222955,32.10570047767076</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:38.056787300</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19161753027805,32.10692703646143</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:38.457714800</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place boy</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.188500771222955,32.10570047767076</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:38.457714800</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.18872274460289,32.10613933360389</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:38.858643800</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19565793847981,32.10567199049591</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:38.858643800</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.18871408297598,32.10612220899931</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:39.259594500</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19565793847981,32.10567199049591</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:39.259594500</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.192198543582336,32.10666174113443</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:39.659784</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19565793847981,32.10567199049591</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:39.659784</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.197528356739305,32.1053088</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:40.060472200</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.188827745913414,32.10634692808267</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:40.060472200</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.192541783261056,32.106505015148755</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:40.461391900</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.18867176864414,32.103663427809636</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:40.461391900</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.189147962587,32.10698001745193</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:40.862281400</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19580080140219,32.10564424993287</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:40.862281400</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.18808922893813,32.10488683157731</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:41.263208600</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19580080140219,32.10564424993287</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:41.263208600</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19133248267831,32.1070571914779</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:41.664135100</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.19580080140219,32.10564424993287</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:41.664135100</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.196327234731264,32.105542029169754</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:42.065064500</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1911,16 +4323,34 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:22.285941700</ns2:when>
+                <ns2:when>2020-01-18T14:01:42.065064500</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.19578441070316,32.10564743261465</ns2:coordinates>
+                <ns2:coordinates>35.19250837652673,32.10652026893114</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:23.301329400</ns2:when>
+                <ns2:when>2020-01-18T14:01:42.466030100</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place girl</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.188081181912885,32.104870922080536</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:42.466030100</ns2:when>
+            </ns2:TimeStamp>
+            <ns2:styleUrl>#place robot</ns2:styleUrl>
+            <ns2:Point>
+                <ns2:coordinates>35.18915886561223,32.10700157344803</ns2:coordinates>
+            </ns2:Point>
+        </ns2:Placemark>
+        <ns2:Placemark>
+            <ns2:TimeStamp>
+                <ns2:when>2020-01-18T14:01:42.866917300</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place girl</ns2:styleUrl>
             <ns2:Point>
@@ -1929,11 +4359,11 @@
         </ns2:Placemark>
         <ns2:Placemark>
             <ns2:TimeStamp>
-                <ns2:when>2020-01-17T11:38:23.301329400</ns2:when>
+                <ns2:when>2020-01-18T14:01:42.866917300</ns2:when>
             </ns2:TimeStamp>
             <ns2:styleUrl>#place robot</ns2:styleUrl>
             <ns2:Point>
-                <ns2:coordinates>35.187550669390276,32.10382206402277</ns2:coordinates>
+                <ns2:coordinates>35.18753053591606,32.10378225882353</ns2:coordinates>
             </ns2:Point>
         </ns2:Placemark>
     </ns2:Document>

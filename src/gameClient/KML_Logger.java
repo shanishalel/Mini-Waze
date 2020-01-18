@@ -48,10 +48,10 @@ public class KML_Logger {
 		myFloder.withName("KML new floder").withOpen(true);
 		// icons 
 		Icon icon = new Icon();
-		icon.withHref("http://maps.google.com/mapfiles/kml/shapes/sunny.png");
+		icon.withHref("http://maps.google.com/mapfiles/kml/paddle/purple-blank.png");
 		//style
 		Style style = doc.createAndAddStyle();
-		style.withId("place Node").createAndSetIconStyle().withIcon(icon).withScale(1.5);
+		style.withId("place Node").createAndSetIconStyle().withIcon(icon).withScale(1);
 		Collection<node_data> Nodes = graph.getV();
 		for (node_data node : Nodes) {
 			Placemark place_mark = doc.createAndAddPlacemark();

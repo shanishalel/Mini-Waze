@@ -15,7 +15,6 @@ public class ThreadGame {
 			public void run() {
 				// TODO Auto-generated method stub
 				while(game.isRunning()) {
-					System.out.println(game.timeToEnd()/1000);
 					try{
 						Thread.sleep(1000);
 					}

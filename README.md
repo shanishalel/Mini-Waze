@@ -1,4 +1,5 @@
 # OOP-EX3 Packman
+
 In this project we made our one version for "packman" game. the red car should take as many hitchhikers as she can (there isn't 
 limit of seats) so that she will get the largest score in the game.
 

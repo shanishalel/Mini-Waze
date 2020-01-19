@@ -43,6 +43,7 @@ import utils.StdDrawGame;
  */
 public class MyGameGUI  {
 
+	game_service game;
 	public  graph graph;
 	public Hashtable<Point3D, Fruit> fruits;
 	public Hashtable<Integer, Robot> robots;
@@ -88,10 +89,6 @@ public class MyGameGUI  {
 		initGUI();
 	}
 
-
-
-
-
 	/**
 	 * This function is playing the automatic choice, and sent it to moveautomatic
 	 */
@@ -107,211 +104,12 @@ public class MyGameGUI  {
 			JOptionPane.showMessageDialog(input, "The number that you entered isn't a Scenario number " );
 		}
 		else {
-			game_service game = Game_Server.getServer(sen); // you have [0,23] games
+			this.game = Game_Server.getServer(sen); // you have [0,23] games
 			Automatic Auto= new Automatic (this);//call for autogame for this graph and string 
 			Auto.Playautomatic(game, sen);
 		}
 		
 	}
-
-	//				String g = game.getGraph();
-	//				DGraph gg = new DGraph();
-	//				gg.init(g);
-	//				this.graph =gg;
-	//				String info = game.toString();
-	// fruit
-	//				if (fruits == null ) {
-	//					fruits= new Hashtable<Point3D, Fruit>();
-	//				}
-	//				for (String  fruit : game.getFruits()) {
-	//					Fruit f = new Fruit();
-	//					f.init(fruit);
-	//					Point3D p_f	=f.getPoint3D();
-	//					f.findFruitPlace(gg , f);
-	//					fruits.put(p_f, f);
-	//				}
-	//				
-	//				//robot
-	//				Robot r=new Robot();
-	//				JSONObject obj = new JSONObject(info);
-	//				JSONObject Robot =obj.getJSONObject("GameServer");
-	//				int amountRobot = Robot.getInt("robots");
-	//				Collection<node_data> node = graph.getV();
-	//				int size = node.size();
-	//				int rnd = 0;
-	//				if (robots == null ) {
-	//					robots = new Hashtable<Integer, Robot>();
-	//				}
-	//				int counter=0;
-	//				Set <Point3D> allFruits = fruits.keySet();
-	//				for (Point3D Point : allFruits) {
-	//					if (counter < fruits.size()) {
-	//						if (counter >= amountRobot ) {
-	//							break;
-	//						}
-	//						Fruit placeFruit = fruits.get(Point);
-	//						r.setSrc(placeFruit.getSrc());
-	//						game.addRobot(placeFruit.getSrc());
-	//						counter++;
-	//					}
-	//					else {
-	//						while (counter < amountRobot) {
-	//							rnd = (int) (Math.random()*size);
-	//							if (graph.getNode(rnd) != null) {
-	//								game.addRobot(rnd);
-	//								counter++;
-	//							}
-	//						} 
-	//					}
-	//				}
-	//				for (String robo : game.getRobots()) {
-	//					Robot ro = new Robot();
-	//					ro.init(robo);
-	//					int id = ro.getID();
-	//					robots.put(id, ro);
-	//				}
-
-
-
-
-	//	/**
-	//	 * This function gets game and graph start the game and while the game run 
-	//	 * she send the parameters to move robots
-	//	 * @param game
-	//	 * @param gg
-	//	 */
-	//	public void startGameNow(game_service game ,graph gg , int sen) {
-	//		JFrame input = new JFrame();
-	//		game.startGame();
-	//		KML.setGame(game);
-	//		ThreadGame.moveKml(game, KML);
-	//		ThreadGame.moveTime(game);
-	//		ThreadGame.timeRun(game);
-	//		while(game.isRunning()) {
-	//			smartMove(game , gg);
-	//		}
-	//		try {
-	//			KML.save(sen + ".kml");
-	//			String info = game.toString();
-	//			System.out.println(info);
-	//			JSONObject obj = new JSONObject(info);
-	//			JSONObject GameServer =obj.getJSONObject("GameServer");
-	//			int grade = GameServer.getInt("grade");
-	//			JOptionPane.showMessageDialog(input, "the game is finished! \n"+ "your score is: " + grade);
-	//			
-	//		}
-	//		catch (Exception e) {
-	//			e.printStackTrace();
-	//		}
-	//	}
-	//
-	//	/**
-	//	 * This function is the smart move- she made a path for every robot by the shortestpath and shortspathdist
-	//	 * 
-	//	 * @param game
-	//	 * @param gg
-	//	 */
-	//	private void smartMove(game_service game, graph gg) {
-	//		List<node_data> ListGr = new ArrayList<node_data>();
-	//		Graph_Algo graphA = new Graph_Algo(gg);
-	//			try {
-	//				String info = game.toString();
-	//				JSONObject obj = new JSONObject(info);
-	//				JSONObject Robot =obj.getJSONObject("GameServer");
-	//				int amountRobot = Robot.getInt("robots");
-	//				int counter=0;
-	//				while ( counter < amountRobot) {
-	//					Robot ro = robots.get(counter);
-	//					ListGr=SetPath ( game,  gg, ro,  graphA);
-	//					MoveRobot( game,  gg,  ro,  graphA, ListGr);
-	//					counter++;
-	//				}
-	//			} 
-	//			catch (JSONException e) {e.printStackTrace();}
-	//		// robot move 
-	//		reRobot(game , gg);	
-	//		// fruit move if its eaten
-	//		reFruit( game, gg);
-	//		paint();
-	//	}
-
-	//	/**
-	//	 * This function return the path that the robot should
-	//	 *  go to ,to get the fruit
-	//	 * @param game
-	//	 * @param gg
-	//	 * @param dest
-	//	 * @param ro
-	//	 * @param graphA
-	//	 * @return
-	//	 */
-	//	private List<node_data> SetPath (game_service game, MYdataStructure.graph gg, Robot ro, Graph_Algo graphA) {
-	//		double min =Integer.MAX_VALUE , temp=0;
-	//		List<node_data> ListGr = new ArrayList<node_data>();
-	//		Set <Point3D> allFruits = fruits.keySet();
-	//		Fruit temp_f = new Fruit();
-	//		for (Point3D point3d : allFruits) {
-	//			Fruit fo = fruits.get(point3d);
-	//			temp = graphA.shortestPathDist(ro.getSrc(), fo.getSrc());
-	//			if ( temp < min && fo.getVisited() == false) {
-	//				temp_f = fo;
-	//				min = temp;
-	//				fo.setVisited(true);//mark as visited 
-	//				ListGr = graphA.shortestPath(ro.getSrc(), fo.getSrc());
-	//				ListGr.add(gg.getNode(fo.getDest()));
-	//			}
-	//
-	//
-	//		}
-	//		return ListGr;
-	//
-	//	}
-
-	//	/**
-	//	 * this function will move the robots by the path she gets
-	//	 * @param game
-	//	 * @param gg
-	//	 * @param ro
-	//	 * @param graphA
-	//	 * @param ListGr
-	//	 */
-	//	private void MoveRobot(game_service game, MYdataStructure.graph gg, Robot ro, Graph_Algo graphA, List<node_data> ListGr) {
-	//		Fruit temp_f = new Fruit();
-	//		temp_f.setVisited(true);
-	//		if (ListGr.size() != 0 ) {
-	//			ListGr.remove(0);
-	//		}
-	//		for (int j = 0; j < ListGr.size(); j++) {
-	//			node_data temp_node = ListGr.get(j);
-	//			int destGo = temp_node.getKey();
-	//			Point3D po = temp_node.getLocation();
-	//			ro.setPoint3D(po);
-	//			ro.setSrc( temp_node.getKey());
-	//			game.chooseNextEdge(ro.getID(), destGo);
-	//		}
-	//	}
-
-	//	private void reRobot(game_service game, MYdataStructure.graph gg) {
-	//		robots.clear();
-	//		for (String robo : game.getRobots()) {
-	//			Robot r=new Robot();
-	//			r.init(robo);
-	//			int id = r.getID();
-	//			robots.put(id, r);
-	//		}
-	//	}
-	//
-	//	private void reFruit(game_service game, MYdataStructure.graph gg) {
-	//		fruits.clear();
-	//		for (String  fruit : game.getFruits()) {
-	//			Fruit f = new Fruit();
-	//			f.init(fruit);
-	//			Point3D p_f	=f.getPoint3D();
-	//			f.setVisited(false);
-	//			f.findFruitPlace(gg , f);
-	//			fruits.put(p_f, f);
-	//		}
-	//	}
 
 	/**
 	 * This function gets the point that the user click on her in the screen
@@ -329,10 +127,6 @@ public class MyGameGUI  {
 	 * and se will print the changes on the screen
 	 * @param game
 	 */
-
-	
-
-	
 	
 	public void PlayManual() {
 		try {
@@ -345,7 +139,7 @@ public class MyGameGUI  {
 				JOptionPane.showMessageDialog(input, "The number that you entered isn't a Scenario number " );
 			}
 			else {
-				game_service game = Game_Server.getServer(sen); // you have [0,23] games
+				this.game = Game_Server.getServer(sen); // you have [0,23] games
 				String g = game.getGraph();
 				DGraph gg = new DGraph();
 				gg.init(g);
@@ -360,14 +154,6 @@ public class MyGameGUI  {
 				e.printStackTrace();
 			}
 	}
-
-
-
-
-
-
-
-
 
 	/**
 	 * this function will paint the graph 
@@ -414,6 +200,7 @@ public class MyGameGUI  {
 					}	
 				}
 			}
+			painStatus();
 			paintFruit();
 			paintRobot();
 			StdDrawGame.show();
@@ -457,12 +244,24 @@ public class MyGameGUI  {
 				//				StdDrawGame.picture(x, Y_max, filename, scaledWidth, scaledHeight);
 				//				StdDrawGame.filledCircle(p.x(), p.y(), 0.00025);
 			}
-
 		}
 	}
-
-
-
+	
+	public void painStatus() {
+		try {
+		StdDrawGame.setPenColor(Color.BLACK);
+		String info = game.toString();
+		JSONObject obj = new JSONObject(info);
+		JSONObject GAME =obj.getJSONObject("GameServer");
+		int grade = GAME.getInt("grade");
+		StdDrawGame.text(X_max, Y_max,"grade: " +""+grade);
+		StdDrawGame.text(X_max, Y_max-(Y_max*0.000009),"time: " +""+game.timeToEnd()/1000);
+		StdDrawGame.text(X_max, Y_max-(Y_max*0.000018),"move: " +""+GAME.getInt("moves"));
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 	/**
 	 * This function is init the gui 
@@ -470,10 +269,10 @@ public class MyGameGUI  {
 	public void initGUI() {
 		StdDrawGame.setCanvasSize(800, 600);
 		StdDrawGame.enableDoubleBuffering();
-		double X_min = Integer.MAX_VALUE;
-		double X_max = Integer.MIN_VALUE;
-		double Y_min = Integer.MAX_VALUE;
-		double Y_max = Integer.MIN_VALUE;
+		 X_min = Integer.MAX_VALUE;
+		 X_max = Integer.MIN_VALUE;
+		 Y_min = Integer.MAX_VALUE;
+		 Y_max = Integer.MIN_VALUE;
 
 		// rescale the coordinate system
 		if (graph != null) {

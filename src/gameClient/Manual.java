@@ -51,10 +51,15 @@ public class Manual {
 		game.startGame();
 		ThreadGame.timeRun(game);
 		try {
-			List<String> log = game.move();
 			Set <Integer> roboLoc = gameGui.robots.keySet();
 			Robot r = new Robot();
+			Long timeB = game.timeToEnd();
 			while (game.isRunning()) {
+				if(timeB-game.timeToEnd() > 70)
+				{
+					game.move();
+					timeB = game.timeToEnd();
+				}
 				//re build the robots
 				reRobot(game, gameGui.graph);
 				// fruit move if its eaten
@@ -90,14 +95,10 @@ public class Manual {
 							gameGui.isRobot =false;
 							gameGui.x=0;
 							gameGui.y=0;
-							String robot_json = log.get(r.getID());
-							JSONObject line = new JSONObject(robot_json);
-							System.out.println("Turn to node: "+node_edge.getKey()+"  time to end:"+(t/1000));
 							break;
 						}
 					}
 				}
-				game.move();
 				gameGui.paint();
 			}
 		}

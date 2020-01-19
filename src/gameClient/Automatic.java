@@ -151,15 +151,19 @@ public class Automatic {
 		game.startGame();
 		gameGui.KML.setGame(game);
 		ThreadGame.moveKml(game, gameGui.KML);
-		ThreadGame.moveTime(game);
 		ThreadGame.timeRun(game);
+		Long timeB = game.timeToEnd();
 		while(game.isRunning()) {
+			if(timeB-game.timeToEnd() > 70)
+			{
+				game.move();
+				timeB = game.timeToEnd();
+			}
 			smartMove(game , gg);
 		}
 		try {
 			gameGui.KML.save(sen + ".kml");
 			String info = game.toString();
-			System.out.println(info);
 			JSONObject obj = new JSONObject(info);
 			JSONObject GameServer =obj.getJSONObject("GameServer");
 			int grade = GameServer.getInt("grade");

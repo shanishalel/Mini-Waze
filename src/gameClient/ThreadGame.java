@@ -1,10 +1,10 @@
 package gameClient;
 
-import java.awt.Color;
+
+import java.time.LocalTime;
 
 import Server.game_service;
-import utils.StdDraw;
-import utils.StdDrawGame;
+
 
 public class ThreadGame {
 
@@ -28,27 +28,6 @@ public class ThreadGame {
 		time.start();
 	}
 	
-	static Thread moveTime;
-	public static void moveTime(game_service game) {
-		moveTime= new Thread(new Runnable() {
-			
-			@Override
-			public void run() {
-				while (game.isRunning()) {
-					game.move();
-					try{
-						Thread.sleep(80);
-					}
-					catch (Exception e) {
-						e.printStackTrace();
-					}
-				}
-				
-			}
-		});
-		moveTime.start();
-	}
-	
 	static Thread Kml_file;
 	public static void moveKml(game_service game , KML_Logger KML) {
 		Kml_file= new Thread(new Runnable() {
@@ -57,10 +36,14 @@ public class ThreadGame {
 			public void run() {
 				while (game.isRunning()) {
 					try{
-						Thread.sleep(400);
+						Thread.sleep(100);
 						String time = java.time.LocalDate.now()+"T"+java.time.LocalTime.now();
-						KML.setFruit(time);
-						KML.setRobot(time);
+						LocalTime end = java.time.LocalTime.now(); 
+						end = end.plusNanos(100*1000000);
+						String endTime = java.time.LocalDate.now()+"T"+end;
+						KML.setFruit(time , endTime);
+						KML.setRobot(time , endTime);
+					
 					}
 					catch (Exception e) {
 						e.printStackTrace();

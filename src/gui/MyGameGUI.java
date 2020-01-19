@@ -42,20 +42,20 @@ import utils.StdDrawGame;
  *
  */
 public class MyGameGUI  {
-	
+
 	public  graph graph;
-	Hashtable<Point3D, Fruit> fruits;
-	Hashtable<Integer, Robot> robots;
+	public Hashtable<Point3D, Fruit> fruits;
+	public Hashtable<Integer, Robot> robots;
 	private static final long serialVersionUID = 6128157318970002904L;
-	LinkedList<Point3D> points = new LinkedList<Point3D>();
-	double X_min = Integer.MAX_VALUE;
-	double X_max = Integer.MIN_VALUE;
-	double Y_min = Integer.MAX_VALUE;
-	double Y_max = Integer.MIN_VALUE;
-	double x;
-	double y;
-	boolean isRobot = false;
-	KML_Logger KML;
+	public LinkedList<Point3D> points = new LinkedList<Point3D>();
+	public double X_min = Integer.MAX_VALUE;
+	public double X_max = Integer.MIN_VALUE;
+	public double Y_min = Integer.MAX_VALUE;
+	public double Y_max = Integer.MIN_VALUE;
+	public double x;
+	public double y;
+	public boolean isRobot = false;
+	public KML_Logger KML;
 
 	/**
 	 * This function is a default constructor
@@ -88,307 +88,230 @@ public class MyGameGUI  {
 		initGUI();
 	}
 
-	
 
-	/**
-	 * This function is play the manual choice and send it to move manual
-	 */
-	public void PlayManual() {
-		try {
-			JFrame input = new JFrame();
-			String s ="";
-			s = JOptionPane.showInputDialog(
-					null, "Please enter a Scenario number between 0-23");
-			int sen=Integer.parseInt(s);
-			if(sen<0 || sen>23) {
-				JOptionPane.showMessageDialog(input, "The number that you entered isn't a Scenario number " );
-			}
-			else {
-				game_service game = Game_Server.getServer(sen); // you have [0,23] games
-				String g = game.getGraph();
-				DGraph gg = new DGraph();
-				gg.init(g);
-				this.graph =gg;
-				String info = game.toString();
-				// fruit
-				if (fruits == null ) {
-					fruits= new Hashtable<Point3D, Fruit>();
-				}
-				for (String  fruit : game.getFruits()) {
-					Fruit f = new Fruit();
-					f.init(fruit);
-					Point3D p_f	=f.getPoint3D();
-					f.findFruitPlace(gg , f);
-					fruits.put(p_f, f);
-				}
-				//robot
-				Robot r=new Robot();
-				JSONObject obj = new JSONObject(info);
-				JSONObject Robot =obj.getJSONObject("GameServer");
-				int amountRobot = Robot.getInt("robots");
-				Collection<node_data> node = graph.getV();
-				int size = node.size();
-				int rnd = 0;
-				if (robots == null ) {
-					robots = new Hashtable<Integer, Robot>();
-				}
-				int counter=0;
-				Set <Point3D> allFruits = fruits.keySet();
-				for (Point3D Point : allFruits) {
-					if (counter < fruits.size()) {
-						if (counter >= amountRobot ) {
-							break;
-						}
-						Fruit placeFruit = fruits.get(Point);
-						game.addRobot(placeFruit.getSrc());
-						counter++;
-					}
-					else {
-						while (counter < amountRobot) {
-							rnd = (int) (Math.random()*size);
-							if (graph.getNode(rnd) != null) {
-								game.addRobot(rnd);
-								counter++;
-							}
-						}
-					}
-				}
-				for (String robo : game.getRobots()) {
-					Robot ro = new Robot();
-					ro.init(robo);
-					int id = ro.getID();
-					robots.put(id, ro);
-				}
-				initGUI();
-				moveManual(game);
-			}
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}			
-	}
+
 
 
 	/**
 	 * This function is playing the automatic choice, and sent it to moveautomatic
 	 */
 	public void Playautomatic() {
-		try {
-			JFrame input = new JFrame();
-			String s ="";
-			s = JOptionPane.showInputDialog(
-					null, "Please enter a Scenario number between 0-23");
-			int sen=Integer.parseInt(s);
-			if(sen<0 || sen>23) {
-				JOptionPane.showMessageDialog(input, "The number that you entered isn't a Scenario number " );
-			}
-			else {
-				game_service game = Game_Server.getServer(sen); // you have [0,23] games
-				String g = game.getGraph();
-				DGraph gg = new DGraph();
-				gg.init(g);
-				this.graph =gg;
-				String info = game.toString();
-				// fruit
-				if (fruits == null ) {
-					fruits= new Hashtable<Point3D, Fruit>();
-				}
-				for (String  fruit : game.getFruits()) {
-					Fruit f = new Fruit();
-					f.init(fruit);
-					Point3D p_f	=f.getPoint3D();
-					f.findFruitPlace(gg , f);
-					fruits.put(p_f, f);
-				}
-				
-				//robot
-				Robot r=new Robot();
-				JSONObject obj = new JSONObject(info);
-				JSONObject Robot =obj.getJSONObject("GameServer");
-				int amountRobot = Robot.getInt("robots");
-				Collection<node_data> node = graph.getV();
-				int size = node.size();
-				int rnd = 0;
-				if (robots == null ) {
-					robots = new Hashtable<Integer, Robot>();
-				}
-				int counter=0;
-				Set <Point3D> allFruits = fruits.keySet();
-				for (Point3D Point : allFruits) {
-					if (counter < fruits.size()) {
-						if (counter >= amountRobot ) {
-							break;
-						}
-						Fruit placeFruit = fruits.get(Point);
-						r.setSrc(placeFruit.getSrc());
-						game.addRobot(placeFruit.getSrc());
-						counter++;
-					}
-					else {
-						while (counter < amountRobot) {
-							rnd = (int) (Math.random()*size);
-							if (graph.getNode(rnd) != null) {
-								game.addRobot(rnd);
-								counter++;
-							}
-						} 
-					}
-				}
-				for (String robo : game.getRobots()) {
-					Robot ro = new Robot();
-					ro.init(robo);
-					int id = ro.getID();
-					robots.put(id, ro);
-				}
-				initGUI();
-				startGameNow(game, gg , sen);
-			}
 
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}			
-	}
-
-
-	/**
-	 * This function gets game and graph start the game and while the game run 
-	 * she send the parameters to move robots
-	 * @param game
-	 * @param gg
-	 */
-	public void startGameNow(game_service game ,graph gg , int sen) {
 		JFrame input = new JFrame();
-		game.startGame();
-		KML.setGame(game);
-		ThreadGame.moveKml(game, KML);
-		ThreadGame.moveTime(game);
-		ThreadGame.timeRun(game);
-		while(game.isRunning()) {
-			smartMove(game , gg);
+		String s ="";
+		s = JOptionPane.showInputDialog(
+				null, "Please enter a Scenario number between 0-23");
+
+		int sen=Integer.parseInt(s);
+		if(sen<0 || sen>23) {
+			JOptionPane.showMessageDialog(input, "The number that you entered isn't a Scenario number " );
 		}
-		try {
-			KML.save(sen + ".kml");
-			String info = game.toString();
-			System.out.println(info);
-			JSONObject obj = new JSONObject(info);
-			JSONObject GameServer =obj.getJSONObject("GameServer");
-			int grade = GameServer.getInt("grade");
-			JOptionPane.showMessageDialog(input, "the game is finished! \n"+ "your score is: " + grade);
-			
+		else {
+			game_service game = Game_Server.getServer(sen); // you have [0,23] games
+			Automatic Auto= new Automatic (this);//call for autogame for this graph and string 
+			Auto.Playautomatic(game, sen);
 		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
+		
 	}
 
-	/**
-	 * This function is the smart move- she made a path for every robot by the shortestpath and shortspathdist
-	 * 
-	 * @param game
-	 * @param gg
-	 */
-	private void smartMove(game_service game, graph gg) {
-		List<node_data> ListGr = new ArrayList<node_data>();
-		Graph_Algo graphA = new Graph_Algo(gg);
-			try {
-				String info = game.toString();
-				JSONObject obj = new JSONObject(info);
-				JSONObject Robot =obj.getJSONObject("GameServer");
-				int amountRobot = Robot.getInt("robots");
-				int counter=0;
-				while ( counter < amountRobot) {
-					Robot ro = robots.get(counter);
-					ListGr=SetPath ( game,  gg, ro,  graphA);
-					MoveRobot( game,  gg,  ro,  graphA, ListGr);
-					counter++;
-				}
-			} 
-			catch (JSONException e) {e.printStackTrace();}
-		// robot move 
-		reRobot(game , gg);	
-		// fruit move if its eaten
-		reFruit( game, gg);
-		paint();
-	}
+	//				String g = game.getGraph();
+	//				DGraph gg = new DGraph();
+	//				gg.init(g);
+	//				this.graph =gg;
+	//				String info = game.toString();
+	// fruit
+	//				if (fruits == null ) {
+	//					fruits= new Hashtable<Point3D, Fruit>();
+	//				}
+	//				for (String  fruit : game.getFruits()) {
+	//					Fruit f = new Fruit();
+	//					f.init(fruit);
+	//					Point3D p_f	=f.getPoint3D();
+	//					f.findFruitPlace(gg , f);
+	//					fruits.put(p_f, f);
+	//				}
+	//				
+	//				//robot
+	//				Robot r=new Robot();
+	//				JSONObject obj = new JSONObject(info);
+	//				JSONObject Robot =obj.getJSONObject("GameServer");
+	//				int amountRobot = Robot.getInt("robots");
+	//				Collection<node_data> node = graph.getV();
+	//				int size = node.size();
+	//				int rnd = 0;
+	//				if (robots == null ) {
+	//					robots = new Hashtable<Integer, Robot>();
+	//				}
+	//				int counter=0;
+	//				Set <Point3D> allFruits = fruits.keySet();
+	//				for (Point3D Point : allFruits) {
+	//					if (counter < fruits.size()) {
+	//						if (counter >= amountRobot ) {
+	//							break;
+	//						}
+	//						Fruit placeFruit = fruits.get(Point);
+	//						r.setSrc(placeFruit.getSrc());
+	//						game.addRobot(placeFruit.getSrc());
+	//						counter++;
+	//					}
+	//					else {
+	//						while (counter < amountRobot) {
+	//							rnd = (int) (Math.random()*size);
+	//							if (graph.getNode(rnd) != null) {
+	//								game.addRobot(rnd);
+	//								counter++;
+	//							}
+	//						} 
+	//					}
+	//				}
+	//				for (String robo : game.getRobots()) {
+	//					Robot ro = new Robot();
+	//					ro.init(robo);
+	//					int id = ro.getID();
+	//					robots.put(id, ro);
+	//				}
 
-	/**
-	 * This function return the path that the robot should
-	 *  go to ,to get the fruit
-	 * @param game
-	 * @param gg
-	 * @param dest
-	 * @param ro
-	 * @param graphA
-	 * @return
-	 */
-	private List<node_data> SetPath (game_service game, MYdataStructure.graph gg, Robot ro, Graph_Algo graphA) {
-		double min =Integer.MAX_VALUE , temp=0;
-		List<node_data> ListGr = new ArrayList<node_data>();
-		Set <Point3D> allFruits = fruits.keySet();
-		Fruit temp_f = new Fruit();
-		for (Point3D point3d : allFruits) {
-			Fruit fo = fruits.get(point3d);
-			temp = graphA.shortestPathDist(ro.getSrc(), fo.getSrc());
-			if ( temp < min && fo.getVisited() == false) {
-				temp_f = fo;
-				min = temp;
-				fo.setVisited(true);//mark as visited 
-				ListGr = graphA.shortestPath(ro.getSrc(), fo.getSrc());
-				ListGr.add(gg.getNode(fo.getDest()));
-			}
 
 
-		}
-		return ListGr;
 
-	}
+	//	/**
+	//	 * This function gets game and graph start the game and while the game run 
+	//	 * she send the parameters to move robots
+	//	 * @param game
+	//	 * @param gg
+	//	 */
+	//	public void startGameNow(game_service game ,graph gg , int sen) {
+	//		JFrame input = new JFrame();
+	//		game.startGame();
+	//		KML.setGame(game);
+	//		ThreadGame.moveKml(game, KML);
+	//		ThreadGame.moveTime(game);
+	//		ThreadGame.timeRun(game);
+	//		while(game.isRunning()) {
+	//			smartMove(game , gg);
+	//		}
+	//		try {
+	//			KML.save(sen + ".kml");
+	//			String info = game.toString();
+	//			System.out.println(info);
+	//			JSONObject obj = new JSONObject(info);
+	//			JSONObject GameServer =obj.getJSONObject("GameServer");
+	//			int grade = GameServer.getInt("grade");
+	//			JOptionPane.showMessageDialog(input, "the game is finished! \n"+ "your score is: " + grade);
+	//			
+	//		}
+	//		catch (Exception e) {
+	//			e.printStackTrace();
+	//		}
+	//	}
+	//
+	//	/**
+	//	 * This function is the smart move- she made a path for every robot by the shortestpath and shortspathdist
+	//	 * 
+	//	 * @param game
+	//	 * @param gg
+	//	 */
+	//	private void smartMove(game_service game, graph gg) {
+	//		List<node_data> ListGr = new ArrayList<node_data>();
+	//		Graph_Algo graphA = new Graph_Algo(gg);
+	//			try {
+	//				String info = game.toString();
+	//				JSONObject obj = new JSONObject(info);
+	//				JSONObject Robot =obj.getJSONObject("GameServer");
+	//				int amountRobot = Robot.getInt("robots");
+	//				int counter=0;
+	//				while ( counter < amountRobot) {
+	//					Robot ro = robots.get(counter);
+	//					ListGr=SetPath ( game,  gg, ro,  graphA);
+	//					MoveRobot( game,  gg,  ro,  graphA, ListGr);
+	//					counter++;
+	//				}
+	//			} 
+	//			catch (JSONException e) {e.printStackTrace();}
+	//		// robot move 
+	//		reRobot(game , gg);	
+	//		// fruit move if its eaten
+	//		reFruit( game, gg);
+	//		paint();
+	//	}
 
-	/**
-	 * this function will move the robots by the path she gets
-	 * @param game
-	 * @param gg
-	 * @param ro
-	 * @param graphA
-	 * @param ListGr
-	 */
-	private void MoveRobot(game_service game, MYdataStructure.graph gg, Robot ro, Graph_Algo graphA, List<node_data> ListGr) {
-		Fruit temp_f = new Fruit();
-		temp_f.setVisited(true);
-		if (ListGr.size() != 0 ) {
-			ListGr.remove(0);
-		}
-		for (int j = 0; j < ListGr.size(); j++) {
-			node_data temp_node = ListGr.get(j);
-			int destGo = temp_node.getKey();
-			Point3D po = temp_node.getLocation();
-			ro.setPoint3D(po);
-			ro.setSrc( temp_node.getKey());
-			game.chooseNextEdge(ro.getID(), destGo);
-		}
-	}
+	//	/**
+	//	 * This function return the path that the robot should
+	//	 *  go to ,to get the fruit
+	//	 * @param game
+	//	 * @param gg
+	//	 * @param dest
+	//	 * @param ro
+	//	 * @param graphA
+	//	 * @return
+	//	 */
+	//	private List<node_data> SetPath (game_service game, MYdataStructure.graph gg, Robot ro, Graph_Algo graphA) {
+	//		double min =Integer.MAX_VALUE , temp=0;
+	//		List<node_data> ListGr = new ArrayList<node_data>();
+	//		Set <Point3D> allFruits = fruits.keySet();
+	//		Fruit temp_f = new Fruit();
+	//		for (Point3D point3d : allFruits) {
+	//			Fruit fo = fruits.get(point3d);
+	//			temp = graphA.shortestPathDist(ro.getSrc(), fo.getSrc());
+	//			if ( temp < min && fo.getVisited() == false) {
+	//				temp_f = fo;
+	//				min = temp;
+	//				fo.setVisited(true);//mark as visited 
+	//				ListGr = graphA.shortestPath(ro.getSrc(), fo.getSrc());
+	//				ListGr.add(gg.getNode(fo.getDest()));
+	//			}
+	//
+	//
+	//		}
+	//		return ListGr;
+	//
+	//	}
 
-	private void reRobot(game_service game, MYdataStructure.graph gg) {
-		robots.clear();
-		for (String robo : game.getRobots()) {
-			Robot r=new Robot();
-			r.init(robo);
-			int id = r.getID();
-			robots.put(id, r);
-		}
-	}
+	//	/**
+	//	 * this function will move the robots by the path she gets
+	//	 * @param game
+	//	 * @param gg
+	//	 * @param ro
+	//	 * @param graphA
+	//	 * @param ListGr
+	//	 */
+	//	private void MoveRobot(game_service game, MYdataStructure.graph gg, Robot ro, Graph_Algo graphA, List<node_data> ListGr) {
+	//		Fruit temp_f = new Fruit();
+	//		temp_f.setVisited(true);
+	//		if (ListGr.size() != 0 ) {
+	//			ListGr.remove(0);
+	//		}
+	//		for (int j = 0; j < ListGr.size(); j++) {
+	//			node_data temp_node = ListGr.get(j);
+	//			int destGo = temp_node.getKey();
+	//			Point3D po = temp_node.getLocation();
+	//			ro.setPoint3D(po);
+	//			ro.setSrc( temp_node.getKey());
+	//			game.chooseNextEdge(ro.getID(), destGo);
+	//		}
+	//	}
 
-	private void reFruit(game_service game, MYdataStructure.graph gg) {
-		fruits.clear();
-		for (String  fruit : game.getFruits()) {
-			Fruit f = new Fruit();
-			f.init(fruit);
-			Point3D p_f	=f.getPoint3D();
-			f.setVisited(false);
-			f.findFruitPlace(gg , f);
-			fruits.put(p_f, f);
-		}
-	}
+	//	private void reRobot(game_service game, MYdataStructure.graph gg) {
+	//		robots.clear();
+	//		for (String robo : game.getRobots()) {
+	//			Robot r=new Robot();
+	//			r.init(robo);
+	//			int id = r.getID();
+	//			robots.put(id, r);
+	//		}
+	//	}
+	//
+	//	private void reFruit(game_service game, MYdataStructure.graph gg) {
+	//		fruits.clear();
+	//		for (String  fruit : game.getFruits()) {
+	//			Fruit f = new Fruit();
+	//			f.init(fruit);
+	//			Point3D p_f	=f.getPoint3D();
+	//			f.setVisited(false);
+	//			f.findFruitPlace(gg , f);
+	//			fruits.put(p_f, f);
+	//		}
+	//	}
 
 	/**
 	 * This function gets the point that the user click on her in the screen
@@ -407,75 +330,43 @@ public class MyGameGUI  {
 	 * @param game
 	 */
 
-	public void moveManual(game_service game) {
-		game.startGame();
-		ThreadGame.timeRun(game);
-		try {
-			List<String> log = game.move();
-			Set <Integer> roboLoc = robots.keySet();
-			Robot r = new Robot();
-			while (game.isRunning()) {
-				//re build the robots
-				reRobot(game, graph);
-				// fruit move if its eaten
-				reFruit(game, graph);
-				long t = game.timeToEnd();
-				
-				if (isRobot == false ) {
-					for (Integer roboL : roboLoc) {
-						r = robots.get(roboL);
-						Point3D p = r.getPoint3D();
-						double disX=Math.pow((p.x()-this.x), 2);
-						double disY=Math.pow((p.y()-this.y), 2);
-						if(Math.sqrt(disY+disX)<=0.00025) {	
-							isRobot =true;
-							this.x=0;
-							this.y=0;
-							break;
-						}
-					}
-				}
-				else {	
-					node_data node = graph.getNode(r.getSrc());
-					Collection <edge_data> edges = graph.getE(node.getKey());
-					for (edge_data edge_data : edges) {
-						node_data node_edge = graph.getNode(edge_data.getDest());
-						Point3D po = node_edge.getLocation();
-						double disX=Math.pow((po.x()-this.x), 2);
-						double disY=Math.pow((po.y()-this.y), 2);
-						if(Math.sqrt(disY+disX)<=0.00025) {
-							r.setPoint3D(po);
-							r.setDest(node_edge.getKey());
-							game.chooseNextEdge(r.getID(), node_edge.getKey());
-							isRobot =false;
-							this.x=0;
-							this.y=0;
-							String robot_json = log.get(r.getID());
-							JSONObject line = new JSONObject(robot_json);
-							System.out.println("Turn to node: "+node_edge.getKey()+"  time to end:"+(t/1000));
-							break;
-						}
-					}
-				}
-				game.move();
-				paint();
-			}
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
+	
+
+	
+	
+	public void PlayManual() {
 		try {
 			JFrame input = new JFrame();
-			String info = game.toString();
-			JSONObject obj = new JSONObject(info);
-			JSONObject GameServer =obj.getJSONObject("GameServer");
-			int grade = GameServer.getInt("grade");
-			JOptionPane.showMessageDialog(input, "the game is finished! \n"+ "your score is: " + grade);
+			String s ="";
+			s = JOptionPane.showInputDialog(
+					null, "Please enter a Scenario number between 0-23");
+			int sen=Integer.parseInt(s);
+			if(sen<0 || sen>23) {
+				JOptionPane.showMessageDialog(input, "The number that you entered isn't a Scenario number " );
+			}
+			else {
+				game_service game = Game_Server.getServer(sen); // you have [0,23] games
+				String g = game.getGraph();
+				DGraph gg = new DGraph();
+				gg.init(g);
+				graph =gg;
+				String info = game.toString();
+				
+				Manual playMan=new Manual(this);
+				 playMan.PlayManual(game, sen);
+			}
 		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
 	}
+
+
+
+
+
+
+
 
 
 	/**
@@ -553,7 +444,7 @@ public class MyGameGUI  {
 	}
 
 	/**
-	 * This function paint the robots by 
+	 * This function paint the robots by stdDraw
 	 */
 	public void paintRobot() {
 		if(this.robots!=null) {
@@ -570,6 +461,12 @@ public class MyGameGUI  {
 		}
 	}
 
+
+
+
+	/**
+	 * This function is init the gui 
+	 */
 	public void initGUI() {
 		StdDrawGame.setCanvasSize(800, 600);
 		StdDrawGame.enableDoubleBuffering();
@@ -577,7 +474,7 @@ public class MyGameGUI  {
 		double X_max = Integer.MIN_VALUE;
 		double Y_min = Integer.MAX_VALUE;
 		double Y_max = Integer.MIN_VALUE;
-		
+
 		// rescale the coordinate system
 		if (graph != null) {
 			KML = new KML_Logger(graph);

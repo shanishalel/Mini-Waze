@@ -6,13 +6,11 @@ import org.junit.jupiter.api.Test;
 
 class ManualTest {
 
-	@Test
-	void testManual() {
-		fail("Not yet implemented");
-	}
+	
 
 	@Test
 	void testReRobot() {
+		
 		fail("Not yet implemented");
 	}
 

@@ -20,12 +20,10 @@ class AutomaticTest {
 			  fail();
 			  
 		  }
-		  
 	}
 
 	@Test
 	void testPlayautomatic() {
-		game_service game = Game_Server.getServer(0);
 		
 		
 		

@@ -30,13 +30,9 @@ the object MyGameGUI will let as use all the funcion and field that we create in
  */
 
 
-
-
-
-
 public class Automatic {
 
-	MyGameGUI gameGui;
+	public MyGameGUI gameGui;
 
 
 	/**

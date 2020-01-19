@@ -59,12 +59,12 @@ public class Robot implements Robots {
 	 * @param SPEED - the speed of the robot
 	 */
 	public Robot(Point3D p,int VALUE,int ID,int SRC,int DEST,int SPEED) {
-		this.VALUE=0;
+		this.VALUE=VALUE;
 		this.ID=ID;
 		this.SRC = SRC;
 		this.DEST=DEST;
 		this.SPEED=SPEED;
-		this.POINT=POINT;
+		this.POINT=p;
 	}
 	
 	

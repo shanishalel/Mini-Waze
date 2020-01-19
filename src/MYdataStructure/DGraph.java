@@ -131,7 +131,6 @@ public class DGraph implements graph, java.io.Serializable{
 		return MC;
 	}
 	
-	//start from here
 /**
  * this function will get a string represent a graph and init a graph from her
  * @param g

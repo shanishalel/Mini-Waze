@@ -21,17 +21,38 @@ import algorithms.Graph_Algo;
 import gui.MyGameGUI;
 import utils.Point3D;
 
+/**
+ * This class include all the automatic algorithms the we used in the playautomatic function. 
+ * This Automatic class have MyGameGui field that allow as to build the gameGui according to the MyGameGui.
+ * 
+ * @author USER
+ *
+ */
+
+
+
+
+
+
 public class Automatic {
 
 	MyGameGUI gameGui;
 	
+	
+	/**
+	 * construct that get the gui game and init him to gamegui
+	 * @param gameGui
+	 */
 	public Automatic(MyGameGUI gameGui) {
 		this.gameGui=gameGui;
 	}
 
 
 	/**
-	 * This function is playing the automatic choice, and sent it to moveautomatic
+	 * This function get the game and num of sceneario,
+	 * the function locate the robots by run on the fruit list (reading it from the json) and check for every fruit what is the closest node 
+	 * and then locate the robot on this node. the function called helper function startGameNow.
+	 * 
 	 */
 	public void Playautomatic(game_service game, int serv ) {
 		String g = game.getGraph();
@@ -50,8 +71,7 @@ public class Automatic {
 			f.findFruitPlace(gg , f);
 			gameGui.fruits.put(p_f, f);
 		}
-
-		//robot
+		
 		Robot r=new Robot();
 		JSONObject obj = null;
 		try {
@@ -117,9 +137,12 @@ public class Automatic {
 	}
 
 
+	
+
+
 	/**
-	 * This function gets game and graph start the game and while the game run 
-	 * she send the parameters to move robots
+	 * This function get the game, graph , num of scenario and start the game, start the kml file and all our threads. 
+	 * while the game is running the function call help function - the smartmove.  
 	 * @param game
 	 * @param gg
 	 */
@@ -153,7 +176,10 @@ public class Automatic {
 
 
 	/**
-	 * This function is the smart move- she made a path for every robot by the shortestpath and shortspathdist
+	 * This function is the automatic play moves that we create, this function goal is to create the ultimate path for all the robots in the game that we will 
+	 * get the best score and win the game ! 
+	 * this function idea is checking for every robot which fruit is the closest to him by using the shortestpathdist (graph_algo) and save the min path by list of nodes
+	 * , then she will determined the path for the node by the helper function SetPath, and move the robots by the helper function MoveRobot.
 	 * 
 	 * @param game
 	 * @param gg
@@ -183,8 +209,7 @@ public class Automatic {
 	}
 
 	/**
-	 * This function return the path that the robot should
-	 *  go to ,to get the fruit
+	 * This function determined the path for the robot by pass all the fruit and check the 
 	 * @param game
 	 * @param gg
 	 * @param dest

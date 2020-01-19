@@ -90,8 +90,9 @@ public class MyGameGUI  {
 	}
 
 	/**
-	 * This function is playing the automatic choice, and sent it to moveautomatic
-	 */
+This function is playing the automatic game by open a object of Automatic
+ (this class include all the algoritms for automatic game) and set her this (my game gui).
+All the algorithm that we used is detailed in the Automatic section	 */
 	public void Playautomatic() {
 
 		JFrame input = new JFrame();
@@ -112,8 +113,9 @@ public class MyGameGUI  {
 	}
 
 	/**
-	 * This function gets the point that the user click on her in the screen
-	 * @param x
+This function get the point that the user 
+clicked on it the frame from the StdDraw lib that we made (g_StdDraw ).	
+ * @param x
 	 * @param y
 	 */
 	public void setXY(double x , double y) {
@@ -122,9 +124,9 @@ public class MyGameGUI  {
 	}
 
 	/**
-	 * This function moving the robots manualy by the user choice 
-	 * while the game is running she will change the robots ocation by the location the user entered 
-	 * and se will print the changes on the screen
+	 * This function is playing the manual game by open a object of Manual 
+	 * (this class include all the algoritms for manual game) and set her this (my game gui).
+	 * All the algorithms that we used is detailed in the Manual section.
 	 * @param game
 	 */
 	

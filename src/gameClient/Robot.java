@@ -11,16 +11,18 @@ import MYdataStructure.node_data;
 import utils.Point3D;
 
 /**
- *  This represents Robot that eat all the fruit in the graph, 
- * every robot have:
-	int VALUE;
-	int ID;
-	int SRC;
-	int DEST;
-	int SPEED;
-	Point3D POINT;
-	
-	every robot have the following function by there define 
+ *  This interface represent a robot struct, the location of the robots on the graph is 
+ *  located by us, we locate them in the most closet location to the 
+ *  fruit (so we will be able to get to the max point in the game). the robots 
+ *  moves and points from the fruit that he eat is update from the server.
+The robot have the next fields:
+
+*int id- represent the key of the node that he is located.
+*int speed- gets from the server the speed change during the game (according to the fruit the robot eat).
+*point 3D- location of the robot.
+*int value- value of the robot according to the fruit he eat.
+*int src- the src of the point the robot locate.
+*int dest - the dest of the robot (used for building path).
 
  * @author USER
  *
@@ -180,8 +182,8 @@ public class Robot implements Robots {
 	
 	
 	/**
-	 * This function gets string s and init from her the robot all the information she needs, 
-	   by reading from the json. 
+	 * this fucntion init the robot 
+	 * from json file by reading from json file and set the according field. 
 	 * @param s
 	 */
 	@Override

@@ -20,7 +20,7 @@ import de.micromata.opengis.kml.v_2_2_0.Style;
 import utils.Point3D;
 
 /**
- * This example generates a KML file with a placemark and a chart for each continent. The chart is generated with the Google Chart API and
+ * This class generates a KML file with a placemark and a chart for each continent. The chart is generated with the Google Chart API and
  * show the area (surface of the earth) of each continent.
  * 
  * Google Chart API example: http://chart.apis.google.com/chart?cht=p3&chd=t:60,40&chs=250x100&chl=Hello|World
@@ -32,14 +32,26 @@ public class KML_Logger {
 	Document doc;
 	Kml myKml;
 
+	/**
+	 * init the graph
+	 * @param graph
+	 */
 	public KML_Logger(graph graph) {
 		this.graph = graph;
 	}
-
+	
+	
+	/**
+	 * init the game
+	 * @param game
+	 */
 	public void setGame (game_service game) {
 		this.game = game;
 	}
 
+	/** 
+	 * this function is init the kml file by pass all the nodes, edge_data .
+	 */
 	public void kml_Graph() {
 		this.myKml = new Kml();
 		this.doc = myKml.createAndSetDocument().withName("new KML").withOpen(true);
@@ -70,6 +82,10 @@ public class KML_Logger {
 		}
 	}
 
+	/**
+	 * this function save the file of kml that we create.
+	 * @param fileName
+	 */
 	public void save (String fileName ) {
 		try {
 			myKml.marshal(new File(fileName));
@@ -79,6 +95,12 @@ public class KML_Logger {
 		}
 	}
 
+	/**
+	 * this function set the fruit by pass all the fruits and 
+	 * each fruit will place at the kml file.
+	 * @param time
+	 * @param endTime
+	 */
 	public void setFruit(String time , String endTime) {
 		//icon for fruits
 		Icon boyIcon = new Icon();
@@ -140,6 +162,12 @@ public class KML_Logger {
 		}
 	}
 	
+	/**
+	 * this function set the robot by pass all the robots and 
+	 * each robot will place at the kml file.
+	 * @param time
+	 * @param endTime
+	 */
 	public void setRobot (String time , String endTime) {
 		//icon for fruits
 		Icon robotIcon = new Icon();

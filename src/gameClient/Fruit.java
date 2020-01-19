@@ -243,7 +243,14 @@ public class Fruit implements Fruits{
 		}
 	}
 	
-	
+	/**
+	 * this function calculate the distance between two point 
+	 * @param x
+	 * @param y
+	 * @param x2
+	 * @param y2
+	 * @return
+	 */
 	private double distans(double x, double y, double x2, double y2) {
 		double x_dis = Math.pow((x-x2), 2);
 		double y_dis = Math.pow((y-y2), 2);

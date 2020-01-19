@@ -18,14 +18,32 @@ import Server.game_service;
 import gui.MyGameGUI;
 import utils.Point3D;
 
+
+/**
+ * This class include all the algorithms for the manual game ,
+ *  we used one field in this class MyGameGUI the field is MyGameGUI.
+ *  the object MyGameGUI will let as use all the funcion and field
+ *   that we create in the MyGameGUI.
+ * @author USER
+ *
+ */
 public class Manual {
 	MyGameGUI gameGui;
 	
+	/**
+	 * init the game 
+	 * @param gameGui
+	 */
 	public Manual(MyGameGUI gameGui) {
 		this.gameGui=gameGui;
 	}
 
-	private void reRobot(game_service game, MYdataStructure.graph gg) {
+/**
+ * This fucntion is refresh the robot list she gets from the server .
+ * @param game
+ * @param gg
+ */
+	void reRobot(game_service game, MYdataStructure.graph gg) {
 		gameGui.robots.clear();
 		for (String robo : game.getRobots()) {
 			Robot r=new Robot();
@@ -35,6 +53,13 @@ public class Manual {
 		}
 	}
 	
+	
+	/**
+	 * This fucntion is refresh the fruit list to the most 
+	 * recent fruit she will get from the server.
+	 * @param game
+	 * @param gg
+	 */
 	private void reFruit(game_service game, MYdataStructure.graph gg) {
 		gameGui.fruits.clear();
 		for (String  fruit : game.getFruits()) {
@@ -47,6 +72,13 @@ public class Manual {
 		}
 	}
 	
+	/**
+	 * move the robots manually by getting the x, y of the clicking in the screen from the
+	 *  function setXY, then she will check which robot is
+	 *  the one that the user click on by check if the distance between the x and
+	 *  y is equals to distance from x to p and from p to y . p= click point.
+	 * @param game
+	 */
 	public void moveManual(game_service game) {
 		game.startGame();
 		ThreadGame.timeRun(game);
@@ -121,9 +153,11 @@ public class Manual {
 
 
 	
-	
 	/**
-	 * This function is play the manual choice and send it to move manual
+	 * This function is playing the manual game 
+	 * by paint all the fruit by getting it from server and repaint it .
+	 * @param game
+	 * @param serv
 	 */
 	public void PlayManual(game_service game, int serv) {
 				String g = game.getGraph();

@@ -22,9 +22,9 @@ import gui.MyGameGUI;
 import utils.Point3D;
 
 /**
- * This class include all the automatic algorithms the we used in the playautomatic function. 
- * This Automatic class have MyGameGui field that allow as to build the gameGui according to the MyGameGui.
- * 
+This class include all the algorithms for the automatic game , we used one field in this class MyGameGUI the field is MyGameGUI. 
+the object MyGameGUI will let as use all the funcion and field that we create in the MyGameGUI.
+
  * @author USER
  *
  */
@@ -37,8 +37,8 @@ import utils.Point3D;
 public class Automatic {
 
 	MyGameGUI gameGui;
-	
-	
+
+
 	/**
 	 * construct that get the gui game and init him to gamegui
 	 * @param gameGui
@@ -47,12 +47,12 @@ public class Automatic {
 		this.gameGui=gameGui;
 	}
 
-
 	/**
-	 * This function get the game and num of sceneario,
-	 * the function locate the robots by run on the fruit list (reading it from the json) and check for every fruit what is the closest node 
-	 * and then locate the robot on this node. the function called helper function startGameNow.
-	 * 
+	 * This function get the game and num of sceneario, the function locate the robots by 
+	 * run on the fruit list (reading it from the json) and check for every fruit what is 
+	 * the closest node and then locate the robot on this node. the function called helper function
+	 * @param game
+	 * @param serv
 	 */
 	public void Playautomatic(game_service game, int serv ) {
 		String g = game.getGraph();
@@ -71,7 +71,7 @@ public class Automatic {
 			f.findFruitPlace(gg , f);
 			gameGui.fruits.put(p_f, f);
 		}
-		
+
 		Robot r=new Robot();
 		JSONObject obj = null;
 		try {
@@ -133,16 +133,17 @@ public class Automatic {
 
 
 
-					
+
 	}
 
 
-	
+
 
 
 	/**
-	 * This function get the game, graph , num of scenario and start the game, start the kml file and all our threads. 
-	 * while the game is running the function call help function - the smartmove.  
+	 * This function get the game, graph , num of scenario and start the game,
+	 *  start the kml file and all our threads.
+	 *  while the game is running the function call help function - the smartmove.
 	 * @param game
 	 * @param gg
 	 */
@@ -180,11 +181,13 @@ public class Automatic {
 
 
 	/**
-	 * This function is the automatic play moves that we create, this function goal is to create the ultimate path for all the robots in the game that we will 
-	 * get the best score and win the game ! 
-	 * this function idea is checking for every robot which fruit is the closest to him by using the shortestpathdist (graph_algo) and save the min path by list of nodes
-	 * , then she will determined the path for the node by the helper function SetPath, and move the robots by the helper function MoveRobot.
-	 * 
+	 * This function is the automatic play moves that we create, this function goal is to create
+	 *  the ultimate path for all the robots in the game that we will get the best score and win the game !
+	 *  this function idea is checking for every robot which fruit is the closest to him by
+	 *  using the shortestpathdist (graph_algo) and save the min path by list of nodes,
+	 *  then she will determined the path for the node by the helper function SetPath,
+	 *  and move the robots by the helper function MoveRobot.
+	 *  then she will call the reRobot, reFruit function and gameGui.paint() function.
 	 * @param game
 	 * @param gg
 	 */
@@ -213,7 +216,9 @@ public class Automatic {
 	}
 
 	/**
-	 * This function determined the path for the robot by pass all the fruit and check the 
+	This function set the path for the robot by pass all the fruit and check which 
+	fruit in the closest fruit by the shortestpathdist (graph_algo) after this the function 
+	will set the closest fruit as visited so the other robots won't go there
 	 * @param game
 	 * @param gg
 	 * @param dest
@@ -244,7 +249,8 @@ public class Automatic {
 	}
 
 	/**
-	 * this function will move the robots by the path she gets
+	 *This function is moving the robot to the location of the closest 
+	 fruit by the list of node she gets.
 	 * @param game
 	 * @param gg
 	 * @param ro
@@ -267,6 +273,11 @@ public class Automatic {
 		}
 	}
 
+	/**
+	 * This fucntion is refresh the robot list she gets from the server .
+	 * @param game
+	 * @param gg
+	 */
 	private void reRobot(game_service game, MYdataStructure.graph gg) {
 		gameGui.robots.clear();
 		for (String robo : game.getRobots()) {
@@ -277,6 +288,12 @@ public class Automatic {
 		}
 	}
 
+	/**
+	 * This fucntion is refresh the fruit list to the most recent fruit she
+	 *  will get from the server.
+	 * @param game
+	 * @param gg
+	 */
 	private void reFruit(game_service game, MYdataStructure.graph gg) {
 		gameGui.fruits.clear();
 		for (String  fruit : game.getFruits()) {

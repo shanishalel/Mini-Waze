@@ -1,4 +1,11 @@
 # OOP-EX3 Packman
+
+![WhatsApp Image 2020-01-19 at 21 44 15](https://user-images.githubusercontent.com/57361588/72687511-0d2bb700-3b07-11ea-973f-ae9c71aa6107.jpeg)
+
+
+
+
+### Explenation :
 In this project we made our one version for "packman" game. the red car should take as many hitchhikers as she can (there isn't 
 limit of seats) so that she will get the largest score in the game.
 

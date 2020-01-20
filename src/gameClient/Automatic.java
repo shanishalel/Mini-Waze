@@ -56,6 +56,8 @@ public class Automatic {
 		gg.init(g);
 		gameGui.graph =gg;
 		String info = game.toString();
+		int id_my = 311594964;
+//		Game_Server.login(id_my);
 		// fruit
 		if (gameGui.fruits == null ) {
 			gameGui.fruits= new Hashtable<Point3D, Fruit>();
@@ -73,21 +75,18 @@ public class Automatic {
 		try {
 			obj = new JSONObject(info);
 		} catch (JSONException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		JSONObject Robot = null;
 		try {
 			Robot = obj.getJSONObject("GameServer");
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		int amountRobot = 0;
 		try {
 			amountRobot = Robot.getInt("robots");
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		Collection<node_data> node = gameGui.graph.getV();
@@ -126,15 +125,7 @@ public class Automatic {
 		}
 		gameGui.initGUI();
 		startGameNow(game, gg , serv);
-
-
-
-
 	}
-
-
-
-
 
 	/**
 	 * This function get the game, graph , num of scenario and start the game,
@@ -151,7 +142,7 @@ public class Automatic {
 		ThreadGame.timeRun(game);
 		Long timeB = game.timeToEnd();
 		while(game.isRunning()) {
-			if(timeB-game.timeToEnd() > 70)
+			if(timeB-game.timeToEnd() > 48)
 			{
 				game.move();
 				timeB = game.timeToEnd();
@@ -160,12 +151,13 @@ public class Automatic {
 		}
 		try {
 			gameGui.KML.save(sen + ".kml");
+//			game.sendKML(sen + ".kml"); // Should be your KML (will not work on case -1).
 			String info = game.toString();
+			System.out.println(info);
 			JSONObject obj = new JSONObject(info);
 			JSONObject GameServer =obj.getJSONObject("GameServer");
 			int grade = GameServer.getInt("grade");
 			JOptionPane.showMessageDialog(input, "the game is finished! \n"+ "your score is: " + grade);
-
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -198,11 +190,14 @@ public class Automatic {
 			int counter=0;
 			while ( counter < amountRobot) {
 				Robot ro = gameGui.robots.get(counter);
-				ListGr=SetPath ( game,  gg, ro,  graphA);
-				MoveRobot( game,  gg,  ro,  graphA, ListGr);
+//				if (ro.getISDONE()) {
+				SetPath ( game,  gg, ro,  graphA);
+//				}
 				counter++;
 			}
+			MoveRobot( game,  gg,  graphA);
 		} 
+		
 		catch (JSONException e) {e.printStackTrace();}
 		// robot move 
 		reRobot(game , gg);	
@@ -222,7 +217,8 @@ public class Automatic {
 	 * @param graphA
 	 * @return
 	 */
-	private List<node_data> SetPath (game_service game, MYdataStructure.graph gg, Robot ro, Graph_Algo graphA) {
+	private void SetPath (game_service game, MYdataStructure.graph gg, Robot ro, Graph_Algo graphA) {
+		if ( ro.getPath() == null) {
 		double min =Integer.MAX_VALUE , temp=0;
 		List<node_data> ListGr = new ArrayList<node_data>();
 		Set <Point3D> allFruits = gameGui.fruits.keySet();
@@ -237,11 +233,10 @@ public class Automatic {
 				ListGr = graphA.shortestPath(ro.getSrc(), fo.getSrc());
 				ListGr.add(gg.getNode(fo.getDest()));
 			}
-
-
 		}
-		return ListGr;
-
+		ro.setISDONE(false);
+		ro.setPath(ListGr);
+		}
 	}
 
 	/**
@@ -253,20 +248,55 @@ public class Automatic {
 	 * @param graphA
 	 * @param ListGr
 	 */
-	private void MoveRobot(game_service game, MYdataStructure.graph gg, Robot ro, Graph_Algo graphA, List<node_data> ListGr) {
+	private void MoveRobot(game_service game, MYdataStructure.graph gg, Graph_Algo graphA) {
 		Fruit temp_f = new Fruit();
-		temp_f.setVisited(true);
-		if (ListGr.size() != 0 ) {
-			ListGr.remove(0);
+		Set <Integer> robo = gameGui.robots.keySet();
+		for (Integer rob : robo) {
+			Robot ro = gameGui.robots.get(rob);
+			if ( ro.getPath() != null ) {
+				if (ro.getPath().isEmpty()) {
+					ro.setPath(null);
+				}
+				else {
+				if (ro.IsDone(ro.getPath().get(0))) {
+				List <node_data> robo_path= ro.getPath();
+				node_data temp_node = ro.getPath().get(0);
+				Point3D po = temp_node.getLocation();
+				ro.setPoint3D(po);
+				ro.setSrc( temp_node.getKey());
+				robo_path.remove(0);
+				if (ro.getPath().isEmpty()) {
+					ro.setPath(null);
+				}
+				else {
+				game.chooseNextEdge(ro.getID(), robo_path.get(0).getKey());	
+				
+				}
+				}
+				}
+			}
+			
 		}
-		for (int j = 0; j < ListGr.size(); j++) {
-			node_data temp_node = ListGr.get(j);
-			int destGo = temp_node.getKey();
-			Point3D po = temp_node.getLocation();
-			ro.setPoint3D(po);
-			ro.setSrc( temp_node.getKey());
-			game.chooseNextEdge(ro.getID(), destGo);
-		}
+		
+		
+//		temp_f.setVisited(true);
+//		if (ListGr.size() != 0 ) {
+//			ListGr.remove(0);
+//		}
+//		for (int j = 0; j < ListGr.size(); j++) {
+//				node_data temp_node = ListGr.get(j);
+//				int destGo = temp_node.getKey();
+//				Point3D po = temp_node.getLocation();
+//				ro.setPoint3D(po);
+//				ro.setSrc( temp_node.getKey());
+//				game.chooseNextEdge(ro.getID(), destGo);
+//		}
+//		if (ro.IsDone(gg.getNode(ListGr.size()-1))) {
+//			System.out.println(ro.ISDONE);
+//		System.out.println(ListGr.size()-1);
+//		ro.setISDONE(true);
+//		}
+			
 	}
 
 	/**

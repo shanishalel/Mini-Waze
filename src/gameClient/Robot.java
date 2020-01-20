@@ -2,6 +2,8 @@ package gameClient;
 
 
 import java.awt.Point;
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Hashtable;
 
@@ -35,6 +37,9 @@ public class Robot implements Robots {
 	int DEST;
 	int SPEED;
 	Point3D POINT;
+	boolean ISDONE;
+	List<node_data> PATH;
+	
 
 
 	/**
@@ -47,6 +52,7 @@ public class Robot implements Robots {
 		this.DEST=DEST;
 		this.SPEED=SPEED;
 		this.POINT=POINT;
+		this.ISDONE = true;
 	}
 	
 	/**
@@ -67,6 +73,13 @@ public class Robot implements Robots {
 		this.POINT=p;
 	}
 	
+	public List<node_data> getPath(){
+		return this.PATH;
+	}
+	
+	public void setPath(List<node_data> path) {
+		this.PATH = path;
+	}
 	
 	/**
 	 * This function gets the type, value and point and entered them to the robot
@@ -229,6 +242,14 @@ public class Robot implements Robots {
 		
 	}
 	
+	public void setISDONE(boolean ISDONE) {
+		this.ISDONE = ISDONE;
+	}
+	
+	public boolean getISDONE() {
+		return this.ISDONE;
+	}
+	
 	
 	/**
 	 * boolean that will mark if the robot is done the path that was made for him
@@ -236,15 +257,22 @@ public class Robot implements Robots {
 	 * @return
 	 */
 	@Override
-	public boolean IsDone(node_data dest) {
+	public boolean IsDone(node_data src) {
 			boolean IsDone=false;
-			if(this.getPoint3D()==dest.getLocation()) {
+			double x = distans(this.getPoint3D().x(), this.getPoint3D().y(), src.getLocation().x(), src.getLocation().y());
+			if(x<=0.000001) {
 				IsDone=true;
 			}
 			return IsDone;
-		
 	}
 	
+	private double distans(double x, double y, double x2, double y2) {
+		double x_dis = Math.pow((x-x2), 2);
+		double y_dis = Math.pow((y-y2), 2);
+		double dis = Math.sqrt((x_dis + y_dis));
+		return dis;
+
+	}
 	
 
 

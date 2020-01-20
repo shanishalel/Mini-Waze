@@ -15,16 +15,16 @@ import utils.Point3D;
  * This class represent fruit struct that have 2 types of fruit : 
  	1- that represent a fruit from high to low and -1 - that represent a fruit from low to high . 
  	Every fruit composed by :    
-* graph - graph that represent the graph of the scenario of the game.
-* edge_data - that represent the edge that the fruit on here.  
-* int type - that represent the type of the fruit (-1 is for low to high, 1 is from high to low). Notice: in our game the fruit type are girl or boy . 
-* int value - that represent the value that the fruit equals to. 
-* Point 3D - that represent the point on the graph were the fruit is located.
-* int src - that represent the src of the edge that the fruit is located on.  
-* int dest - that represent the dest of the edge that the fruit is located on.
-* boolean visited - that represent if the fruit is on the path of one of the robots or no.
-  
-	
+ * graph - graph that represent the graph of the scenario of the game.
+ * edge_data - that represent the edge that the fruit on here.  
+ * int type - that represent the type of the fruit (-1 is for low to high, 1 is from high to low). Notice: in our game the fruit type are girl or boy . 
+ * int value - that represent the value that the fruit equals to. 
+ * Point 3D - that represent the point on the graph were the fruit is located.
+ * int src - that represent the src of the edge that the fruit is located on.  
+ * int dest - that represent the dest of the edge that the fruit is located on.
+ * boolean visited - that represent if the fruit is on the path of one of the robots or no.
+
+
 	this class contains the interface function . 
  * @author USER
  *
@@ -39,10 +39,10 @@ public class Fruit implements Fruits{
 	int DEST;
 	int SRC;
 	boolean VISITED;
-	
+
 	/**
-	  *This function is the default counstrctor 
-	  */
+	 *This function is the default counstrctor 
+	 */
 	public Fruit () {
 		this.graph=graph;
 		this.edge = edge;
@@ -53,7 +53,7 @@ public class Fruit implements Fruits{
 		this.DEST=DEST;
 		this.VISITED=VISITED;
 	}
-	
+
 	/**
 	 * This function is cunstrctor
 	 * @param type - the type of the fruit (1 or -1)
@@ -71,7 +71,7 @@ public class Fruit implements Fruits{
 		this.DEST=DEST;
 		this.VISITED=VISITED;
 	}
-	
+
 	/**
 	 * get the point
 	 * @return
@@ -80,7 +80,7 @@ public class Fruit implements Fruits{
 	public Point3D getPoint3D () {
 		return this.POINT;
 	}
-	
+
 	/**
 	 * get the value
 	 * @return
@@ -89,7 +89,7 @@ public class Fruit implements Fruits{
 	public int getValue () {
 		return this.VALUE;
 	}
-	
+
 	/**
 	 * get the type
 	 * @return
@@ -98,7 +98,7 @@ public class Fruit implements Fruits{
 	public int getType() {
 		return this.TYPE;
 	}
-	
+
 	/**
 	 * get the src
 	 * @return
@@ -107,7 +107,7 @@ public class Fruit implements Fruits{
 	public int getSrc () {
 		return this.SRC;
 	}
-	
+
 	/**
 	 * set the src
 	 * @param Src
@@ -116,7 +116,7 @@ public class Fruit implements Fruits{
 	public void setSrc(int Src) {
 		this.SRC =Src;
 	}
-	
+
 	/**
 	 * get the dest
 	 * @return
@@ -134,7 +134,7 @@ public class Fruit implements Fruits{
 	public void setDest(int Dest) {
 		this.DEST = Dest;
 	}
-	
+
 	/**
 	 * get the edge
 	 * @return
@@ -143,8 +143,8 @@ public class Fruit implements Fruits{
 	public edge_data getEdge() {
 		return this.edge;
 	}
-	
-	
+
+
 	/**
 	 *set the edge 
 	 * @param Edge
@@ -160,7 +160,7 @@ public class Fruit implements Fruits{
 	public boolean getVisited() {
 		return this.VISITED;
 	}
-	
+
 	/**
 	 * set boolean
 	 */
@@ -168,13 +168,13 @@ public class Fruit implements Fruits{
 	public void setVisited(boolean Visited) {
 		this.VISITED=Visited;
 	}
-	
-	 /**
-	  * This function init a fruit from the string s by reading from the json  
-	  * the function reading from the json and init it to fruit struct to the 
-	  * correct field. 
-	  * @param s
-	  */
+
+	/**
+	 * This function init a fruit from the string s by reading from the json  
+	 * the function reading from the json and init it to fruit struct to the 
+	 * correct field. 
+	 * @param s
+	 */
 	@Override
 	public void init(String s) {
 		try {
@@ -182,39 +182,39 @@ public class Fruit implements Fruits{
 			String k = "";
 			JSONObject obj = new JSONObject(s);
 			JSONObject Fruits2 =obj.getJSONObject("Fruit");
-				String point=(String) Fruits2.get("pos");
-				for (int j = 0; j < point.length(); j++) {
-					if (point.charAt(j) != ',') {
-						k+=point.charAt(j); 
-						 if (counter==2 && j == point.length()-1) {
-								z= Double.parseDouble(k);
-								counter=0;
-								k="";
-							}
-					}
-					else {
-						if (counter==0) {
-							x= Double.parseDouble(k);
-							counter++;
-							k="";
-						}
-						else if (counter==1) {
-							y= Double.parseDouble(k);
-							counter++;
-							k="";
-						}
+			String point=(String) Fruits2.get("pos");
+			for (int j = 0; j < point.length(); j++) {
+				if (point.charAt(j) != ',') {
+					k+=point.charAt(j); 
+					if (counter==2 && j == point.length()-1) {
+						z= Double.parseDouble(k);
+						counter=0;
+						k="";
 					}
 				}
-				Point3D p = new Point3D(x,y,z);
-				this.VALUE = Fruits2.getInt("value");
-				this.TYPE =  Fruits2.getInt("type");
-				this.POINT=new Point3D(p);
+				else {
+					if (counter==0) {
+						x= Double.parseDouble(k);
+						counter++;
+						k="";
+					}
+					else if (counter==1) {
+						y= Double.parseDouble(k);
+						counter++;
+						k="";
+					}
+				}
+			}
+			Point3D p = new Point3D(x,y,z);
+			this.VALUE = Fruits2.getInt("value");
+			this.TYPE =  Fruits2.getInt("type");
+			this.POINT=new Point3D(p);
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * This function gets graph and fruit and set the dest, src and edge 
 	 * the function pass all the nodes and check for every node if the dest between the 2 nodes is
@@ -230,19 +230,22 @@ public class Fruit implements Fruits{
 		for (node_data node_data : Nodes) {
 			Collection<edge_data> neighbors=gg.getE(node_data.getKey());
 			for (edge_data edge_data : neighbors) {
-				double dis1 = distans(node_data.getLocation().x() , node_data.getLocation().y(), p.x() , p.y());
-				int dest = edge_data.getDest();
-				double dis2 = distans(gg.getNode(dest).getLocation().x() , gg.getNode(dest).getLocation().y() ,p.x() , p.y());
-				double dis_All = distans(node_data.getLocation().x() , node_data.getLocation().y() ,gg.getNode(dest).getLocation().x() , gg.getNode(dest).getLocation().y() );	
-				if (Math.abs((dis1+dis2) - dis_All)<= EPS) {
-					f.setDest(dest);
-					f.setSrc(node_data.getKey());
-					f.setEdge(edge_data);
+				if ((edge_data.getSrc()- edge_data.getDest()) * f.getType() < 0 ) {
+					double dis1 = distans(node_data.getLocation().x() , node_data.getLocation().y(), p.x() , p.y());
+					int dest = edge_data.getDest();
+					double dis2 = distans(gg.getNode(dest).getLocation().x() , gg.getNode(dest).getLocation().y() ,p.x() , p.y());
+					double dis_All = distans(node_data.getLocation().x() , node_data.getLocation().y() ,gg.getNode(dest).getLocation().x() , gg.getNode(dest).getLocation().y() );	
+					if (Math.abs((dis1+dis2) - dis_All)<= EPS) {
+						// from height to low
+								f.setDest(dest);
+								f.setSrc(edge_data.getSrc());
+								f.setEdge(edge_data);
+					}
 				}
 			}
 		}
 	}
-	
+
 	/**
 	 * this function calculate the distance between two point 
 	 * @param x
@@ -256,7 +259,7 @@ public class Fruit implements Fruits{
 		double y_dis = Math.pow((y-y2), 2);
 		double dis = Math.sqrt((x_dis + y_dis));
 		return dis;
-		
+
 	}
 }
 

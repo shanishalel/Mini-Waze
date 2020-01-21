@@ -1,6 +1,11 @@
 package gui;
 
 import java.awt.Color;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Hashtable;
@@ -42,7 +47,9 @@ import utils.StdDrawGame;
  *
  */
 public class MyGameGUI  {
-
+	public static final String jdbcUrl="jdbc:mysql://db-mysql-ams3-67328-do-user-4468260-0.db.ondigitalocean.com:25060/oop?useUnicode=yes&characterEncoding=UTF-8&useSSL=false";
+	public static final String jdbcUser="student";
+	public static final String jdbcUserPassword="OOP2020student";
 	game_service game;
 	public  graph graph;
 	public Hashtable<Point3D, Fruit> fruits;
@@ -57,7 +64,7 @@ public class MyGameGUI  {
 	public double y;
 	public boolean isRobot = false;
 	public KML_Logger KML;
-	
+
 	/**
 	 * This function is a default constructor
 	 */
@@ -89,23 +96,81 @@ public class MyGameGUI  {
 		initGUI();
 	}
 
-	
+
 	public void Results () {
-		JFrame Results = new JFrame();
-		String r="";
-		SimpleDB y= new SimpleDB();
-		System.out.println(y.getKML(311594964, 1));
-		System.out.println("");
-		
+			JFrame Results = new JFrame();
+			String r="";
+			
+			ArrayList<Integer> score = new ArrayList<Integer>();
+			ArrayList<Integer> moves = new ArrayList<Integer>();
+			int [] need_moves = {290,580,0,580,0,500,0,0,0,580,0,580,0,580,0,0,290,0,0,580,290,0,0,1140};
+			int [] need_grade = {145,450,0,720,0,570,0,0,0,510,0,1050,0,310,0,0,235,0,0,250,200,0,0,1000};
+		try {
+			for (int i = 0; i < 24; i++) {
+				score.add(i, 0);
+				moves.add(i, 0);
+			}
+			int count =0;
+			int moves_level=0 , score_level = 0,  level=0;
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection connection = 
+					DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcUserPassword);
+			Statement statement = connection.createStatement();
+			String allCustomersQuery = "SELECT * FROM oop.Logs where userID = 206087702  and levelID < 23;";
+			ResultSet resultSet = statement.executeQuery(allCustomersQuery);
+			while(resultSet.next())
+			{
+				count++;
+					int id = resultSet.getInt("levelID");
+					 score_level = resultSet.getInt("score");
+					 moves_level = resultSet.getInt("moves");
+					 if (score_level >= need_grade[id]) {
+					 if (score.get(id) < score_level && moves_level <= need_moves[id] ) {
+						 score.remove(id);
+						 score.add(id, score_level);
+						 moves.remove(id);
+						 moves.add(id, moves_level);
+					 }
+				}
+			}
+			for (int i = 0; i < 24; i++) {
+				if ( score.get(i) != 0 ) {
+				r+= "Level : "+i + " best score: " + score.get(i) + " moves: " + moves.get(i) + "\n";
+				level=i;
+				}
+			}
+			if ( level != 23) {
+				level++;
+				while (need_moves[level] ==0) {
+					level++;
+				}
+			}
+			JOptionPane.showMessageDialog(
+					Results, "Numbers of games you play in the server : "+count + "\n"
+					+r + "You are in level: "+ level);
+			System.out.println(count);
+			resultSet.close();
+			statement.close();		
+			connection.close();		
+		}
+
+		catch (SQLException sqle) {
+			System.out.println("SQLException: " + sqle.getMessage());
+			System.out.println("Vendor Error: " + sqle.getErrorCode());
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
 
 	}
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
 	/**
 This function is playing the automatic game by open a object of Automatic
  (this class include all the algoritms for automatic game) and set her this (my game gui).
@@ -126,13 +191,13 @@ All the algorithm that we used is detailed in the Automatic section	 */
 			Automatic Auto= new Automatic (this);//call for autogame for this graph and string 
 			Auto.Playautomatic(game, sen);
 		}
-		
+
 	}
 
 	/**
 This function get the point that the user 
 clicked on it the frame from the StdDraw lib that we made (g_StdDraw ).	
- * @param x
+	 * @param x
 	 * @param y
 	 */
 	public void setXY(double x , double y) {
@@ -146,7 +211,7 @@ clicked on it the frame from the StdDraw lib that we made (g_StdDraw ).
 	 * All the algorithms that we used is detailed in the Manual section.
 	 * @param game
 	 */
-	
+
 	public void PlayManual() {
 		try {
 			JFrame input = new JFrame();
@@ -164,14 +229,14 @@ clicked on it the frame from the StdDraw lib that we made (g_StdDraw ).
 				gg.init(g);
 				graph =gg;
 				String info = game.toString();
-				
+
 				Manual playMan=new Manual(this);
-				 playMan.PlayManual(game, sen);
+				playMan.PlayManual(game, sen);
 			}
 		}
-			catch(Exception e) {
-				e.printStackTrace();
-			}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -265,17 +330,17 @@ clicked on it the frame from the StdDraw lib that we made (g_StdDraw ).
 			}
 		}
 	}
-	
+
 	public void painStatus() {
 		try {
-		StdDrawGame.setPenColor(Color.BLACK);
-		String info = game.toString();
-		JSONObject obj = new JSONObject(info);
-		JSONObject GAME =obj.getJSONObject("GameServer");
-		int grade = GAME.getInt("grade");
-		StdDrawGame.text(X_max, Y_max,"grade: " +""+grade);
-		StdDrawGame.text(X_max, Y_max-(Y_max*0.000009),"time: " +""+game.timeToEnd()/1000);
-		StdDrawGame.text(X_max, Y_max-(Y_max*0.000018),"move: " +""+GAME.getInt("moves"));
+			StdDrawGame.setPenColor(Color.BLACK);
+			String info = game.toString();
+			JSONObject obj = new JSONObject(info);
+			JSONObject GAME =obj.getJSONObject("GameServer");
+			int grade = GAME.getInt("grade");
+			StdDrawGame.text(X_max, Y_max,"grade: " +""+grade);
+			StdDrawGame.text(X_max, Y_max-(Y_max*0.000009),"time: " +""+game.timeToEnd()/1000);
+			StdDrawGame.text(X_max, Y_max-(Y_max*0.000018),"move: " +""+GAME.getInt("moves"));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -288,10 +353,10 @@ clicked on it the frame from the StdDraw lib that we made (g_StdDraw ).
 	public void initGUI() {
 		StdDrawGame.setCanvasSize(800, 600);
 		StdDrawGame.enableDoubleBuffering();
-		 X_min = Integer.MAX_VALUE;
-		 X_max = Integer.MIN_VALUE;
-		 Y_min = Integer.MAX_VALUE;
-		 Y_max = Integer.MIN_VALUE;
+		X_min = Integer.MAX_VALUE;
+		X_max = Integer.MIN_VALUE;
+		Y_min = Integer.MAX_VALUE;
+		Y_max = Integer.MIN_VALUE;
 
 		// rescale the coordinate system
 		if (graph != null) {

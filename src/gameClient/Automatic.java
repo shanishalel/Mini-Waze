@@ -145,7 +145,7 @@ public class Automatic {
 		ThreadGame.timeRun(game);
 		Long timeB = game.timeToEnd();
 		while(game.isRunning()) {
-			if(timeB-game.timeToEnd() > 110)
+			if(timeB-game.timeToEnd() > 102)
 			{
 				game.move();
 				timeB = game.timeToEnd();
@@ -213,9 +213,7 @@ public class Automatic {
 			int counter=0;
 			while ( counter < amountRobot) {
 				Robot ro = gameGui.robots.get(counter);
-//				if (ro.getISDONE()) {
 				SetPath ( game,  gg, ro,  graphA);
-//				}
 				counter++;
 			}
 			MoveRobot( game,  gg,  graphA);

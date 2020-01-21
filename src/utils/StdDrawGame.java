@@ -720,15 +720,21 @@ public final class StdDrawGame implements ActionListener, MouseListener, MouseMo
 	private static JMenuBar createMenuBar() {
 		JMenuBar menuBar = new JMenuBar();
 		JMenu menu1 = new JMenu("Play");
-		
+		JMenu menu2 = new JMenu("Info");
+
 		menuBar.add(menu1);
 		JMenuItem menuItem1 = new JMenuItem("Play automatic");
 		JMenuItem menuItem2 = new JMenuItem("Play Manual");
+		menuBar.add(menu2);
+		JMenuItem menuItem3 = new JMenuItem("Results");
+
+
 		menuItem1.addActionListener(std);
 		menuItem2.addActionListener(std);
+		menuItem3.addActionListener(std);
 		menu1.add(menuItem1);
 		menu1.add(menuItem2);
-
+		menu2.add(menuItem3);
 		return menuBar;
 	}
 
@@ -1701,6 +1707,9 @@ public static void setGuiGraph(MyGameGUI Gui) {
 		}
 		else if (str.equals("Play Manual") ) {
 			threadPlatManu();
+		}
+		else if (str.equals("Results")) {
+			MyGameGUI.Results();
 		}
 		
 //		switch(str) {

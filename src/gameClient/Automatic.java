@@ -60,7 +60,7 @@ public class Automatic {
 		gameGui.graph =gg;
 		String info = game.toString();
 		int id_my = 311594964;
-		Game_Server.login(id_my);
+//		Game_Server.login(id_my);
 		// fruit
 		if (gameGui.fruits == null ) {
 			gameGui.fruits= new Hashtable<Point3D, Fruit>();
@@ -145,7 +145,7 @@ public class Automatic {
 		ThreadGame.timeRun(game);
 		Long timeB = game.timeToEnd();
 		while(game.isRunning()) {
-			if(timeB-game.timeToEnd() > 102)
+			if(timeB-game.timeToEnd() > 49)
 			{
 				game.move();
 				timeB = game.timeToEnd();
@@ -154,8 +154,8 @@ public class Automatic {
 		}
 		try {
 			gameGui.KML.save(sen + ".kml");
-			String s = getKML(sen + ".kml");
-			game.sendKML(s); // Should be your KML (will not work on case -1).
+//			String s = getKML(sen + ".kml");
+//			game.sendKML(s); // Should be your KML (will not work on case -1).
 			String info = game.toString();
 			System.out.println(info);
 			JSONObject obj = new JSONObject(info);
@@ -203,7 +203,6 @@ public class Automatic {
 	 * @param gg
 	 */
 	private void smartMove(game_service game, graph gg) {
-		List<node_data> ListGr = new ArrayList<node_data>();
 		Graph_Algo graphA = new Graph_Algo(gg);
 		try {
 			String info = game.toString();
@@ -270,7 +269,6 @@ public class Automatic {
 	 * @param ListGr
 	 */
 	private void MoveRobot(game_service game, MYdataStructure.graph gg, Graph_Algo graphA) {
-		Fruit temp_f = new Fruit();
 		Set <Integer> robo = gameGui.robots.keySet();
 		for (Integer rob : robo) {
 			Robot ro = gameGui.robots.get(rob);
@@ -291,7 +289,6 @@ public class Automatic {
 				}
 				else {
 				game.chooseNextEdge(ro.getID(), robo_path.get(0).getKey());	
-				
 				}
 				}
 				}

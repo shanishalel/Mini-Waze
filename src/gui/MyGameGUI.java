@@ -57,7 +57,7 @@ public class MyGameGUI  {
 	public double y;
 	public boolean isRobot = false;
 	public KML_Logger KML;
-
+	
 	/**
 	 * This function is a default constructor
 	 */
@@ -89,6 +89,23 @@ public class MyGameGUI  {
 		initGUI();
 	}
 
+	
+	public void Results () {
+		JFrame Results = new JFrame();
+		String r="";
+		SimpleDB y= new SimpleDB();
+		System.out.println(y.getKML(311594964, 1));
+		System.out.println("");
+		
+
+	}
+	
+	
+	
+	
+	
+	
+	
 	/**
 This function is playing the automatic game by open a object of Automatic
  (this class include all the algoritms for automatic game) and set her this (my game gui).

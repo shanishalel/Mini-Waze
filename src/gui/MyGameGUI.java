@@ -98,6 +98,8 @@ public class MyGameGUI  {
 
 
 	public void Results () {
+		
+		
 			JFrame Results = new JFrame();
 			String r="";
 			
@@ -105,6 +107,7 @@ public class MyGameGUI  {
 			ArrayList<Integer> moves = new ArrayList<Integer>();
 			int [] need_moves = {290,580,0,580,0,500,0,0,0,580,0,580,0,580,0,0,290,0,0,580,290,0,0,1140};
 			int [] need_grade = {145,450,0,720,0,570,0,0,0,510,0,1050,0,310,0,0,235,0,0,250,200,0,0,1000};
+			int [] place = new int [24]; 
 		try {
 			for (int i = 0; i < 24; i++) {
 				score.add(i, 0);
@@ -112,11 +115,12 @@ public class MyGameGUI  {
 			}
 			int count =0;
 			int moves_level=0 , score_level = 0,  level=0;
+			int id_my = 311594964;
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection connection = 
 					DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcUserPassword);
 			Statement statement = connection.createStatement();
-			String allCustomersQuery = "SELECT * FROM oop.Logs where userID = 206087702  and levelID < 23;";
+			String allCustomersQuery = "SELECT * FROM oop.Logs where userID = "+id_my+";";
 			ResultSet resultSet = statement.executeQuery(allCustomersQuery);
 			while(resultSet.next())
 			{
@@ -133,9 +137,20 @@ public class MyGameGUI  {
 					 }
 				}
 			}
+
+			for (int i = 0; i < 24; i++) {
+				String allCustomersQuery2 = "SELECT * FROM oop.Logs where levelID = "+i+" and score > "+score.get(i)+" and moves <= "+need_moves[i]+";";
+				ResultSet resultSet2 = statement.executeQuery(allCustomersQuery2);
+				int counter =0;
+				while (resultSet2.next()) {
+					counter++;
+				}
+				place[i] = counter;
+			}
+			
 			for (int i = 0; i < 24; i++) {
 				if ( score.get(i) != 0 ) {
-				r+= "Level : "+i + " best score: " + score.get(i) + " moves: " + moves.get(i) + "\n";
+				r+= "Level : "+i + " best score: " + score.get(i) + " moves: " + moves.get(i)  + ", Your place at this level is: " + place[i]+ "\n";
 				level=i;
 				}
 			}
@@ -146,13 +161,21 @@ public class MyGameGUI  {
 				}
 			}
 			JOptionPane.showMessageDialog(
-					Results, "Numbers of games you play in the server : "+count + "\n"
+					Results,"The best games of id: " + 311594964 + "\n" +  "Numbers of games you play in the server : "+count + "\n"
 					+r + "You are in level: "+ level);
-			System.out.println(count);
+			
+//			resultSet2.close();
 			resultSet.close();
 			statement.close();		
 			connection.close();		
+		
+			
+			
 		}
+		
+		
+		
+		
 
 		catch (SQLException sqle) {
 			System.out.println("SQLException: " + sqle.getMessage());
@@ -161,8 +184,18 @@ public class MyGameGUI  {
 		catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
+		
+		
+		
+		
 
 	}
+	
+	
+	
+	
+	
+
 
 
 

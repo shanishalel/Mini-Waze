@@ -1,6 +1,7 @@
 package gui;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -30,6 +31,7 @@ import gameClient.Fruit;
 import gameClient.Robot;
 import gameClient.*;
 import utils.Point3D;
+import utils.StdDraw;
 import utils.StdDrawGame;
 
 /**
@@ -98,11 +100,8 @@ public class MyGameGUI  {
 
 
 	public void Results () {
-		
-		
-			JFrame Results = new JFrame();
+			StdDrawGame.clear();
 			String r="";
-			
 			ArrayList<Integer> score = new ArrayList<Integer>();
 			ArrayList<Integer> moves = new ArrayList<Integer>();
 			int [] need_moves = {290,580,0,580,0,500,0,0,0,580,0,580,0,580,0,0,290,0,0,580,290,0,0,1140};
@@ -115,11 +114,14 @@ public class MyGameGUI  {
 			}
 			int count =0;
 			int moves_level=0 , score_level = 0,  level=0;
-			int id_my = 311594964;
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection connection = 
 					DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcUserPassword);
 			Statement statement = connection.createStatement();
+			String s ="";
+			s = JOptionPane.showInputDialog(
+					null, "Enter ID:");
+			int id_my = Integer.parseInt(s);
 			String allCustomersQuery = "SELECT * FROM oop.Logs where userID = "+id_my+";";
 			ResultSet resultSet = statement.executeQuery(allCustomersQuery);
 			while(resultSet.next())
@@ -147,10 +149,30 @@ public class MyGameGUI  {
 				}
 				place[i] = counter;
 			}
+			double y = 0;
 			
+			Font font = new Font("Calibri", Font.BOLD, 16);
+			StdDrawGame.setFont(font);
+			StdDrawGame.setPenColor(Color.BLACK);
+
+			StdDrawGame.textLeft(X_min, Y_max-y, "The best games of id: " + id_my );
+			
+
 			for (int i = 0; i < 24; i++) {
 				if ( score.get(i) != 0 ) {
-				r+= "Level : "+i + " best score: " + score.get(i) + " moves: " + moves.get(i)  + ", Your place at this level is: " + place[i]+ "\n";
+					y+= 35;
+				StdDrawGame.setPenColor(Color.DARK_GRAY);
+				r= "Level:"+i;
+				StdDrawGame.textLeft(X_min, Y_max-y, r);
+				StdDrawGame.setPenColor(Color.blue);
+				r= " Score: " + score.get(i);
+				StdDrawGame.textLeft(X_min+80, Y_max-y, r);
+				StdDrawGame.setPenColor(Color.RED);
+				r= " Moves:" + moves.get(i)  ;
+				StdDrawGame.textLeft(X_min+210, Y_max-y, r);
+				StdDrawGame.setPenColor(Color.MAGENTA);
+				r=" Your place at this level is: " + place[i]+ "\n";
+				StdDrawGame.textLeft(X_min+330, Y_max-y, r);
 				level=i;
 				}
 			}
@@ -160,23 +182,17 @@ public class MyGameGUI  {
 					level++;
 				}
 			}
-			JOptionPane.showMessageDialog(
-					Results,"The best games of id: " + 311594964 + "\n" +  "Numbers of games you play in the server : "+count + "\n"
-					+r + "You are in level: "+ level);
+			StdDrawGame.setPenColor(Color.BLACK);
+			y+=35;
+			StdDrawGame.textLeft(X_min, Y_max-y, "Numbers of games you play in the server : "+count);
+			y+= 35;
+			StdDrawGame.textLeft(X_min, Y_max-y, "You are in level: "+ level);
+			StdDrawGame.show();
 			
-//			resultSet2.close();
 			resultSet.close();
 			statement.close();		
 			connection.close();		
-		
-			
-			
 		}
-		
-		
-		
-		
-
 		catch (SQLException sqle) {
 			System.out.println("SQLException: " + sqle.getMessage());
 			System.out.println("Vendor Error: " + sqle.getErrorCode());
@@ -386,10 +402,18 @@ clicked on it the frame from the StdDraw lib that we made (g_StdDraw ).
 	public void initGUI() {
 		StdDrawGame.setCanvasSize(800, 600);
 		StdDrawGame.enableDoubleBuffering();
+		if (graph != null) {
 		X_min = Integer.MAX_VALUE;
 		X_max = Integer.MIN_VALUE;
 		Y_min = Integer.MAX_VALUE;
 		Y_max = Integer.MIN_VALUE;
+		}
+		else {
+			X_min =0;
+			Y_min = 0;
+			X_max = 800;
+			Y_max = 600;
+		}
 
 		// rescale the coordinate system
 		if (graph != null) {

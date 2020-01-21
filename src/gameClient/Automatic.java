@@ -1,5 +1,8 @@
 package gameClient;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Hashtable;
@@ -57,7 +60,7 @@ public class Automatic {
 		gameGui.graph =gg;
 		String info = game.toString();
 		int id_my = 311594964;
-//		Game_Server.login(id_my);
+		Game_Server.login(id_my);
 		// fruit
 		if (gameGui.fruits == null ) {
 			gameGui.fruits= new Hashtable<Point3D, Fruit>();
@@ -142,7 +145,7 @@ public class Automatic {
 		ThreadGame.timeRun(game);
 		Long timeB = game.timeToEnd();
 		while(game.isRunning()) {
-			if(timeB-game.timeToEnd() > 48)
+			if(timeB-game.timeToEnd() > 110)
 			{
 				game.move();
 				timeB = game.timeToEnd();
@@ -151,7 +154,8 @@ public class Automatic {
 		}
 		try {
 			gameGui.KML.save(sen + ".kml");
-//			game.sendKML(sen + ".kml"); // Should be your KML (will not work on case -1).
+			String s = getKML(sen + ".kml");
+			game.sendKML(s); // Should be your KML (will not work on case -1).
 			String info = game.toString();
 			System.out.println(info);
 			JSONObject obj = new JSONObject(info);
@@ -162,6 +166,25 @@ public class Automatic {
 		catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public String getKML(String pa) {
+		String s = "";
+		
+		try {
+			File file = new File(pa);
+			BufferedReader reader = new BufferedReader( new FileReader(file));
+			String st= "";
+			while ( (st = reader.readLine()) != null) {
+				s = s+ st+"\n";
+			}
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+		}
+		return s;
+		
+		
 	}
 
 

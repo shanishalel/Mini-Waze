@@ -147,7 +147,7 @@ public class MyGameGUI  {
 				while (resultSet2.next()) {
 					id_best.put(resultSet2.getInt("userID"), resultSet2.getInt("score"));
 				}
-				place[i] = id_best.size();
+				place[i] = id_best.size()+1;
 				id_best.clear();
 			}
 			double y = 0;

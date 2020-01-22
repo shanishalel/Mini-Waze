@@ -1,9 +1,7 @@
 package gameClient;
 
 import java.util.Collection;
-import java.util.Hashtable;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import MYdataStructure.*;

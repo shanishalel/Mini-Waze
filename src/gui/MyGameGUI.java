@@ -11,13 +11,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Hashtable;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Set;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import MYdataStructure.DGraph;
@@ -26,12 +24,10 @@ import MYdataStructure.graph;
 import MYdataStructure.node_data;
 import Server.Game_Server;
 import Server.game_service;
-import algorithms.Graph_Algo;
 import gameClient.Fruit;
 import gameClient.Robot;
 import gameClient.*;
 import utils.Point3D;
-import utils.StdDraw;
 import utils.StdDrawGame;
 
 /**
@@ -77,7 +73,7 @@ public class MyGameGUI  {
 	}
 
 	/**
-	 * This function is constructor that get graph g and init int it to gui
+	 * This function is constructor that get graph g and init it to gui
 	 * @param g
 	 */
 	public MyGameGUI(graph g)
@@ -99,15 +95,21 @@ public class MyGameGUI  {
 	}
 
 
+	/**
+	 * This function is meant to show the results of the id that the user entered, 
+	 * in this function we connect the server and using sql get the info that we need 
+	 * we print the user the level he is in it, the best score in all levels, numbers of game
+	 * he play in the sever and his place according to the teame play in the server.
+	 */
 	public void Results () {
-			StdDrawGame.clear();
-			String r="";
-			Hashtable<Integer, Integer> id_best = new Hashtable<Integer, Integer>();
-			ArrayList<Integer> score = new ArrayList<Integer>();
-			ArrayList<Integer> moves = new ArrayList<Integer>();
-			int [] need_moves = {290,580,0,580,0,500,0,0,0,580,0,580,0,580,0,0,290,0,0,580,290,0,0,1140};
-			int [] need_grade = {145,450,0,720,0,570,0,0,0,510,0,1050,0,310,0,0,235,0,0,250,200,0,0,1000};
-			int [] place = new int [24]; 
+		StdDrawGame.clear();
+		String r="";
+		Hashtable<Integer, Integer> id_best = new Hashtable<Integer, Integer>();
+		ArrayList<Integer> score = new ArrayList<Integer>();
+		ArrayList<Integer> moves = new ArrayList<Integer>();
+		int [] need_moves = {290,580,0,580,0,500,0,0,0,580,0,580,0,580,0,0,290,0,0,580,290,0,0,1140};
+		int [] need_grade = {145,450,0,720,0,570,0,0,0,510,0,1050,0,310,0,0,235,0,0,250,200,0,0,1000};
+		int [] place = new int [24]; 
 		try {
 			for (int i = 0; i < 24; i++) {
 				score.add(i, 0);
@@ -128,16 +130,16 @@ public class MyGameGUI  {
 			while(resultSet.next())
 			{
 				count++;
-					int id = resultSet.getInt("levelID");
-					 score_level = resultSet.getInt("score");
-					 moves_level = resultSet.getInt("moves");
-					 if (score_level >= need_grade[id]) {
-					 if (score.get(id) < score_level && moves_level <= need_moves[id] ) {
-						 score.remove(id);
-						 score.add(id, score_level);
-						 moves.remove(id);
-						 moves.add(id, moves_level);
-					 }
+				int id = resultSet.getInt("levelID");
+				score_level = resultSet.getInt("score");
+				moves_level = resultSet.getInt("moves");
+				if (score_level >= need_grade[id]) {
+					if (score.get(id) < score_level && moves_level <= need_moves[id] ) {
+						score.remove(id);
+						score.add(id, score_level);
+						moves.remove(id);
+						moves.add(id, moves_level);
+					}
 				}
 			}
 
@@ -151,30 +153,30 @@ public class MyGameGUI  {
 				id_best.clear();
 			}
 			double y = 0;
-			
+
 			Font font = new Font("Calibri", Font.BOLD, 16);
 			StdDrawGame.setFont(font);
 			StdDrawGame.setPenColor(Color.BLACK);
 
 			StdDrawGame.textLeft(X_min, Y_max-y, "The best games of id: " + id_my );
-			
+
 
 			for (int i = 0; i < 24; i++) {
 				if ( score.get(i) != 0 ) {
 					y+= 35;
-				StdDrawGame.setPenColor(Color.DARK_GRAY);
-				r= "Level:"+i;
-				StdDrawGame.textLeft(X_min, Y_max-y, r);
-				StdDrawGame.setPenColor(Color.blue);
-				r= " Score: " + score.get(i);
-				StdDrawGame.textLeft(X_min+80, Y_max-y, r);
-				StdDrawGame.setPenColor(Color.RED);
-				r= " Moves:" + moves.get(i)  ;
-				StdDrawGame.textLeft(X_min+210, Y_max-y, r);
-				StdDrawGame.setPenColor(Color.MAGENTA);
-				r=" Your place at this level is: " + place[i]+ "\n";
-				StdDrawGame.textLeft(X_min+330, Y_max-y, r);
-				level=i;
+					StdDrawGame.setPenColor(Color.DARK_GRAY);
+					r= "Level:"+i;
+					StdDrawGame.textLeft(X_min, Y_max-y, r);
+					StdDrawGame.setPenColor(Color.blue);
+					r= " Score: " + score.get(i);
+					StdDrawGame.textLeft(X_min+80, Y_max-y, r);
+					StdDrawGame.setPenColor(Color.RED);
+					r= " Moves:" + moves.get(i)  ;
+					StdDrawGame.textLeft(X_min+210, Y_max-y, r);
+					StdDrawGame.setPenColor(Color.MAGENTA);
+					r=" Your place at this level is: " + place[i]+ "\n";
+					StdDrawGame.textLeft(X_min+330, Y_max-y, r);
+					level=i;
 				}
 			}
 			if ( level != 23) {
@@ -189,7 +191,7 @@ public class MyGameGUI  {
 			y+= 35;
 			StdDrawGame.textLeft(X_min, Y_max-y, "You are in level: "+ level);
 			StdDrawGame.show();
-			
+
 			resultSet.close();
 			statement.close();		
 			connection.close();		
@@ -204,9 +206,10 @@ public class MyGameGUI  {
 	}
 
 	/**
-This function is playing the automatic game by open a object of Automatic
- (this class include all the algoritms for automatic game) and set her this (my game gui).
-All the algorithm that we used is detailed in the Automatic section	 */
+	This function is playing the automatic game by open a object of Automatic
+ 	(this class include all the algoritms for automatic game) and set her this (my game gui).
+	All the algorithm that we used is detailed in the Automatic section	 */
+	
 	public void Playautomatic() {
 
 		JFrame input = new JFrame();
@@ -227,8 +230,8 @@ All the algorithm that we used is detailed in the Automatic section	 */
 	}
 
 	/**
-This function get the point that the user 
-clicked on it the frame from the StdDraw lib that we made (g_StdDraw ).	
+	This function get the point that the user 
+	clicked on it the frame from the StdDraw lib that we made (g_StdDraw ).	
 	 * @param x
 	 * @param y
 	 */
@@ -335,12 +338,10 @@ clicked on it the frame from the StdDraw lib that we made (g_StdDraw ).
 				if (fru.getType() == -1) {
 					StdDrawGame.setPenColor(Color.RED);
 					StdDrawGame.picture(p3.x(), p3.y(), "data/boy.jpg", 0.0006, 0.0004);
-					//					StdDrawGame.filledCircle(p3.x(), p3.y(), 0.00015);
 				}
 				else {
 					StdDrawGame.setPenColor(Color.CYAN);
 					StdDrawGame.picture(p3.x(), p3.y(), "data/girl.jpg", 0.0006, 0.0004);
-					//					StdDrawGame.filledCircle(p3.x(), p3.y(), 0.00015);
 				}
 			}
 		}
@@ -357,12 +358,13 @@ clicked on it the frame from the StdDraw lib that we made (g_StdDraw ).
 				Point3D p = robo.getPoint3D();
 				StdDrawGame.setPenColor(Color.GREEN);
 				StdDrawGame.picture(p.x(), p.y(), "data/car2.jpg", 0.0008, 0.0004);
-				//				StdDrawGame.picture(x, Y_max, filename, scaledWidth, scaledHeight);
-				//				StdDrawGame.filledCircle(p.x(), p.y(), 0.00025);
 			}
 		}
 	}
 
+	/**
+	 * this function print the time left, score and moves 
+	 */
 	public void painStatus() {
 		try {
 			StdDrawGame.setPenColor(Color.BLACK);
@@ -386,10 +388,10 @@ clicked on it the frame from the StdDraw lib that we made (g_StdDraw ).
 		StdDrawGame.setCanvasSize(800, 600);
 		StdDrawGame.enableDoubleBuffering();
 		if (graph != null) {
-		X_min = Integer.MAX_VALUE;
-		X_max = Integer.MIN_VALUE;
-		Y_min = Integer.MAX_VALUE;
-		Y_max = Integer.MIN_VALUE;
+			X_min = Integer.MAX_VALUE;
+			X_max = Integer.MIN_VALUE;
+			Y_min = Integer.MAX_VALUE;
+			Y_max = Integer.MIN_VALUE;
 		}
 		else {
 			X_min =0;

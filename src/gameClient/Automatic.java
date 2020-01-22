@@ -60,7 +60,7 @@ public class Automatic {
 		gameGui.graph =gg;
 		String info = game.toString();
 		int id_my = 311594964;
-//		Game_Server.login(id_my);
+		Game_Server.login(id_my);
 		// fruit
 		if (gameGui.fruits == null ) {
 			gameGui.fruits= new Hashtable<Point3D, Fruit>();
@@ -154,8 +154,8 @@ public class Automatic {
 		}
 		try {
 			gameGui.KML.save(sen + ".kml");
-//			String s = getKML(sen + ".kml");
-//			game.sendKML(s); // Should be your KML (will not work on case -1).
+			String s = getKML(sen + ".kml");
+			game.sendKML(s); // Should be your KML (will not work on case -1).
 			String info = game.toString();
 			System.out.println(info);
 			JSONObject obj = new JSONObject(info);

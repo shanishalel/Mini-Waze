@@ -102,6 +102,7 @@ public class MyGameGUI  {
 	public void Results () {
 			StdDrawGame.clear();
 			String r="";
+			Hashtable<Integer, Integer> id_best = new Hashtable<Integer, Integer>();
 			ArrayList<Integer> score = new ArrayList<Integer>();
 			ArrayList<Integer> moves = new ArrayList<Integer>();
 			int [] need_moves = {290,580,0,580,0,500,0,0,0,580,0,580,0,580,0,0,290,0,0,580,290,0,0,1140};
@@ -143,11 +144,11 @@ public class MyGameGUI  {
 			for (int i = 0; i < 24; i++) {
 				String allCustomersQuery2 = "SELECT * FROM oop.Logs where levelID = "+i+" and score > "+score.get(i)+" and moves <= "+need_moves[i]+";";
 				ResultSet resultSet2 = statement.executeQuery(allCustomersQuery2);
-				int counter =0;
 				while (resultSet2.next()) {
-					counter++;
+					id_best.put(resultSet2.getInt("userID"), resultSet2.getInt("score"));
 				}
-				place[i] = counter;
+				place[i] = id_best.size();
+				id_best.clear();
 			}
 			double y = 0;
 			
@@ -200,25 +201,7 @@ public class MyGameGUI  {
 		catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		
-		
-		
-		
-
 	}
-	
-	
-	
-	
-	
-
-
-
-
-
-
-
-
 
 	/**
 This function is playing the automatic game by open a object of Automatic
